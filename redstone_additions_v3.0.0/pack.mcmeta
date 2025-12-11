@@ -1,0 +1,19 @@
+{
+  "pack": {
+    "description": [
+      {"text": "⚡ ", "color": "red", "bold": true},
+      {"text": "Redstone Additions", "color": "gold", "bold": true},
+      {"text": " v3.0.0\n", "color": "yellow"},
+      {"text": "Automate ", "color": "gray", "italic": true},
+      {"text": "Everything", "color": "white", "italic": true, "bold": true},
+      {"text": " • ", "color": "dark_gray"},
+      {"text": "by ", "color": "gray"},
+      {"text": "Ancar", "color": "aqua", "underlined": true}
+    ],
+    "pack_format": 61,
+    "supported_formats": {
+      "min_inclusive": 61,
+      "max_inclusive": 999
+    }
+  }
+}
