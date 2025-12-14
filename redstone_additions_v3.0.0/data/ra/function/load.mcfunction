@@ -2,7 +2,10 @@
 # Redstone Additions V3.0.0 - Core Load
 
 # Initialize library systems
-function ra_lib:import
+function ra_lib:initialize
+
+# Run tick function
+function ra:tick
 
 scoreboard objectives add ra.blocks.cooldown dummy
 

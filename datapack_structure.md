@@ -88,7 +88,7 @@ function ra_interactive:custom_blocks/block_breaker/register
 tellraw @a [{"text":"[","color":"dark_gray"},{"text":"RA","color":"gold","bold":true},{"text":"] ","color":"dark_gray"},{"text":"Interactive blocks loaded!","color":"aqua"}]
 ```
 
----
+---z
 
 ### `data/ra_interactive/function/tick.mcfunction`
 

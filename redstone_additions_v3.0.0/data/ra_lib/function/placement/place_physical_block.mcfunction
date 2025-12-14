@@ -9,6 +9,3 @@ $execute if score #facing ra.temp matches 2 run setblock ~ ~ ~ $(block_id)[facin
 $execute if score #facing ra.temp matches 3 run setblock ~ ~ ~ $(block_id)[facing=south] replace
 $execute if score #facing ra.temp matches 4 run setblock ~ ~ ~ $(block_id)[facing=west] replace
 $execute if score #facing ra.temp matches 5 run setblock ~ ~ ~ $(block_id)[facing=east] replace
-
-# Non-directional blocks (dir_type 0) - place without facing property
-$execute if score #facing ra.temp matches ..0 run setblock ~ ~ ~ $(block_id) replace

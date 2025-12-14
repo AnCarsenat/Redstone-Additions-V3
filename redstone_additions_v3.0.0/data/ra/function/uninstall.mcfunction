@@ -1,3 +1,4 @@
+# /data/ra/function/uninstall.mcfunction
 # Uninstall Redstone Additions
 
 # Remove all custom blocks
