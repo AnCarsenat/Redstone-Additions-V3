@@ -2,6 +2,9 @@
 # Give all custom block items
 
 function ra_interactive:blocks/block_breaker/give
+function ra_interactive:blocks/spitter/give
+function ra_interactive:blocks/block_placer/give
+function ra_interactive:blocks/pusher/give
 function ra_interactive:blocks/conveyor/give
 
 tellraw @s [{"text":"[","color":"dark_gray"},{"text":"RA","color":"gold","bold":true},{"text":"] ","color":"dark_gray"},{"text":"Given all custom blocks!","color":"green"}]
