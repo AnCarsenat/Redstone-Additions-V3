@@ -1,0 +1,6 @@
+tellraw @s[tag=!redexp_hide] ["",{"text":"\n"},{"text":"REDSTONE EXPANSION V2.1","color":"aqua"},{"text":" BY ","color":"gray"},{"text":"SKYBALL","color":"gold"},{"text":"\n"},{"text":" - ","color":"gray"},{"text":"How to use","color":"gold"},{"text":": [","color":"gray"},{"text":"click","color":"blue","clickEvent":{"action":"open_url","value":"https://docs.google.com/document/d/1acfII6qIuL_gTxwmi8xXEj0Hi6y28iikD7Hw-My45NA"}},{"text":"]\n - ","color":"gray"},{"text":"Get the items","color":"gold"},{"text":": ","color":"gray"},{"text":"/function r:give","color":"gold","clickEvent":{"action":"run_command","value":"/function r:give"}},{"text":"\n"},{"text":" - ","color":"gray"},{"text":"Hide this message ","color":"gold"},{"text":"when reentering the game [","color":"gray"},{"text":"click","color":"gold","clickEvent":{"action":"run_command","value":"/tag @s add redexp_hide"}},{"text":"]","color":"gray"},{"text":"\n "}]
+
+title @s[gamemode=creative] actionbar ["",{"text":"- - - ","color":"gray"},{"text":"REDSTONE EXPANSION BY SKYBALL","bold":true,"color":"aqua"},{"text":" - - -","color":"gray"}]
+
+tag @a[tag=!firstTimeJoin] add firstTimeJoin
+scoreboard players set @a[scores={leaveGame=1..}] leaveGame 0

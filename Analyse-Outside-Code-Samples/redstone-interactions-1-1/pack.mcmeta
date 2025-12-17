@@ -1,0 +1,6 @@
+   {
+       "pack": {
+           "pack_format": 5,
+           "description": "Library for datapacks to integrate with redstone"
+       }
+   }
