@@ -4,6 +4,9 @@
 # Initialize library systems
 function ra_lib:init
 
+# Run tick
+function ra:tick
+
 # Initialize sub-modules
 function ra_interactive:load
 

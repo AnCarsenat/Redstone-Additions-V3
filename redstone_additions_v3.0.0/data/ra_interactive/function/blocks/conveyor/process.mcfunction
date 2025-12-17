@@ -1,9 +1,10 @@
 # /ra_interactive:blocks/conveyor/process
 # Process item pipe logic. As armor stand (rotated to face output), at dispenser position.
 # Features:
-# - Transfer items to container in front
-# - Filter items to the side (left) if item frame with filter item exists
-# - Shoot item out if no valid output
+# - Check for filter item frame on ANY side of the pipe block
+# - If filter exists and item MATCHES filter: try to send to adjacent container
+# - If no adjacent container OR item doesn't match OR no filter: send forward
+# - If no valid output: shoot item out
 
 # Initialize cooldown if not set
 execute unless score @s ra.cooldown matches -2147483648.. run scoreboard players set @s ra.cooldown 0
@@ -18,17 +19,22 @@ execute unless data block ~ ~ ~ Items[0] run return 0
 # Has item - reset cooldown
 scoreboard players set @s ra.cooldown 0
 
-# Store current item data for filter check
+# Store current item data
 data modify storage ra:temp pipe_item set from block ~ ~ ~ Items[0]
 
-# Check for filter (item frame to the left: ^ ^-1 ^)
-# If filter exists and matches, send to the left side
-execute positioned ^-1 ^ ^ if entity @e[type=item_frame,distance=..0.5,limit=1] run function ra_interactive:blocks/conveyor/check_filter
+# Reset flags
+scoreboard players set #filtered ra.temp 0
+scoreboard players set #transferred ra.temp 0
+
+# Check for filter on any side of the block
+function ra_interactive:blocks/conveyor/check_filter
+
+# If filtered to side, we're done
 execute if score #filtered ra.temp matches 1 run return 1
 
-# Try to insert into container in front (^ ^ ^1)
+# Not filtered - try to send forward (^ ^ ^1)
 execute positioned ^ ^ ^1 if block ~ ~ ~ #ra_lib:containers run function ra_interactive:blocks/conveyor/transfer
 execute if score #transferred ra.temp matches 1 run return 1
 
-# No filter match and no container in front - shoot the item out
+# No valid output - shoot the item out
 function ra_interactive:blocks/conveyor/shoot

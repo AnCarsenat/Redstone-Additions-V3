@@ -4,12 +4,13 @@
 # Kill the vanilla dispenser drop to prevent duplicate items
 kill @e[type=item,nbt={Item:{id:"minecraft:dispenser"}},distance=..2,limit=1,sort=nearest]
 
-# Drop items inside the pipe first
-data modify storage ra:temp Items set from block ~ ~ ~ Items
-execute if data storage ra:temp Items[0] run loot spawn ~ ~0.5 ~ mine ~ ~ ~ air{drop_contents:{}}
+# Drop items inside the pipe by spawning item entities for each slot
+execute if data block ~ ~ ~ Items[0] run summon item ~ ~0.5 ~ {Tags:["ra.drop_temp"]}
+execute if entity @e[type=item,tag=ra.drop_temp,limit=1] run data modify entity @e[type=item,tag=ra.drop_temp,limit=1] Item set from block ~ ~ ~ Items[0]
+execute as @e[type=item,tag=ra.drop_temp] run tag @s remove ra.drop_temp
 
 # Drop the item pipe itself
-summon item ~ ~ ~ {Item:{id:"minecraft:bat_spawn_egg",count:1,components:{"minecraft:item_model":"minecraft:dispenser","minecraft:item_name":'"Item Pipe"',"minecraft:custom_data":{ra:{item_pipe:1b}},"minecraft:entity_data":{id:"minecraft:bat",Tags:["ra.spawned","ra.place.item_pipe"],Silent:1b,NoAI:1b,Invulnerable:1b}}}}
+summon item ~ ~ ~ {Item:{id:"minecraft:bat_spawn_egg",count:1,components:{"minecraft:item_model":"minecraft:dispenser","minecraft:item_name":'Item Pipe',"minecraft:custom_data":{ra:{item_pipe:1b}},"minecraft:entity_data":{id:"minecraft:bat",Tags:["ra.spawned","ra.place.item_pipe"],Silent:1b,NoAI:1b,Invulnerable:1b}}}}
 
 playsound minecraft:block.stone.break block @a[distance=..16] ~ ~ ~ 1 1
 particle minecraft:cloud ~ ~ ~ 0.2 0.2 0.2 0.02 5

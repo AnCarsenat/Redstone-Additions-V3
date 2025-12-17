@@ -46,4 +46,4 @@ $execute store result block ~ ~ ~ Items[{Slot:$(slot)b}].count byte 1 run scoreb
 
 # Reduce input count
 scoreboard players operation #input_count ra.temp -= #to_add ra.temp
-execute if score #input_count ra.temp matches ..0 run scoreboard players set #slot ra.inv.slot $(slot)
+$execute if score #input_count ra.temp matches ..0 run scoreboard players set #slot ra.inv.slot $(slot)
