@@ -1,0 +1,12 @@
+# /ra_interactive:blocks/conveyor/handle_placement
+# Handle item pipe placement
+# Context: as bat, at bat position
+# Called via function tag ra:register_placement
+
+# Only process if this is an item pipe bat
+execute unless entity @s[tag=ra.place.item_pipe] run return 0
+
+# Place the block using the library (dir_type:2 = full 6-directional)
+function ra_lib:placement/place {block_id:"minecraft:dispenser",block_tag:"item_pipe",dir_type:2}
+
+return 1
