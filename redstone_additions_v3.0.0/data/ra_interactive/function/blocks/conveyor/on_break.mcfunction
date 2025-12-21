@@ -10,7 +10,7 @@ execute if entity @e[type=item,tag=ra.drop_temp,limit=1] run data modify entity 
 execute as @e[type=item,tag=ra.drop_temp] run tag @s remove ra.drop_temp
 
 # Drop the item pipe itself
-summon item ~ ~ ~ {Item:{id:"minecraft:bat_spawn_egg",count:1,components:{"minecraft:item_model":"minecraft:dispenser","minecraft:item_name":'Item Pipe',"minecraft:custom_data":{ra:{item_pipe:1b}},"minecraft:entity_data":{id:"minecraft:bat",Tags:["ra.spawned","ra.place.item_pipe"],Silent:1b,NoAI:1b,Invulnerable:1b}}}}
+summon item ~ ~ ~ {Item:{id:"minecraft:bat_spawn_egg",count:1,components:{"minecraft:item_model":"minecraft:dispenser","minecraft:item_name":'Conveyor',"minecraft:custom_data":{ra:{item_pipe:1b}},"minecraft:entity_data":{id:"minecraft:bat",Tags:["ra.spawned","ra.place.item_pipe"],Silent:1b,NoAI:1b,Invulnerable:1b}}}}
 
 playsound minecraft:block.stone.break block @a[distance=..16] ~ ~ ~ 1 1
 particle minecraft:cloud ~ ~ ~ 0.2 0.2 0.2 0.02 5

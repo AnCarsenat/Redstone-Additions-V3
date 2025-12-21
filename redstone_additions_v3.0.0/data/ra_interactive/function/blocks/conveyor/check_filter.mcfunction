@@ -5,10 +5,10 @@
 # Output: #filtered ra.temp = 1 if item was sent to a side container
 
 # Find item frame attached to this block (within 1 block radius)
-execute unless entity @e[type=item_frame,distance=..1.4,limit=1] run return 0
+execute positioned ~ ~0.5 ~ unless entity @e[type=item_frame,distance=..1.1,limit=1,sort=nearest] run return 0
 
 # Get filter item from nearest item frame
-data modify storage ra:temp filter_item set from entity @e[type=item_frame,distance=..1.4,limit=1,sort=nearest] Item
+data modify storage ra:temp filter_item set from entity @e[type=item_frame,distance=..1.1,limit=1,sort=nearest] Item
 execute unless data storage ra:temp filter_item.id run return 0
 
 # Compare item IDs
