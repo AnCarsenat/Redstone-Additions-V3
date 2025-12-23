@@ -18,6 +18,6 @@ execute if score #range ra.temp matches 8 if entity @a[distance=..8] run scorebo
 execute if score #range ra.temp matches 9 if entity @a[distance=..9] run scoreboard players set #detected ra.temp 1
 execute if score #range ra.temp matches 10.. if entity @a[distance=..10] run scoreboard players set #detected ra.temp 1
 
-# Output redstone signal based on detection
-execute if score #detected ra.temp matches 1 run setblock ~ ~ ~ observer[powered=true]
-execute if score #detected ra.temp matches 0 run setblock ~ ~ ~ observer[powered=false]
+# Only update block if state changed (prevents flashing)
+execute if score #detected ra.temp matches 1 unless block ~ ~ ~ observer[powered=true] run setblock ~ ~ ~ observer[powered=true]
+execute if score #detected ra.temp matches 0 unless block ~ ~ ~ observer[powered=false] run setblock ~ ~ ~ observer[powered=false]
