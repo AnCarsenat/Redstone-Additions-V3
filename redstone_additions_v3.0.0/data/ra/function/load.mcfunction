@@ -11,7 +11,11 @@ function ra:tick
 function ra_interactive:load
 function ra_sensors:load
 
+# Core scoreboards
 scoreboard objectives add ra.cooldown dummy
+
+# Carrot on a stick click detection (for data handler)
+scoreboard objectives add ra.coas_click minecraft.used:minecraft.carrot_on_a_stick
 
 # Welcome message
 tellraw @a [{"text":"[","color":"dark_gray"},{"text":"RA","color":"gold","bold":true},{"text":"] ","color":"dark_gray"},{"text":"Redstone Additions v3.1.0 loaded!","color":"green"}]

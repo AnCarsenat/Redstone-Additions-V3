@@ -7,7 +7,13 @@ execute unless entity @s[tag=ra.place.tag_checker] run return 0
 # Place purple glazed terracotta with armor stand marker (dir_type:0 = non-directional)
 function ra_lib:placement/place {block_id:"minecraft:purple_glazed_terracotta",block_tag:"tag_checker",dir_type:0}
 
-# Copy properties from the spawned bat to the armor stand
-data modify entity @e[tag=ra.custom_block.tag_checker,tag=ra.new,limit=1] data.properties set from entity @s properties
+# Initialize default properties first
+data modify entity @e[tag=ra.custom_block.tag_checker,tag=ra.new,limit=1] data.properties set value {range:5,tag:"custom_tag",entity_type:""}
+
+# Copy properties from the spawned bat to the armor stand (overrides defaults if bat has them)
+execute if data entity @s properties run data modify entity @e[tag=ra.custom_block.tag_checker,tag=ra.new,limit=1] data.properties set from entity @s properties
+
+# Remove ra.new tag now that setup is complete
+tag @e[tag=ra.custom_block.tag_checker,tag=ra.new] remove ra.new
 
 return 1

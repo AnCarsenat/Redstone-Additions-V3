@@ -9,4 +9,7 @@ execute unless entity @s[tag=ra.place.item_pipe] run return 0
 # Place the block using the library (dir_type:2 = full 6-directional)
 function ra_lib:placement/place {block_id:"minecraft:dispenser",block_tag:"item_pipe",dir_type:2}
 
+# Remove ra.new tag now that setup is complete
+tag @e[tag=ra.custom_block.item_pipe,tag=ra.new] remove ra.new
+
 return 1

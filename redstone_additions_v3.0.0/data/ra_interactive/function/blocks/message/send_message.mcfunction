@@ -4,10 +4,17 @@
 # Copy message to storage
 data modify storage ra:temp message set from entity @s data.properties.message
 
-# Send tellraw with the message based on range
-execute if score #range ra.temp matches ..8 run tellraw @a[distance=..8] [{"text":"[Message] ","color":"yellow"},{"nbt":"message","storage":"ra:temp","color":"white"}]
-execute if score #range ra.temp matches 9..16 run tellraw @a[distance=..16] [{"text":"[Message] ","color":"yellow"},{"nbt":"message","storage":"ra:temp","color":"white"}]
-execute if score #range ra.temp matches 17..32 run tellraw @a[distance=..32] [{"text":"[Message] ","color":"yellow"},{"nbt":"message","storage":"ra:temp","color":"white"}]
-execute if score #range ra.temp matches 33.. run tellraw @a[distance=..64] [{"text":"[Message] ","color":"yellow"},{"nbt":"message","storage":"ra:temp","color":"white"}]
+# Get range value
+execute store result score #range ra.temp run data get entity @s data.properties.range
+execute if score #range ra.temp matches ..0 run scoreboard players set #range ra.temp 16
 
-playsound minecraft:block.note_block.chime block @a[distance=..16] ~ ~ ~ 0.5 1.2
+# Send tellraw to players within range (use execute if to check range brackets)
+# Use interpret:true to parse JSON text components in the message
+execute if score #range ra.temp matches ..8 run tellraw @a[distance=..8] [{"text":"[Message] ","color":"yellow"},{"nbt":"message","storage":"ra:temp","interpret":true}]
+execute if score #range ra.temp matches 9..16 run tellraw @a[distance=..16] [{"text":"[Message] ","color":"yellow"},{"nbt":"message","storage":"ra:temp","interpret":true}]
+execute if score #range ra.temp matches 17..32 run tellraw @a[distance=..32] [{"text":"[Message] ","color":"yellow"},{"nbt":"message","storage":"ra:temp","interpret":true}]
+execute if score #range ra.temp matches 33.. run tellraw @a[distance=..64] [{"text":"[Message] ","color":"yellow"},{"nbt":"message","storage":"ra:temp","interpret":true}]
+
+execute if score #range ra.temp matches ..16 run playsound minecraft:block.note_block.chime block @a[distance=..16] ~ ~ ~ 0.5 1.2
+execute if score #range ra.temp matches 17..32 run playsound minecraft:block.note_block.chime block @a[distance=..32] ~ ~ ~ 0.5 1.2
+execute if score #range ra.temp matches 33.. run playsound minecraft:block.note_block.chime block @a[distance=..64] ~ ~ ~ 0.5 1.2
