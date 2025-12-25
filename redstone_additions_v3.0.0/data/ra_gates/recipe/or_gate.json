@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "redstone",
+  "pattern": [
+    "SSS",
+    "R R",
+    "SSS"
+  ],
+  "key": {
+    "S": "minecraft:smooth_stone_slab",
+    "R": "minecraft:redstone"
+  },
+  "result": {
+    "id": "minecraft:bat_spawn_egg",
+    "components": {
+      "minecraft:item_model": "minecraft:smooth_stone_slab",
+      "minecraft:item_name": "OR Gate",
+      "minecraft:custom_data": { "ra": { "or_gate": true } },
+      "minecraft:entity_data": {
+        "id": "minecraft:bat",
+        "Tags": ["ra.spawned", "ra.place.or_gate"],
+        "Silent": true,
+        "NoAI": true,
+        "Invulnerable": true
+      }
+    }
+  },
+  "show_notification": true
+}

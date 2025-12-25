@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    "CCC",
+    "NPR",
+    "CCC"
+  ],
+  "key": {
+    "C": "minecraft:cobblestone",
+    "N": "minecraft:name_tag",
+    "P": "minecraft:purple_glazed_terracotta",
+    "R": "minecraft:comparator"
+  },
+  "result": {
+    "id": "minecraft:bat_spawn_egg",
+    "components": {
+      "minecraft:item_model": "minecraft:purple_glazed_terracotta",
+      "minecraft:item_name": "Tag Checker",
+      "minecraft:custom_data": { "ra": { "tag_checker": true } },
+      "minecraft:entity_data": {
+        "id": "minecraft:bat",
+        "Tags": ["ra.spawned", "ra.place.tag_checker"],
+        "Silent": true,
+        "NoAI": true,
+        "Invulnerable": true,
+        "properties": { "range": 5, "tag": "custom_tag", "entity_type": "" }
+      }
+    }
+  },
+  "show_notification": true
+}

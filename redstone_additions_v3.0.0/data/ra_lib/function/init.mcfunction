@@ -6,6 +6,7 @@ function ra_lib:placement/init
 function ra_lib:removal/init
 function ra_lib:inventory/init
 function ra_lib:redstone/init
+function ra_lib:crafting/init
 
 # Data handler scoreboards
 scoreboard objectives add ra.edit_type trigger
