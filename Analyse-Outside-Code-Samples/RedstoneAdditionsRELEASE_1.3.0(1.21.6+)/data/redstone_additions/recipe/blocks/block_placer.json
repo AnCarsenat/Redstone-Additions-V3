@@ -1,0 +1,39 @@
+{
+    HIDDEN
+    "type": "minecraft:crafting_shaped",
+    "category": "redstone",
+    "pattern": [
+        "###",
+        "BDR",
+        "###"
+    ],
+    "key": {
+        "#": [
+            "minecraft:cobblestone",
+            "minecraft:blackstone"
+        ],
+        "B": "minecraft:bow",
+        "D": "minecraft:dispenser",
+        "R": "minecraft:redstone_block"
+    },
+    "result": {
+        "id": "minecraft:item_frame",
+        "components": {
+            "minecraft:item_name": {"text":"block_placer"},
+            "minecraft:item_model": "minecraft:dispenser",
+            "minecraft:custom_data": {
+                "block_placer": true
+            },
+            "minecraft:entity_data": {
+                "id": "item_frame",
+                "Tags": [
+                    "reddition.blocks.block_place.block_placer",
+                    "reddition.blocks",
+                    "reddition.has_cooldown"
+                ]
+            }
+        },
+        "count": 1
+    },
+    "show_notification": true
+}

@@ -1,0 +1,1 @@
+tellraw @a ["",{"text":"=","color":"yellow"},{"text":"Redstone Additions Settings v1.0","color":"gold"},{"text":"=\nSettings>Blocks>Disable/Enable","color":"yellow"},"\n\n[","Block Placer","] (",{"score":{"objective":"BlockPlacer","name":"redstone_additions:settings.blocks"}},")\n[","Block Breaker","]()\n[","Breeder","]      ()\n[","LVGEN","]        ()\n[","MNGEN","]        ()"]

@@ -10,6 +10,7 @@ function ra:tick
 # Initialize sub-modules
 function ra_interactive:load
 function ra_sensors:load
+function ra_gates:load
 
 # Core scoreboards
 scoreboard objectives add ra.cooldown dummy

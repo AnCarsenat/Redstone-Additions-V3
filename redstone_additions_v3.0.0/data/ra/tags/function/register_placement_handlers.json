@@ -14,6 +14,13 @@
     "ra_sensors:blocks/entity_detector/handle_placement",
     "ra_sensors:blocks/tag_adder/handle_placement",
     "ra_sensors:blocks/tag_remover/handle_placement",
-    "ra_sensors:blocks/tag_checker/handle_placement"
+    "ra_sensors:blocks/tag_checker/handle_placement",
+    "ra_gates:blocks/and_gate/handle_placement",
+    "ra_gates:blocks/or_gate/handle_placement",
+    "ra_gates:blocks/not_gate/handle_placement",
+    "ra_gates:blocks/xor_gate/handle_placement",
+    "ra_gates:blocks/nand_gate/handle_placement",
+    "ra_gates:blocks/nor_gate/handle_placement",
+    "ra_gates:blocks/xnor_gate/handle_placement"
   ]
 }

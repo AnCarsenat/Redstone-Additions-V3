@@ -1,0 +1,35 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "redstone",
+    "pattern": [
+        "CNC",
+        "GAG",
+        "CGC"
+    ],
+    "key": {
+        "N": "minecraft:netherite_upgrade_smithing_template",
+        "C": "minecraft:copper_block",
+        "G": "minecraft:copper_grate",
+        "A": "minecraft:cauldron"
+    },
+    "result": {
+        "id": "minecraft:command_block",
+        "components": {
+            "minecraft:item_name": {"text":"reactor"},
+            "minecraft:item_model": "minecraft:waxed_exposed_copper_grate",
+            "minecraft:custom_data": {
+                "reactor": true
+            },
+            "minecraft:entity_data": {
+                "id": "item_frame",
+                "Tags": [
+                    "reddition.blocks.block_place.reactor",
+                    "reddition.blocks",
+                    "reddition.has_cooldown"
+                ]
+            }
+        },
+        "count": 1
+    }, 
+"show_notification": true
+}

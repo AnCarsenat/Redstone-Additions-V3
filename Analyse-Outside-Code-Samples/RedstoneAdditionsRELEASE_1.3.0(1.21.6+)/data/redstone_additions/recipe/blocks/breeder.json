@@ -1,0 +1,35 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "redstone",
+    "pattern": [
+        "CCC",
+        "GAB",
+        "CCC"
+    ],
+    "key": {
+        "C": "minecraft:cobblestone",
+        "G": "minecraft:apple",
+        "A": "minecraft:dispenser",
+        "B": "copper_ingot"
+    },
+    "result": {
+        "id": "minecraft:item_frame",
+        "components": {
+            "minecraft:item_name": {"text":"breeder"},
+            "minecraft:item_model": "minecraft:dispenser",
+            "minecraft:custom_data": {
+                "breeder": true
+            },
+            "minecraft:entity_data": {
+                "id": "item_frame",
+                "Tags": [
+                    "reddition.blocks.block_place.breeder",
+                    "reddition.blocks",
+                    "reddition.has_cooldown"
+                ]
+            }
+        },
+        "count": 1
+    },
+    "show_notification": true
+}

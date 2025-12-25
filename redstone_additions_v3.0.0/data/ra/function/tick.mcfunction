@@ -13,6 +13,9 @@ function ra_interactive:tick
 # Run sensor blocks tick
 function ra_sensors:tick
 
+# Run logic gates tick
+function ra_gates:tick
+
 # Run data handler tick
 function ra:tools/creative_data_handler/tick
 

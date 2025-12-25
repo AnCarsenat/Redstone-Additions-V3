@@ -1,0 +1,38 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "redstone",
+    "pattern": [
+        "###",
+        "RCi",
+        "###"
+    ],
+    "key": {
+        "#": [
+            "minecraft:cobblestone",
+            "minecraft:blackstone"
+        ],
+        "R": "minecraft:redstone",
+        "C": "minecraft:copper_ingot",
+        "i": "minecraft:iron_ingot"
+    },
+    "result": {
+        "id": "minecraft:item_frame",
+        "components": {
+            "minecraft:item_name": {"text":"conveyor"},
+            "minecraft:item_model": "minecraft:dropper",
+            "minecraft:custom_data": {
+                "conveyor": true
+            },
+            "minecraft:entity_data": {
+                "id": "item_frame",
+                "Tags": [
+                    "reddition.blocks.block_place.conveyor",
+                    "reddition.blocks",
+                    "reddition.has_cooldown"
+                ]
+            }
+        },
+        "count": 1
+    },
+    "show_notification": true
+}

@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "description": "Reddition by CaptainDragons",
+    "pack_format": 81,
+    "supported_formats": {
+      "min_inclusive": 81,
+      "max_inclusive": 999
+    }
+  }
+}

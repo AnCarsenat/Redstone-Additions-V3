@@ -1,0 +1,34 @@
+{
+    HIDDEN
+    "parent": "minecraft:recipes/root",
+    "criteria": {
+        "has_the_recipe": {
+            "conditions": {
+                "recipe": "redstone_additions:blocks/block_placer"
+            },
+            "trigger": "minecraft:recipe_unlocked"
+        },
+        "has_the_items": {
+            "conditions": {
+                "items": [                    
+                    {
+                        "items": "minecraft:dispenser"
+                    }
+                ]
+            },
+            "trigger": "minecraft:inventory_changed"
+        }
+    },
+    "requirements": [
+        [   
+            "has_the_recipe",
+            "has_the_items"
+        ]
+    ],
+    "rewards": {
+        "recipes": [
+            "redstone_additions:blocks/block_placer"
+        ]
+    },
+    "sends_telemetry_event": true
+}
