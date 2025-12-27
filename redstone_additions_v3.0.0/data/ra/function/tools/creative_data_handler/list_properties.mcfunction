@@ -13,8 +13,8 @@ execute if data storage ra:cdh properties.message run function ra:tools/creative
 # Check for 'tag' property (typically str)
 execute if data storage ra:cdh properties.tag run function ra:tools/creative_data_handler/props/show_tag
 
-# Check for 'entity_type' property (typically str)
-execute if data storage ra:cdh properties.entity_type run function ra:tools/creative_data_handler/props/show_entity_type
+# Check for 'entity_selector' property (typically str)
+execute if data storage ra:cdh properties.entity_selector run function ra:tools/creative_data_handler/props/show_entity_selector
 
 # Check for 'inverted' property (typically bool)
 execute if data storage ra:cdh properties.inverted run function ra:tools/creative_data_handler/props/show_inverted

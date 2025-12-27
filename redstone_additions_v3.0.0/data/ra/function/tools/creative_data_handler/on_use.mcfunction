@@ -2,7 +2,7 @@
 # Handle creative data handler click. As player (from advancement).
 
 # Revoke advancement so it can trigger again
-advancement revoke @s only ra:tools/creative_data_handler_click
+advancement revoke @s only ra:tools/creative_data_handler_use
 
 # Remove target tag from any previously selected block
 tag @e[tag=ra.cdh_target] remove ra.cdh_target
