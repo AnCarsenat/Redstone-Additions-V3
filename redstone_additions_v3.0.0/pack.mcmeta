@@ -10,10 +10,8 @@
       {"text": "by ", "color": "gray"},
       {"text": "Ancar", "color": "aqua", "underlined": true}
     ],
-    "pack_format": 61,
-    "supported_formats": {
-      "min_inclusive": 61,
-      "max_inclusive": 999
-    }
+    "pack_format": 88,
+    "min_format": 88, 
+    "max_format": 95
   }
 }
