@@ -19,8 +19,12 @@ execute if data storage ra:cdh properties.entity_selector run function ra:tools/
 # Check for 'inverted' property (typically bool)
 execute if data storage ra:cdh properties.inverted run function ra:tools/creative_data_handler/props/show_inverted
 
+
 # Check for 'delay' property (typically int)
 execute if data storage ra:cdh properties.delay run function ra:tools/creative_data_handler/props/show_delay
+
+# Check for 'cooldown' property (typically int)
+execute if data storage ra:cdh properties.cooldown run function ra:tools/creative_data_handler/props/show_cooldown
 
 # Check for 'power' property (typically int)
 execute if data storage ra:cdh properties.power run function ra:tools/creative_data_handler/props/show_power

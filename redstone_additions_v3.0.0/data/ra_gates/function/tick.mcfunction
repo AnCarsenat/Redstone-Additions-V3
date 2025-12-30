@@ -12,3 +12,4 @@ function ra_gates:blocks/xor_gate/tick
 function ra_gates:blocks/nand_gate/tick
 function ra_gates:blocks/nor_gate/tick
 function ra_gates:blocks/xnor_gate/tick
+function ra_gates:blocks/clock/tick

@@ -1,0 +1,12 @@
+# /ra_gates:blocks/clock/on_break
+# Handle AND gate break
+
+
+# Revert any redstone blocks back to iron blocks
+fill ~-1 ~-1 ~-1 ~1 ~1 ~1 iron_block replace redstone_block
+
+# Drop the AND Gate item at the armor stand's position
+summon item ~ ~ ~ {Item:{id:"minecraft:bat_spawn_egg",count:1,components:{"minecraft:item_model":"minecraft:daylight_detector","minecraft:item_name":"Clock","minecraft:custom_data":{ra:{clock:1b}},"minecraft:entity_data":{id:"minecraft:bat",Tags:["ra.spawned","ra.place.clock"],Silent:1b,NoAI:1b,Invulnerable:1b}}},Tags:["ra.drop_temp"]}
+
+# Kill the armor stand
+kill @s

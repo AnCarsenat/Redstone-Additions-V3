@@ -8,3 +8,4 @@ function ra_gates:blocks/xor_gate/give
 function ra_gates:blocks/nand_gate/give
 function ra_gates:blocks/nor_gate/give
 function ra_gates:blocks/xnor_gate/give
+function ra_gates:blocks/clock/give
