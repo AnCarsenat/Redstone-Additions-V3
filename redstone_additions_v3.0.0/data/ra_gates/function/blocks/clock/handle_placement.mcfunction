@@ -14,5 +14,3 @@ data modify entity @e[tag=ra.custom_block.clock,tag=ra.new,limit=1] data.propert
 scoreboard players set @e[tag=ra.custom_block.clock,tag=ra.new] ra.cooldown 0
 
 return 1
-
-

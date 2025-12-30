@@ -38,5 +38,9 @@ execute if data storage ra:cdh properties.target run function ra:tools/creative_
 # Check for 'enabled' property (typically bool)
 execute if data storage ra:cdh properties.enabled run function ra:tools/creative_data_handler/props/show_enabled
 
+# Check for 'gate' property (typically bool)
+execute if data storage ra:cdh properties.gate run function ra:tools/creative_data_handler/props/show_gate
+
+
 # If no properties, show message
 execute unless data storage ra:cdh properties run tellraw @s [{"text":"  (no properties)","color":"dark_gray","italic":true}]

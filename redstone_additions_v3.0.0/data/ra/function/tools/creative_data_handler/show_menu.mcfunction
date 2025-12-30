@@ -7,7 +7,7 @@ tellraw @s [{"text":"Block: ","color":"gray"},{"nbt":"block_type","storage":"ra:
 tellraw @s ""
 
 # Properties header with Add button
-tellraw @s [{"text":"─── Properties ───","color":"yellow"},{"text":" "},{"text":"[+Add]","color":"green","click_event":{"action":"suggest_command","command":"/data modify entity @e[tag=ra.cdh_target,limit=1] data.properties.new_property set value \"value\""},"hover_event":{"action":"show_text","value":"Add new property"}}]
+tellraw @s [{"text":"─── Properties ───","color":"yellow"},{"text":" "},{"text":"[+Add]","color":"green","click_event":{"action":"suggest_command","command":"/function ra:tools/creative_data_handler/add_property {name:\"\",value:\"\",type:\"\"}"},"hover_event":{"action":"show_text","value":"Add new property"}}]
 tellraw @s [{"text":"  Properties: ","color":"gray"},{"nbt":"properties","storage":"ra:cdh","color":"white"}]
 
 # List all properties dynamically

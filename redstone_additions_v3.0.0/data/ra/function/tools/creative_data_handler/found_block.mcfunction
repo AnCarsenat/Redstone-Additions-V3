@@ -31,7 +31,10 @@ execute if entity @s[tag=ra.custom_block.entity_detector] run data modify storag
 execute if entity @s[tag=ra.custom_block.tag_checker] run data modify storage ra:cdh block_type set value "Tag Checker"
 execute if entity @s[tag=ra.custom_block.tag_adder] run data modify storage ra:cdh block_type set value "Tag Adder"
 execute if entity @s[tag=ra.custom_block.tag_remover] run data modify storage ra:cdh block_type set value "Tag Remover"
+
+# Gate blocks
 execute if entity @s[tag=ra.custom_block.clock] run data modify storage ra:cdh block_type set value "Clock"
+execute if entity @s[tag=ra.custom_block.uni_gate] run data modify storage ra:cdh block_type set value "UNI Gate"
 
 # Store properties and internal data
 data modify storage ra:cdh properties set from entity @s data.properties
