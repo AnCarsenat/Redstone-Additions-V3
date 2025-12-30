@@ -9,9 +9,7 @@ function ra_lib:placement/place {block_id:"minecraft:smooth_stone_slab",block_ta
 # Add checkRed tag for signal detection
 tag @e[tag=ra.custom_block.uni_gate,tag=ra.new] add ra.checkRed
 
-# Copy properties from the spawned bat to the armor stand (overrides defaults if bat has them)
-execute if data entity @s properties run data modify entity @e[tag=ra.custom_block.uni_gate,tag=ra.new,limit=1] data.properties set from entity @s properties
-# Always set cooldown property to 20 after copying (overwrites any delay property)
+# Set default properties
 data modify entity @e[tag=ra.custom_block.uni_gate,tag=ra.new,limit=1] data.properties.gate set value "AND"
 scoreboard players set @e[tag=ra.custom_block.uni_gate,tag=ra.new] ra.cooldown 0
 
