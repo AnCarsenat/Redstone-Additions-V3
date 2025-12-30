@@ -1,4 +1,0 @@
-scoreboard objectives remove dpb_var
-scoreboard objectives remove redstone_additions.command_feedback
-scoreboard objectives remove redstone_additions.delay
-scoreboard objectives remove redstone_additions.temp

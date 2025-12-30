@@ -1,1 +1,0 @@
-execute at @e[tag=GATESSET,limit=1,sort=nearest,distance=..6] run summon minecraft:armor_stand ~ ~ ~ {CustomNameVisible:0b,CustomName:"{\"text\":\"NAND\",\"color\":\"aqua\",\"bold\":\"true\"}",NoGravity:1b,Invulnerable:1b,Small:1b,Marker:1b,Invisible:1b,NoBasePlate:1b,PersistenceRequired:1b,Tags:["NAND","createNAND","checkRed","redexp","out_affect","GATE"]}

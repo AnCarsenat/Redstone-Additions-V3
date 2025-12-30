@@ -1,4 +1,0 @@
-tag @a[nbt={SelectedItem:{id:"minecraft:structure_void"}},gamemode=survival] add giveFurnance
-give @a[tag=giveFurnance] minecraft:armor_stand{redstone:1b,display:{Name:"{\"text\":\"REDSTONE FURNANCE\",\"color\":\"aqua\",\"bold\":\"true\",\"italic\":\"false\"}",Lore:["Activates, if it receives a","redstone signal.","It is craftable, look it up here:","https://imgur.com/y2ZMPyz","Smelts slower than a normal one."]},HideFlags:1,Enchantments:[{id:"minecraft:fortune",lvl:1}],EntityTag:{CustomNameVisible:0b,CustomName:"{\"text\":\"REDSTONE FURNANCE\",\"color\":\"aqua\",\"bold\":\"true\"}",NoGravity:1b,Invulnerable:1b,Small:1b,Marker:1b,Invisible:1b,NoBasePlate:1b,PersistenceRequired:1b,Tags:["FURNANCE","createFURNANCE","redexp","checkRed"]}} 1
-clear @a[tag=giveFurnance] structure_void 1
-tag @a[tag=giveFurnance] remove giveFurnance

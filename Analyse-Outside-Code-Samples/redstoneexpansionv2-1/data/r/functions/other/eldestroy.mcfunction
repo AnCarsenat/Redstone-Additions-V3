@@ -1,4 +1,0 @@
-tellraw @a[distance=..12,tag=!reddestorynottell] ["",{"text":" An ","color":"gray"},{"text":"element ","color":"gold"},{"text":"of the ","color":"gray"},{"text":"redstone expansion ","color":"gold"},{"text":"has been ","color":"gray"},{"text":"destroyed\n ","color":"gold"},{"text":"(","color":"gray"},{"selector":"@s","bold":true,"color":"aqua"},{"text":") [","color":"gray"},{"text":"don't tell me again","color":"gold","clickEvent":{"action":"run_command","value":"/tag @s add reddestorynottell"}},{"text":"]","color":"gray"}]
-particle cloud ~ ~ ~ 0.3 0.3 0.3 0.1 40
-execute at @s[tag=!HOPPER,tag=!FURNANCE] run kill @e[type=item,distance=..0.8]
-kill @s

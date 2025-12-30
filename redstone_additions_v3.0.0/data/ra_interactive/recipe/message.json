@@ -23,8 +23,7 @@
         "Tags": ["ra.spawned", "ra.place.message_block"],
         "Silent": true,
         "NoAI": true,
-        "Invulnerable": true,
-        "properties": { "message": "Hello World!", "range": 16 }
+        "Invulnerable": true
       }
     }
   },

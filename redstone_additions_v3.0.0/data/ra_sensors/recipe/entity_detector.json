@@ -23,8 +23,7 @@
         "Tags": ["ra.spawned", "ra.place.entity_detector"],
         "Silent": true,
         "NoAI": true,
-        "Invulnerable": true,
-        "properties": { "range": 5, "entity_type": "minecraft:pig" }
+        "Invulnerable": true
       }
     }
   },

@@ -1,2 +1,0 @@
-function redstone_additions:crafting/press/items/lava_reactor
-function redstone_additions:crafting/press/items/mineral_reactor

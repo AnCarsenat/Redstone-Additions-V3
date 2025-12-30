@@ -23,8 +23,7 @@
         "Tags": ["ra.spawned", "ra.place.tag_adder"],
         "Silent": true,
         "NoAI": true,
-        "Invulnerable": true,
-        "properties": { "range": 3, "tag": "custom_tag", "entity_type": "" }
+        "Invulnerable": true
       }
     }
   },

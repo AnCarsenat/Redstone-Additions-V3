@@ -3,14 +3,13 @@
   "category": "redstone",
   "pattern": [
     "CCC",
-    "PDR",
+    "CDP",
     "CCC"
   ],
   "key": {
     "C": ["minecraft:cobblestone", "minecraft:blackstone"],
     "P": "minecraft:stone_pickaxe",
-    "D": "minecraft:dispenser",
-    "R": "minecraft:redstone_block"
+    "D": "minecraft:dispenser"
   },
   "result": {
     "id": "minecraft:bat_spawn_egg",
