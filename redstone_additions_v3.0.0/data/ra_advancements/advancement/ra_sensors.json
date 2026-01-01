@@ -1,0 +1,21 @@
+{
+  "parent": "ra_advancements:ra",
+  "display": {
+    "icon": { "id": "minecraft:observer" },
+    "title": "Redstone Sensors",
+    "description": "Utilize sensors to detect the world around you.",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "get_sensor_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": ["minecraft:observer"] }
+        ]
+      }
+    }
+  }
+}

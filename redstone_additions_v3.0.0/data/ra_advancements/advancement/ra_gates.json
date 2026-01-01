@@ -1,0 +1,21 @@
+{
+  "parent": "ra_advancements:ra",
+  "display": {
+    "icon": { "id": "minecraft:comparator" },
+    "title": "Redstone Gates",
+    "description": "Unlock the power of logic gates.",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "get_gate_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": ["minecraft:comparator"] }
+        ]
+      }
+    }
+  }
+}
