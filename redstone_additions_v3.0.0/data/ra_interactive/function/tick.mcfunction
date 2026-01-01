@@ -5,7 +5,7 @@ function ra_interactive:blocks/block_breaker/tick
 function ra_interactive:blocks/spitter/tick
 function ra_interactive:blocks/block_placer/tick
 function ra_interactive:blocks/pusher/tick
-function ra_interactive:blocks/conveyor/tick
+function ra_interactive:blocks/item_pipe/tick
 function ra_interactive:blocks/breeder/tick
 function ra_interactive:blocks/infinite_water_cauldron/tick
 function ra_interactive:blocks/infinite_lava_cauldron/tick

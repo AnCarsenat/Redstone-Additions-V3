@@ -5,7 +5,7 @@ function ra_interactive:blocks/block_breaker/give
 function ra_interactive:blocks/spitter/give
 function ra_interactive:blocks/block_placer/give
 function ra_interactive:blocks/pusher/give
-function ra_interactive:blocks/conveyor/give
+function ra_interactive:blocks/item_pipe/give
 function ra_interactive:blocks/breeder/give
 function ra_interactive:blocks/infinite_water_cauldron/give
 function ra_interactive:blocks/infinite_lava_cauldron/give
