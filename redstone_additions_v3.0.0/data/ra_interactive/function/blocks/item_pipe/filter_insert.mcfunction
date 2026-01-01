@@ -1,4 +1,4 @@
-# /ra_interactive:blocks/conveyor/filter_insert
+# /ra_interactive:blocks/item_pipe/filter_insert
 # Insert filtered item into container at current position.
 # Input: storage ra:temp pipe_item = item to insert
 # Output: #filtered ra.temp = 1 if successful

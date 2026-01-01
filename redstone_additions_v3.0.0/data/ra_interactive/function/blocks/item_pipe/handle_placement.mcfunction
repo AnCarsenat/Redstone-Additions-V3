@@ -1,4 +1,4 @@
-# /ra_interactive:blocks/conveyor/handle_placement
+# /ra_interactive:blocks/item_pipe/handle_placement
 # Handle item pipe placement
 # Context: as bat, at bat position
 # Called via function tag ra:register_placement

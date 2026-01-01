@@ -1,4 +1,4 @@
-# /ra_interactive:blocks/conveyor/process
+# /ra_interactive:blocks/item_pipe/process
 # Process item pipe logic. As armor stand (rotated to face output), at dispenser position.
 # Features:
 # - Check for filter item frame on ANY side of the pipe block
@@ -27,14 +27,14 @@ scoreboard players set #filtered ra.temp 0
 scoreboard players set #transferred ra.temp 0
 
 # Check for filter on any side of the block
-function ra_interactive:blocks/conveyor/check_filter
+function ra_interactive:blocks/item_pipe/check_filter
 
 # If filtered to side, we're done
 execute if score #filtered ra.temp matches 1 run return 1
 
 # Not filtered - try to send forward (^ ^ ^1)
-execute positioned ^ ^ ^1 if block ~ ~ ~ #ra_lib:containers run function ra_interactive:blocks/conveyor/transfer
+execute positioned ^ ^ ^1 if block ~ ~ ~ #ra_lib:containers run function ra_interactive:blocks/item_pipe/transfer
 execute if score #transferred ra.temp matches 1 run return 1
 
 # No valid output - shoot the item out
-function ra_interactive:blocks/conveyor/shoot
+function ra_interactive:blocks/item_pipe/shoot

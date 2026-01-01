@@ -1,4 +1,4 @@
-# /ra_interactive:blocks/conveyor/shoot
+# /ra_interactive:blocks/item_pipe/shoot
 # Shoot item out of pipe as entity. As armor stand, at pipe position.
 # No valid output - eject the item in front of the pipe.
 # Input: storage ra:temp pipe_item = item to shoot

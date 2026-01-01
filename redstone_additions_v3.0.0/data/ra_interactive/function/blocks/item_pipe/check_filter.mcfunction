@@ -1,4 +1,4 @@
-# /ra_interactive:blocks/conveyor/check_filter
+# /ra_interactive:blocks/item_pipe/check_filter
 # Check for filter item frame on the pipe block. At pipe position.
 # If item matches filter, send to any adjacent container (not forward).
 # Input: storage ra:temp pipe_item = item to check
@@ -20,8 +20,8 @@ execute if score #different ra.temp matches 1 run return 0
 
 # Items match! Try to insert into any adjacent container (except forward)
 # Try each side: down, up, left, right, back
-execute if score #filtered ra.temp matches 0 positioned ~ ~-1 ~ if block ~ ~ ~ #ra_lib:containers run function ra_interactive:blocks/conveyor/filter_insert
-execute if score #filtered ra.temp matches 0 positioned ~ ~1 ~ if block ~ ~ ~ #ra_lib:containers run function ra_interactive:blocks/conveyor/filter_insert
-execute if score #filtered ra.temp matches 0 positioned ^-1 ^ ^ if block ~ ~ ~ #ra_lib:containers run function ra_interactive:blocks/conveyor/filter_insert
-execute if score #filtered ra.temp matches 0 positioned ^1 ^ ^ if block ~ ~ ~ #ra_lib:containers run function ra_interactive:blocks/conveyor/filter_insert
-execute if score #filtered ra.temp matches 0 positioned ^ ^ ^-1 if block ~ ~ ~ #ra_lib:containers run function ra_interactive:blocks/conveyor/filter_insert
+execute if score #filtered ra.temp matches 0 positioned ~ ~-1 ~ if block ~ ~ ~ #ra_lib:containers run function ra_interactive:blocks/item_pipe/filter_insert
+execute if score #filtered ra.temp matches 0 positioned ~ ~1 ~ if block ~ ~ ~ #ra_lib:containers run function ra_interactive:blocks/item_pipe/filter_insert
+execute if score #filtered ra.temp matches 0 positioned ^-1 ^ ^ if block ~ ~ ~ #ra_lib:containers run function ra_interactive:blocks/item_pipe/filter_insert
+execute if score #filtered ra.temp matches 0 positioned ^1 ^ ^ if block ~ ~ ~ #ra_lib:containers run function ra_interactive:blocks/item_pipe/filter_insert
+execute if score #filtered ra.temp matches 0 positioned ^ ^ ^-1 if block ~ ~ ~ #ra_lib:containers run function ra_interactive:blocks/item_pipe/filter_insert
