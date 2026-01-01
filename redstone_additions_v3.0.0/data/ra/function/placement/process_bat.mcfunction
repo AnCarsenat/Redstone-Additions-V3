@@ -13,7 +13,7 @@ execute store result score #y ra.temp run data get entity @s Pos[1]
 execute store result score #z ra.temp run data get entity @s Pos[2]
 
 # Get block definition from bat's custom data and route to registry
-function #ra:register_placement_handlers
+function #ra:placement_handlers
 
 # Clean up
 tag @a[tag=ra.placer] remove ra.placer
