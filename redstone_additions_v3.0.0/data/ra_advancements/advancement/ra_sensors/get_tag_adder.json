@@ -6,7 +6,6 @@
     },
     "title": "Tag Adder",
     "description": "Obtain the Tag Adder item.",
-    "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true
   },

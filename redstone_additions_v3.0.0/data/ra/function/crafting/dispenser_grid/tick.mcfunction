@@ -15,7 +15,7 @@ execute at @e[tag=ra.create_crafter] run setblock ~ ~ ~ dispenser[facing=down]{C
 tag @e[tag=ra.create_crafter] remove ra.create_crafter
 
 # Check if crafter still exists
-execute as @e[tag=ra.crafter] at @s unless block ~ ~ ~ dispenser run function ra_lib:crafting/dispenser/on_break
+execute as @e[tag=ra.crafter] at @s unless block ~ ~ ~ dispenser run function ra_lib:crafting/dispenser_grid/on_break
 
 # Reset craft ID
 scoreboard players set @e[tag=ra.crafter] ra.craft_id -1
@@ -24,4 +24,4 @@ scoreboard players set @e[tag=ra.crafter] ra.craft_id -1
 function #ra_lib:crafting/dispenser/recipes
 
 # Execute crafting for valid recipes
-execute as @e[tag=ra.crafter,scores={ra.craft_id=1..}] at @s run function ra_lib:crafting/dispenser/do_craft
+execute as @e[tag=ra.crafter,scores={ra.craft_id=1..}] at @s run function ra_lib:crafting/dispenser_grid/do_craft

@@ -5,4 +5,4 @@
 scoreboard objectives add ra.act_red dummy
 scoreboard objectives add ra.inac_red dummy
 
-tellraw @a [{"text":"[RA] ","color":"gold"},{"text":"Logic Gates module loaded","color":"gray"}]
+tellraw @a [{"text":"[","color":"dark_gray"},{"text":"RA","color":"gold","bold":true},{"text":"] ","color":"dark_gray"},{"text":"Logic Gates loaded!","color":"aqua"}]

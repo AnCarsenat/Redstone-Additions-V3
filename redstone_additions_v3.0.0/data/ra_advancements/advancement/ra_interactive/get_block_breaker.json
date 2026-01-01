@@ -6,7 +6,6 @@
     },
     "title": "Block Breaker",
     "description": "Obtain the Block Breaker item.",
-    "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true
   },

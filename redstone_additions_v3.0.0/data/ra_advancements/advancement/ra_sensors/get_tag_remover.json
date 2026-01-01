@@ -6,7 +6,6 @@
     },
     "title": "Tag Remover",
     "description": "Obtain the Tag Remover item.",
-    "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true
   },

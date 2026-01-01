@@ -4,9 +4,7 @@
     "icon": { "id": "minecraft:piston" },
     "title": "Redstone Interactive",
     "description": "Utilize blocks to interact with the world around you.",
-    "frame": "goal",
-    "show_toast": true,
-    "announce_to_chat": true
+    "show_toast": true
   },
   "criteria": {
     "get_sensor_item": {

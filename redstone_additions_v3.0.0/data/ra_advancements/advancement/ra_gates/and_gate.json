@@ -6,7 +6,6 @@
     },
     "title": "Uni Gate",
     "description": "Obtain the Uni Gate item.",
-    "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true
   },

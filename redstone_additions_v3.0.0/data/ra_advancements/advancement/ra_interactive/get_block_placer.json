@@ -6,7 +6,6 @@
     },
     "title": "Block Placer",
     "description": "Obtain the Block Placer item.",
-    "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true
   },
