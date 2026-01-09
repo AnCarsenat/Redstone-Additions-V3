@@ -14,13 +14,13 @@
     "ra_sensors:blocks/tag_adder/handle_placement",
     "ra_sensors:blocks/tag_remover/handle_placement",
     "ra_gates:blocks/uni_gate/handle_placement",
-    "ra_gates:blocks/and_gate/handle_placement",
-    "ra_gates:blocks/or_gate/handle_placement",
-    "ra_gates:blocks/not_gate/handle_placement",
-    "ra_gates:blocks/xor_gate/handle_placement",
-    "ra_gates:blocks/nand_gate/handle_placement",
-    "ra_gates:blocks/nor_gate/handle_placement",
-    "ra_gates:blocks/xnor_gate/handle_placement",
-    "ra_gates:blocks/clock/handle_placement"
+    "ra_gates:blocks/clock/handle_placement",
+    "ra_gates:blocks/delayer/handle_placement",
+    "ra_gates:blocks/extender/handle_placement",
+    "ra_gates:blocks/beamer/handle_placement",
+    "ra_gates:blocks/rand/handle_placement",
+    "ra_gates:blocks/shortener/handle_placement",
+    "ra_wireless:blocks/emitter/handle_placement",
+    "ra_wireless:blocks/receiver/handle_placement"
   ]
 }

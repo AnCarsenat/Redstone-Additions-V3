@@ -33,9 +33,15 @@
 - **Tag Adder** - Add tags to entities
 - **Tag Remover** - Remove tags from entities
 
+### � Wireless Redstone
+- **Wireless Emitter** - Transmit redstone signals wirelessly
+- **Wireless Receiver** - Receive signals on matching channels
+- **Redstone Remote** - Handheld remote to pulse receivers
+
 ### 🔧 Tools
 - **Wrench** - Cycle block modes and interact with structures
-- **Creative Data Handler** - Inspect block data and properties
+- **Creative Data Handler** - Inspect and edit block properties
+- **Redstone Remote** - Control wireless receivers remotely
 
 ---
 
@@ -127,7 +133,18 @@ Redstone Additions is built with extensibility in mind. The `ra_lib` namespace p
 
 ## 📋 Changelog
 
-### V3.0.0 (Current - January 2026)
+### V3.0.1 (Current - January 2026)
+- ✅ Added Wireless Redstone system (Emitter, Receiver, Remote)
+- ✅ Remote now pulses receivers (4-tick duration)
+- ✅ Creative Data Handler can now edit all block properties
+- ✅ Added [Modify] buttons to CDH property display
+- ✅ Added [Edit All] button to CDH menu
+- ✅ CDH supports all block properties (channel, distance, extend, pulse, entity_type)
+- ✅ Fixed JSON text event syntax (hover_event/click_event)
+- ✅ Added missing advancements for all blocks
+- ✅ Added ra_wireless namespace with full advancement tree
+
+### V3.0.0 (January 2026)
 - ✅ Complete rewrite from V1
 - ✅ Added 20+ custom blocks
 - ✅ UNI Gate with mode cycling

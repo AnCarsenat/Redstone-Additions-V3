@@ -4,6 +4,7 @@
 function ra_interactive:items/give_all
 function ra_sensors:items/give_all
 function ra_gates:items/give_all
+function ra_wireless:items/give_all
 function ra:tools/creative_data_handler/give
 function ra:tools/wrench/give
 give @s minecraft:iron_block[minecraft:item_name="Output 1"]

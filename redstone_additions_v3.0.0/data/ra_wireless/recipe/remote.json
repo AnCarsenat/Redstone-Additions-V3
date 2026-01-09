@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    " G ",
+    "GRG",
+    " S "
+  ],
+  "key": {
+    "G": "minecraft:gold_ingot",
+    "R": "minecraft:redstone",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "id": "minecraft:warped_fungus_on_a_stick",
+    "count": 1,
+    "components": {
+      "minecraft:item_model": "minecraft:red_dye",
+      "minecraft:item_name": "{\"text\":\"Redstone Remote\",\"color\":\"red\",\"italic\":false}",
+      "minecraft:custom_data": { "ra": { "remote": true, "channel": 1 } },
+      "minecraft:lore": ["{\"text\":\"Channel: 1\",\"color\":\"gray\",\"italic\":false}", "{\"text\":\"Right-click: Toggle all receivers\",\"color\":\"dark_gray\",\"italic\":false}", "{\"text\":\"Shift+Right: Change channel\",\"color\":\"dark_gray\",\"italic\":false}"]
+    }
+  },
+  "show_notification": true
+}

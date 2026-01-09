@@ -4,6 +4,7 @@
 # Check for break detection (only if block is air)
 execute as @e[tag=ra.custom_block.infinite_water_cauldron] at @s if block ~ ~ ~ #minecraft:air run tag @s add ra.broken
 execute as @e[tag=ra.broken,tag=ra.custom_block.infinite_water_cauldron] at @s run function ra_interactive:blocks/infinite_water_cauldron/on_break
+tag @e[tag=ra.broken,tag=ra.custom_block.infinite_water_cauldron] remove ra.broken
 
 # Refill cauldron if emptied or partially filled
 execute as @e[tag=ra.custom_block.infinite_water_cauldron] at @s if block ~ ~ ~ cauldron run setblock ~ ~ ~ water_cauldron[level=3]

@@ -19,6 +19,7 @@ function ra_lib:init
 function ra_interactive:load
 function ra_sensors:load
 function ra_gates:load
+function ra_wireless:load
 
 # ========================== TICKLOOP ==========================
 # Run tick
@@ -30,4 +31,4 @@ tellraw @a [{"text":"[RA_Lib] ","color":"gold"},{"text":"v3.1.0 loaded","color":
 
 # Welcome message
 tellraw @a [{"text":"[","color":"dark_gray"},{"text":"RA","color":"gold","bold":true},{"text":"] ","color":"dark_gray"},{"text":"Redstone Additions v3.1.0 loaded!","color":"green"}]
-tellraw @a [{"text":"Use ","color":"gray"},{"text":"/function ra:give_all_items","color":"yellow","hover_event":{action:"show_text",value:"Give all items"},"click_event":{"action":"suggest_command","command":"/function ra:give_all_items"}},{"text":" to get items","color":"gray"}]
+tellraw @a [{"text":"Use ","color":"gray"},{"text":"/function ra:give_all_items","color":"yellow","hover_event":{"action":"show_text","value":"Give all items"},"click_event":{"action":"suggest_command","command":"/function ra:give_all_items"}},{"text":" to get items","color":"gray"}]

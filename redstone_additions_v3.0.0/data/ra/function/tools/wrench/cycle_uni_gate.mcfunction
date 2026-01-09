@@ -4,29 +4,24 @@
 # Initialize gate_type if not set
 execute unless data entity @s data.properties.gate_type run data modify entity @s data.properties.gate_type set value "and"
 
-# Store current gate type to check
-data modify storage ra:temp current_gate set from entity @s data.properties.gate_type
+# Cycle to next gate type based on current value (use return to prevent multiple changes)
+execute if data entity @s data.properties{gate_type:"xnor"} run data modify entity @s data.properties.gate_type set value "and"
+execute if data entity @s data.properties{gate_type:"xnor"} run return run function ra:tools/wrench/cycle_uni_gate_notify
 
-# Cycle to next gate type
-execute if data storage ra:temp{current_gate:"and"} run data modify entity @s data.properties.gate_type set value "or"
-execute if data storage ra:temp{current_gate:"or"} run data modify entity @s data.properties.gate_type set value "not"
-execute if data storage ra:temp{current_gate:"not"} run data modify entity @s data.properties.gate_type set value "xor"
-execute if data storage ra:temp{current_gate:"xor"} run data modify entity @s data.properties.gate_type set value "nand"
-execute if data storage ra:temp{current_gate:"nand"} run data modify entity @s data.properties.gate_type set value "nor"
-execute if data storage ra:temp{current_gate:"nor"} run data modify entity @s data.properties.gate_type set value "xnor"
-execute if data storage ra:temp{current_gate:"xnor"} run data modify entity @s data.properties.gate_type set value "and"
+execute if data entity @s data.properties{gate_type:"nor"} run data modify entity @s data.properties.gate_type set value "xnor"
+execute if data entity @s data.properties{gate_type:"nor"} run return run function ra:tools/wrench/cycle_uni_gate_notify
 
-# Get the new gate type for display
-data modify storage ra:temp current_gate set from entity @s data.properties.gate_type
+execute if data entity @s data.properties{gate_type:"nand"} run data modify entity @s data.properties.gate_type set value "nor"
+execute if data entity @s data.properties{gate_type:"nand"} run return run function ra:tools/wrench/cycle_uni_gate_notify
 
-# Notify player
-tellraw @a[distance=..10] [{"text":"[Wrench] ","color":"gold"},{"text":"UNI Gate mode: ","color":"gray"},{"nbt":"current_gate","storage":"ra:temp","color":"light_purple","bold":true}]
+execute if data entity @s data.properties{gate_type:"xor"} run data modify entity @s data.properties.gate_type set value "nand"
+execute if data entity @s data.properties{gate_type:"xor"} run return run function ra:tools/wrench/cycle_uni_gate_notify
 
-# Play sound
-playsound minecraft:block.note_block.hat block @a[distance=..16] ~ ~ ~ 0.5 2
+execute if data entity @s data.properties{gate_type:"not"} run data modify entity @s data.properties.gate_type set value "xor"
+execute if data entity @s data.properties{gate_type:"not"} run return run function ra:tools/wrench/cycle_uni_gate_notify
 
-# Visual feedback
-particle minecraft:happy_villager ~ ~0.5 ~ 0.3 0.3 0.3 0 5
+execute if data entity @s data.properties{gate_type:"or"} run data modify entity @s data.properties.gate_type set value "not"
+execute if data entity @s data.properties{gate_type:"or"} run return run function ra:tools/wrench/cycle_uni_gate_notify
 
-# Clear storage
-data remove storage ra:temp current_gate
+execute if data entity @s data.properties{gate_type:"and"} run data modify entity @s data.properties.gate_type set value "or"
+function ra:tools/wrench/cycle_uni_gate_notify

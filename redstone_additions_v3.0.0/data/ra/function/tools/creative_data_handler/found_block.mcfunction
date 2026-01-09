@@ -33,10 +33,20 @@ execute if entity @s[tag=ra.custom_block.tag_remover] run data modify storage ra
 # Gate blocks
 execute if entity @s[tag=ra.custom_block.clock] run data modify storage ra:cdh block_type set value "Clock"
 execute if entity @s[tag=ra.custom_block.uni_gate] run data modify storage ra:cdh block_type set value "UNI Gate"
+execute if entity @s[tag=ra.custom_block.delayer] run data modify storage ra:cdh block_type set value "Delayer"
+execute if entity @s[tag=ra.custom_block.extender] run data modify storage ra:cdh block_type set value "Extender"
+execute if entity @s[tag=ra.custom_block.beamer] run data modify storage ra:cdh block_type set value "Beamer"
+execute if entity @s[tag=ra.custom_block.rand] run data modify storage ra:cdh block_type set value "Randomizer"
+execute if entity @s[tag=ra.custom_block.shortener] run data modify storage ra:cdh block_type set value "Shortener"
+
+# Wireless blocks
+execute if entity @s[tag=ra.custom_block.emitter] run data modify storage ra:cdh block_type set value "Wireless Emitter"
+execute if entity @s[tag=ra.custom_block.receiver] run data modify storage ra:cdh block_type set value "Wireless Receiver"
 
 # Store properties and internal data
 data modify storage ra:cdh properties set from entity @s data.properties
 data modify storage ra:cdh internal_data set from entity @s data.data
 
-# Show the info to the nearest player who used the tool
-execute as @p[distance=..10] run function ra:tools/creative_data_handler/show_menu
+# Show the info to the nearest player who used the tool (only once)
+execute unless data storage ra:temp cdh_menu_shown as @p[distance=..10] run function ra:tools/creative_data_handler/show_menu
+data modify storage ra:temp cdh_menu_shown set value 1b

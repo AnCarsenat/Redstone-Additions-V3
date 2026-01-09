@@ -2,8 +2,9 @@
 # Tick all block breakers
 
 # Check for break detection (block removed)
-execute as @e[tag=ra.custom_block.block_breaker] at @s run function ra_lib:removal/check
+execute as @e[tag=ra.custom_block.block_breaker] at @s unless block ~ ~ ~ dispenser run tag @s add ra.broken
 execute as @e[tag=ra.broken,tag=ra.custom_block.block_breaker] at @s run function ra_interactive:blocks/block_breaker/on_break
+tag @e[tag=ra.broken,tag=ra.custom_block.block_breaker] remove ra.broken
 
 # Process cooldowns
 scoreboard players add @e[tag=ra.custom_block.block_breaker] ra.cooldown 1

@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    "CMC",
+    "MRM",
+    "CMC"
+  ],
+  "key": {
+    "C": "minecraft:cobblestone",
+    "M": "minecraft:mossy_cobblestone",
+    "R": "minecraft:redstone"
+  },
+  "result": {
+    "id": "minecraft:bat_spawn_egg",
+    "count": 1,
+    "components": {
+      "minecraft:item_model": "minecraft:mossy_cobblestone",
+      "minecraft:item_name": "Extender",
+      "minecraft:custom_data": { "ra": { "extender": true } },
+      "minecraft:entity_data": {
+        "id": "minecraft:bat",
+        "Tags": ["ra.spawned", "ra.place.extender"],
+        "Silent": true,
+        "NoAI": true,
+        "Invulnerable": true
+      }
+    }
+  },
+  "show_notification": true
+}

@@ -1,8 +1,17 @@
 # /ra:tools/wrench/on_use
-# Handle creative data handler click. As player (from advancement).
+# Handle wrench use. As player (from advancement).
 
-# Revoke advancement so it can trigger again
+# Revoke advancement immediately
 advancement revoke @s only ra:tools/wrench_use
+
+# Mark that player clicked this tick (for tag cleanup in tick.mcfunction)
+tag @s add ra.wrench_clicked
+
+# If player is already holding (has tag), skip execution
+execute if entity @s[tag=ra.wrench_active] run return fail
+
+# Mark player as actively using this tool
+tag @s add ra.wrench_active
 
 execute if predicate ra:is_sneaking run return run function ra:tools/wrench/shift_rmb_function
 function ra:tools/wrench/rmb_function

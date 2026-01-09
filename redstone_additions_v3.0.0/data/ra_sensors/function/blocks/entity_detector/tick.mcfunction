@@ -4,6 +4,7 @@
 # Check for break detection
 execute as @e[tag=ra.custom_block.entity_detector] at @s if block ~ ~ ~ #minecraft:air run tag @s add ra.broken
 execute as @e[tag=ra.broken,tag=ra.custom_block.entity_detector] at @s run function ra_sensors:blocks/entity_detector/on_break
+tag @e[tag=ra.broken,tag=ra.custom_block.entity_detector] remove ra.broken
 
 # Check for entities in range
 execute as @e[tag=ra.custom_block.entity_detector] at @s run function ra_sensors:blocks/entity_detector/detect

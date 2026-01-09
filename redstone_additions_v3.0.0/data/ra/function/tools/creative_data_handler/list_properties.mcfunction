@@ -38,8 +38,23 @@ execute if data storage ra:cdh properties.target run function ra:tools/creative_
 # Check for 'enabled' property (typically bool)
 execute if data storage ra:cdh properties.enabled run function ra:tools/creative_data_handler/props/show_enabled
 
-# Check for 'gate' property (typically bool)
-execute if data storage ra:cdh properties.gate run function ra:tools/creative_data_handler/props/show_gate
+# Check for 'gate_type' property (str: and, or, not, xor, nand, nor, xnor)
+execute if data storage ra:cdh properties.gate_type run function ra:tools/creative_data_handler/props/show_gate_type
+
+# Check for 'channel' property (typically int) - for wireless emitter/receiver
+execute if data storage ra:cdh properties.channel run function ra:tools/creative_data_handler/props/show_channel
+
+# Check for 'distance' property (int) - for beamer
+execute if data storage ra:cdh properties.distance run function ra:tools/creative_data_handler/props/show_distance
+
+# Check for 'extend' property (int) - for extender
+execute if data storage ra:cdh properties.extend run function ra:tools/creative_data_handler/props/show_extend
+
+# Check for 'pulse' property (int) - for shortener
+execute if data storage ra:cdh properties.pulse run function ra:tools/creative_data_handler/props/show_pulse
+
+# Check for 'entity_type' property (str) - for tag_adder/tag_remover
+execute if data storage ra:cdh properties.entity_type run function ra:tools/creative_data_handler/props/show_entity_type
 
 
 # If no properties, show message

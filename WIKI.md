@@ -1,6 +1,6 @@
 # Redstone Additions V3 - Complete Wiki
 
-**Version:** 3.0.0  
+**Version:** 3.0.1  
 **Minecraft Version:** 1.21+  
 **Author:** AnCarsenat
 
@@ -16,6 +16,7 @@
    - [Logic Gates](#logic-gates)
    - [Interactive Machines](#interactive-machines)
    - [Sensors](#sensors)
+   - [Wireless Redstone](#wireless-redstone)
 4. [Tools](#tools)
 5. [Library System (ra_lib)](#library-system)
 6. [Developer Guide](#developer-guide)
@@ -304,6 +305,60 @@ Sensors detect conditions and output redstone signals.
 
 ---
 
+## Wireless Redstone
+
+Wireless redstone allows you to transmit signals across any distance using channels.
+
+### 📡 Wireless Emitter
+**Description:** Transmits redstone signals wirelessly on a specific channel.  
+**Base Block:** End Stone Bricks  
+**Item Model:** End Stone Bricks  
+**Recipe:** 4 Gold Ingots + 4 End Stone Bricks + 1 Redstone
+
+**Properties:**
+- `channel` - Wireless channel (1-65535, default: 1)
+- `enabled` - Whether the emitter is active
+
+**Behavior:**
+- When powered, transmits signal to all receivers on same channel
+- Works across any distance in the same dimension
+- Configure channel with Creative Data Handler
+
+### 📻 Wireless Receiver
+**Description:** Receives wireless signals and outputs redstone.  
+**Base Block:** Purpur Block  
+**Item Model:** Purpur Block  
+**Recipe:** 4 Gold Ingots + 4 Purpur Blocks + 1 Redstone
+
+**Properties:**
+- `channel` - Wireless channel (1-65535, default: 1)
+- `enabled` - Whether the receiver is active
+- `mode` - Output mode (toggle/pulse)
+
+**Behavior:**
+- Outputs redstone when receiving signal on matching channel
+- Can be controlled by Redstone Remote
+- Pulse mode: 4-tick pulse duration
+
+### 🎮 Redstone Remote
+**Item:** Warped Fungus on a Stick (appears as Red Dye)  
+**Obtain:** `/function ra_wireless:items/remote/give`  
+**Recipe:** 3 Gold Ingots + 1 Redstone + 1 Stick
+
+**Properties:**
+- `channel` - Remote channel (1-65535, default: 1)
+
+**Functions:**
+- **Right-Click:** Pulse all receivers on current channel
+- **Shift+Right-Click:** Change channel (opens chat input)
+
+**Behavior:**
+- Sends 4-tick pulse to all receivers on matching channel
+- Works across any distance in the same dimension
+- Channel displayed in item lore
+
+---
+
 ## 🔧 Tools
 
 ### Wrench
@@ -325,20 +380,45 @@ Sensors detect conditions and output redstone signals.
 ```
 
 ### Creative Data Handler
-**Item:** Recovery Compass (with enchantment glint)  
+**Item:** Blaze Rod (with enchantment glint)  
 **Obtain:** `/function ra:tools/creative_data_handler/give`
 
 **Functions:**
-- **Right-Click on Block:** View block data, properties, and internal state
-- Shows: Block type, facing direction, properties, cooldowns, etc.
+- **Shift+Right-Click on Block:** View and edit block properties
+- Shows: Block type, facing direction, all editable properties
+- Each property has **[Modify]** and **[-]** (remove) buttons
+- **[+Add]** button to add new properties
+- **[Edit All]** button to edit all properties at once
+
+**Supported Properties:**
+- `channel` - Wireless channel (emitters, receivers)
+- `cooldown` - Block cooldown timer
+- `delay` - Signal delay (delayer blocks)
+- `distance` - Detection/operation distance
+- `enabled` - Block enabled state
+- `entity_selector` - Entity target selector
+- `entity_type` - Entity type filter
+- `extend` - Signal extension time
+- `gate_type` - Logic gate mode
+- `inverted` - Invert output signal
+- `message` - Message text (message blocks)
+- `mode` - Operation mode
+- `power` - Power level output
+- `pulse` - Pulse duration
+- `range` - Detection range
+- `tag` - Entity tag filter
+- `target` - Target selector
 
 **Usage:**
 ```mcfunction
-# View block data
+# Edit block properties
 1. Hold Creative Data Handler
-2. Right-Click on any custom block
-3. Chat menu shows all block data
-4. Great for debugging and inspection
+2. Shift+Right-Click on any custom block
+3. Chat menu shows all properties with values
+4. Click [Modify] to change a property value
+5. Click [-] to remove a property
+6. Click [+Add] to add new properties
+7. Click [Edit All] for bulk editing
 ```
 
 ---
@@ -755,7 +835,26 @@ This ensures:
 
 ## 📜 Changelog
 
-### V3.0.0 (Current)
+### V3.0.1 (Current)
+- Added Wireless Redstone system (ra_wireless namespace)
+  - Wireless Emitter: Transmit signals across any distance
+  - Wireless Receiver: Receive signals on matching channels
+  - Redstone Remote: Handheld remote to pulse receivers
+- Remote now pulses receivers (4-tick duration) instead of toggling
+- Creative Data Handler major improvements:
+  - Can now edit all block properties interactively
+  - Added [Modify] buttons to each property
+  - Added [Edit All] button for bulk editing
+  - Supports all properties: channel, distance, extend, pulse, entity_type, etc.
+- Fixed JSON text event syntax (hover_event/click_event with underscores)
+- Fixed tool lore formatting (no longer resets to italic)
+- Added missing advancements for all blocks:
+  - ra_wireless: emitter, receiver, remote
+  - ra_gates: beamer, delayer, extender, randomizer, shortener
+  - ra_interactive: item_pipe, message_block, pusher, spitter, infinite cauldrons
+  - ra_sensors: entity_detector
+
+### V3.0.0
 - Complete rewrite from V1
 - Added 20+ custom blocks
 - Added UNI Gate with 7 modes
@@ -783,4 +882,4 @@ This datapack is free to use and modify for personal and server use. Please cred
 
 ---
 
-*Last Updated: January 9, 2026*
+*Last Updated: January 9, 2026 (V3.0.1)*

@@ -4,6 +4,7 @@
 # Check for break detection
 execute as @e[tag=ra.custom_block.tag_remover] at @s if block ~ ~ ~ #minecraft:air run tag @s add ra.broken
 execute as @e[tag=ra.broken,tag=ra.custom_block.tag_remover] at @s run function ra_sensors:blocks/tag_remover/on_break
+tag @e[tag=ra.broken,tag=ra.custom_block.tag_remover] remove ra.broken
 
 # Redstone detection
 execute as @e[tag=ra.custom_block.tag_remover] at @s run function ra_lib:redstone/detect
