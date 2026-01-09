@@ -1,220 +1,175 @@
 # Redstone Additions V3
 
-> **A complete rewrite of [Redstone Additions V1](https://modrinth.com/datapack/redstone-additions?version=1.21.9&loader=datapack)**
+**A Complete Redstone Expansion Datapack for Minecraft 1.21+**
 
-Redstone Additions is the new "all-around" content pack for Minecraft redstone. It bridges all the gaps of default redstone and makes certain contraptions more compact whilst still keeping redstone fun!
+[![Minecraft](https://img.shields.io/badge/Minecraft-1.21+-green.svg)](https://www.minecraft.net/)
+[![License](https://img.shields.io/badge/License-Free-blue.svg)](LICENSE)
 
-Due to the success of V1, this version has been completely rebuilt from the ground up—not only for Minecraft 1.21.10 but with **over 30 custom new blocks** planned!
-
----
-
-## 📦 Installation
-
-1. Download the `redstone_additions_v3.0.0` folder
-2. Place it in your world's `datapacks` folder
-3. Run `/reload` in-game
-4. Use `/function ra:give_all_items` to get all custom blocks
+> Transform your redstone creations with logic gates, interactive machines, sensors, and powerful developer tools. All survival-friendly and fully integrated with vanilla Minecraft.
 
 ---
 
-## 🏗️ Architecture
+## ✨ Features
 
-The datapack is split into three namespaces for modularity:
+### 🔵 Logic Gates
+- **UNI Gate** - One block, seven modes (AND/OR/NOT/XOR/NAND/NOR/XNOR)
+- Compact 3×3×3 multiblock structures
+- Detects redstone from all 6 directions
+- Cycle modes with the Wrench tool
+- Individual gates available for creative mode
 
-| Namespace | Purpose |
-|-----------|---------|
-| `ra` | Core functions, load/tick, and main commands |
-| `ra_lib` | Reusable library systems (placement, orientation, inventory, removal) |
-| `ra_interactive` | All custom block implementations |
+### 🏭 Interactive Machines
+- **Block Breaker** - Auto-mine blocks
+- **Block Placer** - Auto-place blocks
+- **Item Pipe** - Transfer items between containers
+- **Spitter** - Launch items as entities
+- **Pusher** - Push entities upward
+- **Breeder** - Automatic animal breeding
+- **Infinite Cauldrons** - Water, lava, and snow
+- **Message Block** - Display custom messages
 
-### File Structure
-```
-redstone_additions_v3.0.0/
-├── pack.mcmeta
-└── data/
-    ├── minecraft/tags/function/load.json
-    ├── ra/
-    │   ├── function/
-    │   │   ├── load.mcfunction
-    │   │   ├── tick.mcfunction
-    │   │   └── give_all_items.mcfunction
-    │   └── tags/function/
-    │       └── register_placement_handlers.json
-    ├── ra_lib/
-    │   └── function/
-    │       ├── placement/    # Block placement system
-    │       ├── orientation/  # Facing calculation
-    │       ├── removal/      # Break detection
-    │       └── inventory/    # Container operations
-    └── ra_interactive/
-        └── function/
-            ├── load.mcfunction
-            ├── tick.mcfunction
-            ├── items/give_all.mcfunction
-            └── blocks/
-                ├── block_breaker/
-                ├── block_placer/
-                ├── spitter/
-                ├── pusher/
-                ├── conveyor/
-                └── ... (more blocks)
-```
+### 👁️ Sensors
+- **Entity Detector** - Detect entities in range
+- **Tag Adder** - Add tags to entities
+- **Tag Remover** - Remove tags from entities
+
+### 🔧 Tools
+- **Wrench** - Cycle block modes and interact with structures
+- **Creative Data Handler** - Inspect block data and properties
 
 ---
 
-## 🔧 Library Systems (ra_lib)
+## 🚀 Quick Start
 
-### Placement System
-Handles custom block placement with proper orientation.
+### Installation
+
+1. **Download** the latest release or clone this repository
+2. **Copy** `redstone_additions_v3.0.0` folder to your world's `datapacks` folder
+3. **Run** `/reload` in-game
+4. **Get items:** `/function ra:give_all_items`
+
+### First Steps
 
 ```mcfunction
-# Place a block with full 6-direction facing (dispensers, droppers)
-function ra_lib:placement/place {block_id:"minecraft:dispenser",block_tag:"my_block",dir_type:2}
+# Get all items (creative)
+/function ra:give_all_items
 
-# Place a block with horizontal-only facing (glazed terracotta)
-function ra_lib:placement/place {block_id:"minecraft:magenta_glazed_terracotta",block_tag:"my_block",dir_type:1}
-```
+# Get only gates
+/function ra_gates:items/give_all
 
-**dir_type values:**
-- `0` = No rotation
-- `1` = Horizontal only (4 directions)
-- `2` = Full 6-direction (up/down/north/south/east/west)
+# Get only machines
+/function ra_interactive:items/give_all
 
-### Removal System
-Detects when custom blocks are broken.
-
-```mcfunction
-# Check if block was broken (call in tick)
-function ra_lib:removal/check
-
-# The armor stand gets tagged with ra.broken if block is missing
-execute as @e[tag=ra.broken,tag=ra.custom_block.my_block] at @s run function my_namespace:on_break
-```
-
-### Inventory System
-Transfer items between containers with proper stacking.
-
-```mcfunction
-# Give item to container at position
-function ra_lib:inventory/give_nbt
-
-# Try to stack items, find empty slots
-function ra_lib:inventory/try_stack
-function ra_lib:inventory/find_empty_slot
+# Get tools
+/function ra:tools/wrench/give
 ```
 
 ---
 
-## ➕ Adding New Blocks
+## 📖 Documentation
 
-Creating a new custom block is easy! Follow this template:
+**Complete Wiki:** [WIKI.md](WIKI.md)
 
-### 1. Create the block folder
-```
-ra_interactive/function/blocks/my_block/
-├── give.mcfunction
-├── handle_placement.mcfunction
-├── tick.mcfunction
-├── process.mcfunction (or on_powered.mcfunction)
-├── on_break.mcfunction
-└── register_block.mcfunction
-```
-
-### 2. give.mcfunction
-```mcfunction
-# Give item to player
-give @s bat_spawn_egg[item_model="minecraft:dispenser",item_name="My Block",custom_data={ra:{my_block:1b}},entity_data={id:"minecraft:bat",Tags:["ra.spawned","ra.place.my_block"],Silent:1b,NoAI:1b,Invulnerable:1b}]
-```
-
-### 3. handle_placement.mcfunction
-```mcfunction
-# Check if this is our block being placed
-execute unless entity @s[tag=ra.place.my_block] run return 0
-
-# Place the physical block with armor stand marker
-function ra_lib:placement/place {block_id:"minecraft:dispenser",block_tag:"my_block",dir_type:2}
-
-return 1
-```
-
-### 4. tick.mcfunction
-```mcfunction
-# Check for break detection
-execute as @e[tag=ra.custom_block.my_block] at @s run function ra_lib:removal/check
-execute as @e[tag=ra.broken,tag=ra.custom_block.my_block] at @s run function ra_interactive:blocks/my_block/on_break
-
-# Process each block
-execute as @e[tag=ra.custom_block.my_block] at @s run function ra_interactive:blocks/my_block/process
-```
-
-### 5. Register in tags
-Add to `ra/tags/function/register_placement_handlers.json`:
-```json
-{
-  "values": [
-    "ra_interactive:blocks/my_block/handle_placement"
-  ]
-}
-```
-
-Add tick call to `ra_interactive/function/tick.mcfunction`:
-```mcfunction
-function ra_interactive:blocks/my_block/tick
-```
+The wiki includes:
+- Detailed block descriptions
+- Crafting recipes
+- Developer guide
+- Code examples
+- Technical specifications
+- FAQ and troubleshooting
 
 ---
 
-## 📋 Current Blocks
+## 🎮 Example: UNI Gate
 
-| Block | Description | Base Block |
-|-------|-------------|------------|
-| **Block Breaker** | Breaks blocks in front when powered | Dispenser |
-| **Block Placer** | Places blocks from inventory when powered | Dispenser |
-| **Spitter** | Ejects items forward every 4 ticks | Dropper |
-| **Pusher** | Pushes entities above forward (20 tick cooldown) | Magenta Glazed Terracotta |
-| **Item Pipe** | Transfers items between containers with filtering | Dispenser |
+The UNI Gate is the **centerpiece** of Redstone Additions - one block that can be any logic gate:
 
-### Planned Blocks (30+)
-- Vacuum Hopper
-- Chunk Loader
-- Wireless Redstone
-- Block Swapper
-- Entity Sensor
-- Timer
-- Counter
-- Randomizer
-- And many more...
+1. **Place** a UNI Gate (crafted with 8 smooth stone slabs + 1 redstone)
+2. **Surround** with iron blocks in a 3×3×3 cube
+3. **Cycle modes** using Shift+Right-Click with the Wrench
+4. **Connect** redstone inputs from any of the 6 sides
+5. **Output** via iron → redstone block transformation
+
+**Modes:** AND → OR → NOT → XOR → NAND → NOR → XNOR → (repeat)
 
 ---
 
-## 🎮 Commands
+## 🔬 Technical Highlights
 
-| Command | Description |
-|---------|-------------|
-| `/function ra:give_all_items` | Get all custom block items |
-| `/function ra_interactive:items/give_all` | Get all interactive blocks |
-| `/function ra_interactive:blocks/<block>/give` | Get a specific block |
-
----
-
-## 📝 Technical Notes
-
-- Custom blocks use **bat spawn eggs** with custom models
-- Armor stands mark block positions and store rotation
-- Uses **MCFunction macros** for dynamic block placement
-- Local coordinates (`^ ^ ^`) for directional operations
-- Compatible with Minecraft **1.21.10**
+- **Modular Architecture** - Three namespaces (ra, ra_lib, ra_interactive)
+- **Bat-Based Placement** - Survival-compatible custom block placement
+- **Entity Markers** - Invisible armor stands track block state
+- **Library System** - Reusable orientation, placement, redstone, and inventory systems
+- **Performance Optimized** - Efficient selectors and tick management
 
 ---
 
-## 📜 License
+## 🛠️ For Developers
 
-Feel free to use, modify, and distribute. Credit appreciated!
+Redstone Additions is built with extensibility in mind. The `ra_lib` namespace provides:
+
+- **Orientation System** - Calculate facing from player rotation
+- **Placement System** - Place custom blocks with markers
+- **Redstone Detection** - Detect power from all 6 directions
+- **Inventory Management** - Programmatic container operations
+
+**See the [Developer Guide](WIKI.md#developer-guide) in the wiki for templates and examples.**
 
 ---
 
-## 🔗 Links
+## 🐛 Known Issues
 
-- **Original V1**: [Modrinth](https://modrinth.com/datapack/redstone-additions?version=1.21.9&loader=datapack)
-- **Version**: 3.1.0
-- **Minecraft**: 1.21.10
+- Custom blocks are entities, not true blocks (Minecraft limitation)
+- Creative mode breaking doesn't consume the item
+- Recommended max: ~1000 custom blocks per world
+
+---
+
+## 📋 Changelog
+
+### V3.0.0 (Current - January 2026)
+- ✅ Complete rewrite from V1
+- ✅ Added 20+ custom blocks
+- ✅ UNI Gate with mode cycling
+- ✅ Wrench tool system
+- ✅ Fixed all survival duplication bugs
+- ✅ Simplified break detection (removed ra_lib removal)
+- ✅ Comprehensive wiki documentation
+- ✅ Recipe book integration
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please:
+
+1. Fork the repository
+2. Create a feature branch
+3. Test thoroughly in both creative and survival
+4. Submit a pull request
+
+---
+
+## 📄 License
+
+Free to use and modify for personal and server use. Please credit the original author.
+
+---
+
+## 🙏 Acknowledgments
+
+- **Created by:** AnCarsenat
+- **Inspired by:** Redstone Additions V1
+- **Thanks to:** The Minecraft datapacking community
+
+---
+
+## 📞 Support
+
+- **Issues:** [GitHub Issues](https://github.com/AnCarsenat/Redstone-Additions-V3/issues)
+- **Wiki:** [WIKI.md](WIKI.md)
+- **Repository:** [Redstone-Additions-V3](https://github.com/AnCarsenat/Redstone-Additions-V3)
+
+---
+
+**Happy Redstoning! 🔴⚡**
