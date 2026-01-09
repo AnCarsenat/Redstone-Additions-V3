@@ -1,6 +1,8 @@
 # /ra_gates:blocks/and_gate/on_break
 # Handle AND gate break
 
+# Kill vanilla smooth_stone_slab drop
+kill @e[type=item,nbt={Item:{id:"minecraft:smooth_stone_slab"}},distance=..2,limit=1,sort=nearest]
 
 # Revert any redstone blocks back to iron blocks
 fill ~-1 ~-1 ~-1 ~1 ~1 ~1 iron_block replace redstone_block

@@ -3,19 +3,19 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "ra_gates:nand_gate"
+        "recipe": "ra_gates:uni_gate"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "has_redstone_torch": {
+    "has_slab": {
       "conditions": {
-        "items": [{ "items": "minecraft:redstone_torch" }]
+        "items": [{ "items": "minecraft:smooth_stone_slab" }]
       },
       "trigger": "minecraft:inventory_changed"
     }
   },
-  "requirements": [["has_the_recipe", "has_redstone_torch"]],
+  "requirements": [["has_the_recipe", "has_slab"]],
   "rewards": {
-    "recipes": ["ra_gates:nand_gate"]
+    "recipes": ["ra_gates:uni_gate"]
   }
 }
