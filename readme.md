@@ -11,7 +11,7 @@
 
 ## ✨ Features
 
-### 🔵 Logic Gates
+### 🔴 Logic Gates
 - **UNI Gate** - One block, seven modes (AND/OR/NOT/XOR/NAND/NOR/XNOR)
 - Compact 3×3×3 multiblock structures
 - Detects redstone from all 6 directions
