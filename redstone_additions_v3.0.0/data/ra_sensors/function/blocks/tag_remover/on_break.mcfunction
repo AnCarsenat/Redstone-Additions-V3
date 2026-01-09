@@ -1,6 +1,9 @@
 # /ra_sensors:blocks/tag_remover/on_break
 # Called when tag remover is broken. As armor stand, at position.
 
+# Kill vanilla red_glazed_terracotta drop
+kill @e[type=item,nbt={Item:{id:"minecraft:red_glazed_terracotta"}},distance=..2,limit=1,sort=nearest]
+
 # Drop the tag remover item with its properties
 summon item ~ ~ ~ {Item:{id:"minecraft:bat_spawn_egg",count:1,components:{"minecraft:item_model":"minecraft:red_glazed_terracotta","minecraft:item_name":'Tag Remover',"minecraft:custom_data":{ra:{tag_remover:1b}},"minecraft:entity_data":{id:"minecraft:bat",Tags:["ra.spawned","ra.place.tag_remover"],Silent:1b,NoAI:1b,Invulnerable:1b}}}}
 

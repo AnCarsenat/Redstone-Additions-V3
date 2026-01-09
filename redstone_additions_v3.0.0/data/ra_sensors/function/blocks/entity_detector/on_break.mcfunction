@@ -1,6 +1,9 @@
 # /ra_sensors:blocks/entity_detector/on_break
 # Called when entity detector is broken. As armor stand, at position.
 
+# Kill vanilla waxed_chiseled_copper drop
+kill @e[type=item,nbt={Item:{id:"minecraft:waxed_chiseled_copper"}},distance=..2,limit=1,sort=nearest]
+
 # Drop the entity detector item with its properties
 summon item ~ ~ ~ {Item:{id:"minecraft:bat_spawn_egg",count:1,components:{"minecraft:item_model":"minecraft:waxed_chiseled_copper","minecraft:item_name":'Entity Detector',"minecraft:custom_data":{ra:{entity_detector:1b}},"minecraft:entity_data":{id:"minecraft:bat",Tags:["ra.spawned","ra.place.entity_detector"],Silent:1b,NoAI:1b,Invulnerable:1b}}}}
 

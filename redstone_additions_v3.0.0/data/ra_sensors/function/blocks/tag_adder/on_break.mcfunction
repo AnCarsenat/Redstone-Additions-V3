@@ -1,6 +1,9 @@
 # /ra_sensors:blocks/tag_adder/on_break
 # Called when tag adder is broken. As armor stand, at position.
 
+# Kill vanilla green_glazed_terracotta drop
+kill @e[type=item,nbt={Item:{id:"minecraft:green_glazed_terracotta"}},distance=..2,limit=1,sort=nearest]
+
 # Drop the tag adder item with its properties
 summon item ~ ~ ~ {Item:{id:"minecraft:bat_spawn_egg",count:1,components:{"minecraft:item_model":"minecraft:green_glazed_terracotta","minecraft:item_name":'Tag Adder',"minecraft:custom_data":{ra:{tag_adder:1b}},"minecraft:entity_data":{id:"minecraft:bat",Tags:["ra.spawned","ra.place.tag_adder"],Silent:1b,NoAI:1b,Invulnerable:1b}}}}
 
