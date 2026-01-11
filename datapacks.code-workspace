@@ -6,8 +6,6 @@
 	],
 	"settings": {},
 	"extensions": {
-		"recommendations": [
-			"peterschmalfeldt.explorer-exclude"
-		]
+		"recommendations": []
 	}
 }
