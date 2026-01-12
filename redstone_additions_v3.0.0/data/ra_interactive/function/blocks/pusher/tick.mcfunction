@@ -10,7 +10,7 @@ tag @e[tag=ra.broken,tag=ra.custom_block.pusher] remove ra.broken
 execute as @e[tag=ra.custom_block.pusher] unless score @s ra.cooldown matches -2147483648.. run scoreboard players set @s ra.cooldown 0
 
 # Decrement cooldown (only if cooldown is greater than 0)
-execute as @e[tag=ra.custom_block.pusher,scores={ra.cooldown=1..}] run scoreboard players remove @s ra.cooldown 1
+execute as @e[tag=ra.custom_block.pusher,scores={ra.cooldown=1..}] if entity @e[type=!armor_stand,type=!item_frame,type=!marker,dx=0.5,dy=0.5,dz=0.5] run scoreboard players remove @s ra.cooldown 1
 
 # Process each pusher - push entities above (only if cooldown is 0)
 execute as @e[tag=ra.custom_block.pusher,scores={ra.cooldown=0}] at @s run function ra_interactive:blocks/pusher/process

@@ -17,7 +17,6 @@
     "ra_gates:blocks/clock/handle_placement",
     "ra_gates:blocks/delayer/handle_placement",
     "ra_gates:blocks/extender/handle_placement",
-    "ra_gates:blocks/beamer/handle_placement",
     "ra_gates:blocks/rand/handle_placement",
     "ra_gates:blocks/shortener/handle_placement",
     "ra_wireless:blocks/emitter/handle_placement",

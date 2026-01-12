@@ -1,29 +1,30 @@
-# /ra_lib:inventory/consume_one
-# Consume one item from a container by item ID. Macro function.
-# Context: At container block
-# Input: $(item_id) = item ID to consume (e.g., "wheat")
-# Output: returns 1 if consumed, 0 if item not found
+# /ra_lib:inventory/remove {id:"minecraft:...",count:N}
+# Remove items from container at current position. Macro function.
+# Input: $(id) = item ID (e.g., "minecraft:wheat"), $(count) = quantity to remove
+# Output: returns 1 if removed, 0 if item not found or insufficient quantity
+#
+# Example: function ra_lib:inventory/remove {id:"minecraft:wheat",count:1}
 
-# Copy item to storage for manipulation
-$execute unless data block ~ ~ ~ Items[{id:"minecraft:$(item_id)"}] run return 0
+# Check if item exists in container
+$execute unless data block ~ ~ ~ Items[{id:"$(id)"}] run return 0
 
-# Find the first matching item slot, copy full item to storage
-$data modify storage ra:temp consume_item set from block ~ ~ ~ Items[{id:"minecraft:$(item_id)"}]
+# Copy the matching item to storage
+$data modify storage ra:inventory remove_item set from block ~ ~ ~ Items[{id:"$(id)"}]
 
-# Get current count
-execute store result score #count ra.temp run data get storage ra:temp consume_item.count
+# Get current count and slot
+execute store result score #count ra.temp run data get storage ra:inventory remove_item.count
+execute store result score #slot ra.temp run data get storage ra:inventory remove_item.Slot
 
-# Decrement count
-scoreboard players remove #count ra.temp 1
+# Get amount to remove
+$scoreboard players set #to_remove ra.temp $(count)
 
-# If count > 0, update the item; if count == 0, remove it
-execute if score #count ra.temp matches 1.. run data modify storage ra:temp consume_item.count set value 1
-execute if score #count ra.temp matches 1.. store result storage ra:temp consume_item.count int 1 run scoreboard players get #count ra.temp
+# Check if we have enough
+execute if score #count ra.temp < #to_remove ra.temp run return 0
 
-# Get the slot number
-execute store result score #slot ra.temp run data get storage ra:temp consume_item.Slot
+# Calculate new count
+scoreboard players operation #count ra.temp -= #to_remove ra.temp
 
-# Now update or remove based on slot
+# Update or remove based on slot (supports slots 0-8 for dispensers)
 execute if score #count ra.temp matches 1.. if score #slot ra.temp matches 0 store result block ~ ~ ~ Items[{Slot:0b}].count int 1 run scoreboard players get #count ra.temp
 execute if score #count ra.temp matches 1.. if score #slot ra.temp matches 1 store result block ~ ~ ~ Items[{Slot:1b}].count int 1 run scoreboard players get #count ra.temp
 execute if score #count ra.temp matches 1.. if score #slot ra.temp matches 2 store result block ~ ~ ~ Items[{Slot:2b}].count int 1 run scoreboard players get #count ra.temp

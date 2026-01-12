@@ -3,12 +3,14 @@
 # Input: storage ra:temp pipe_item = item to insert
 # Output: #filtered ra.temp = 1 if successful
 
+# Ensure components field exists for macro
+execute unless data storage ra:temp pipe_item.components run data modify storage ra:temp pipe_item.components set value {}
+
 # Insert into container here
-data modify storage ra:inventory item set from storage ra:temp pipe_item
-function ra_lib:inventory/give_nbt
+execute store result score #inserted ra.temp run function ra_lib:inventory/insert with storage ra:temp pipe_item
 
 # If insertion failed, return
-execute unless score #slot ra.inv.slot matches 0.. run return 0
+execute if score #inserted ra.temp matches 0 run return 0
 
 # Success! Remove item from pipe (at @s position)
 execute at @s run data remove block ~ ~ ~ Items[0]

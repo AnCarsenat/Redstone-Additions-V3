@@ -6,10 +6,12 @@
 
 scoreboard players set #transferred ra.temp 0
 
-# Use ra_lib inventory system to insert
-data modify storage ra:inventory item set from storage ra:temp pipe_item
-function ra_lib:inventory/give_nbt
+# Ensure components field exists for macro
+execute unless data storage ra:temp pipe_item.components run data modify storage ra:temp pipe_item.components set value {}
 
-# If slot found (>= 0), transfer was successful
-execute if score #slot ra.inv.slot matches 0.. run data remove block ^ ^ ^-1 Items[0]
-execute if score #slot ra.inv.slot matches 0.. run scoreboard players set #transferred ra.temp 1
+# Use ra_lib inventory system to insert
+execute store result score #inserted ra.temp run function ra_lib:inventory/insert with storage ra:temp pipe_item
+
+# If items were inserted, transfer was successful
+execute if score #inserted ra.temp matches 1.. run data remove block ^ ^ ^-1 Items[0]
+execute if score #inserted ra.temp matches 1.. run scoreboard players set #transferred ra.temp 1
