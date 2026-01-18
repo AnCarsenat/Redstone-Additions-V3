@@ -10,9 +10,6 @@ function ra_lib:placement/place {block_id:"minecraft:note_block",block_tag:"mess
 # Initialize default properties first
 data modify entity @e[tag=ra.custom_block.message_block,tag=ra.new,limit=1] data.properties set value {message:"Hello World!",range:16}
 
-# Copy properties from the spawned bat to the armor stand (overrides defaults if bat has them)
-execute if data entity @s properties run data modify entity @e[tag=ra.custom_block.message_block,tag=ra.new,limit=1] data.properties set from entity @s properties
-
 # Remove ra.new tag now that setup is complete
 tag @e[tag=ra.custom_block.message_block,tag=ra.new] remove ra.new
 
