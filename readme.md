@@ -112,7 +112,7 @@ The complete wiki covers every block, recipe, property, and technical detail:
 
 ---
 
-## Changelog
+## Lates changelog
 
 ### v3.1.0 — February 2026
 - Wireless Redstone system (Emitter, Receiver, Remote)
@@ -121,14 +121,6 @@ The complete wiki covers every block, recipe, property, and technical detail:
 - Clickable [Modify] / [Edit All] buttons in CDH menu
 - Full advancement tree for every addon
 - `ra_wireless` namespace
-
-### v3.0.0 — January 2026
-- Complete rewrite from Redstone Additions V1
-- 23 custom blocks, 3 tools
-- UNI Gate with 7 logic modes
-- Wrench tool system
-- Survival duplication bugs eliminated
-- Recipe book integration for all items
 
 ---
 
