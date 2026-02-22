@@ -1,192 +1,158 @@
-# Redstone Additions V3
+<p align="center">
+  <img src="icon.png" alt="Redstone Additions V3" width="128">
+</p>
 
-**A Complete Redstone Expansion Datapack for Minecraft 1.21+**
+<h1 align="center">Redstone Additions V3</h1>
 
-[![Minecraft](https://img.shields.io/badge/Minecraft-1.21+-green.svg)](https://www.minecraft.net/)
-[![License](https://img.shields.io/badge/License-Free-blue.svg)](LICENSE)
+<p align="center">
+  <strong>23 custom blocks. 3 tools. Zero mods. Pure vanilla datapack magic.</strong>
+</p>
 
-> Transform your redstone creations with logic gates, interactive machines, sensors, and powerful developer tools. All survival-friendly and fully integrated with vanilla Minecraft.
+<p align="center">
+  <a href="https://modrinth.com/datapack/redstone-additions-v3"><img src="https://img.shields.io/badge/Download-Modrinth-00AF5C?style=for-the-badge&logo=modrinth&logoColor=white" alt="Modrinth"></a>
+  <a href="https://github.com/AnCarsenat/Redstone-Additions-V3"><img src="https://img.shields.io/badge/Source-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Minecraft-1.21+-2EA44F?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHJlY3QgZmlsbD0iIzVBOTEzMiIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ii8+PC9zdmc+" alt="Minecraft 1.21+">
+  <img src="https://img.shields.io/badge/Version-3.1.0-blue" alt="Version 3.1.0">
+  <img src="https://img.shields.io/badge/Blocks-23+-red" alt="23+ blocks">
+  <img src="https://img.shields.io/badge/License-Custom-orange" alt="Custom License">
+</p>
 
 ---
 
-## ✨ Features
+Tired of cramming 50 repeaters into ugly circuits? Wish Minecraft had proper logic gates, auto-farmers, or wireless redstone — without installing a single mod?
 
-### 🔴 Logic Gates
-- **UNI Gate** - One block, seven modes (AND/OR/NOT/XOR/NAND/NOR/XNOR)
-- Compact 3×3×3 multiblock structures
-- Detects redstone from all 6 directions
-- Cycle modes with the Wrench tool
-- Individual gates available for creative mode
+**Redstone Additions V3** drops 23 custom blocks and 3 tools into vanilla Minecraft. Every block is craftable in survival, appears in your recipe book, and works on servers with zero dependencies. Place a single UNI Gate and cycle it through AND, OR, XOR, NAND — all seven logic modes — with one click of the Wrench. Wire up Block Breakers and Item Pipes for fully automated farms. Detect entities, breed animals on a timer, or transmit redstone signals wirelessly across your entire world.
 
-### 🏭 Interactive Machines
-- **Block Breaker** - Auto-mine blocks
-- **Block Placer** - Auto-place blocks
-- **Item Pipe** - Transfer items between containers
-- **Spitter** - Launch items as entities
-- **Pusher** - Push entities upward
-- **Breeder** - Automatic animal breeding
-- **Infinite Cauldrons** - Water, lava, and snow
-- **Message Block** - Display custom messages
+This is what redstone should have been.
 
-### 👁️ Sensors
-- **Entity Detector** - Detect entities in range
-- **Tag Adder** - Add tags to entities
-- **Tag Remover** - Remove tags from entities
+---
 
-### � Wireless Redstone
-- **Wireless Emitter** - Transmit redstone signals wirelessly
-- **Wireless Receiver** - Receive signals on matching channels
-- **Redstone Remote** - Handheld remote to pulse receivers
+## What's Inside
+
+### ⚡ Logic Gates — *Think smaller*
+One block replaces an entire wall of redstone. The **UNI Gate** handles all seven Boolean modes in a compact 3×3×3 multiblock that reads signals from all six directions. Need a clock? A pulse shortener? A randomizer? There's a block for each, and they all fit in a single chunk corner.
+
+### 🏭 Interactive Machines — *Automate everything*
+**Block Breaker** mines the block in front of it when powered. **Block Placer** does the opposite. Chain them with **Item Pipes** to build factories. **Spitters** launch items, **Pushers** launch entities, **Breeders** feed and breed animals automatically. Three **Infinite Cauldrons** give you unlimited water, lava, or snow. The **Message Block** displays custom text when powered — perfect for adventure maps.
+
+### 👁️ Sensors — *See what's there*
+**Entity Detector** outputs redstone when it spots a configurable entity type within a configurable range. **Tag Adder** and **Tag Remover** let you tag entities that enter their radius — the building blocks for mob sorting, scoring systems, or custom minigames.
+
+### 📡 Wireless Redstone — *No line of sight required*
+Place an **Emitter**, set a channel, power it. Place a **Receiver** on the same channel anywhere in the world — it lights up. The **Redstone Remote** lets you pulse any channel from your hand. Channels go from 1 to 65,535, so you'll never run out.
 
 ### 🔧 Tools
-- **Wrench** - Cycle block modes and interact with structures
-- **Creative Data Handler** - Inspect and edit block properties
-- **Redstone Remote** - Control wireless receivers remotely
+- **Wrench** — Shift+right-click on blocks to cycle modes, configure settings, and interact with multiblock structures.
+- **Creative Data Handler** — Inspect and live-edit every property on every custom block. Change channels, ranges, delays, entity types, messages — all from a clickable chat menu.
 
 ---
 
-## 🚀 Quick Start
+## Install in 60 Seconds
 
-### Installation
+**Option A — Modrinth (recommended)**
+1. Grab the latest `.zip` from [Modrinth](https://modrinth.com/datapack/redstone-additions-v3)
+2. Drop it into `.minecraft/saves/<your_world>/datapacks/`
+3. Run `/reload` in-game
 
-1. **Download** the latest release or clone this repository
-2. **Copy** `redstone_additions_v3.0.0` folder to your world's `datapacks` folder
-3. **Run** `/reload` in-game
-4. **Get items:** `/function ra:give_all_items`
+**Option B — GitHub**
+```bash
+git clone https://github.com/AnCarsenat/Redstone-Additions-V3.git
+```
+Copy the `redstone_additions_v3.0.0` folder into your world's `datapacks/` directory, then `/reload`.
 
-### First Steps
-
-```mcfunction
-# Get all items (creative)
+**Get every item instantly:**
+```
 /function ra:give_all_items
-
-# Get only gates
-/function ra_gates:items/give_all
-
-# Get only machines
-/function ra_interactive:items/give_all
-
-# Get tools
-/function ra:tools/wrench/give
 ```
 
----
-
-## 📖 Documentation
-
-**Complete Wiki:** [WIKI.md](WIKI.md)
-
-The wiki includes:
-- Detailed block descriptions
-- Crafting recipes
-- Developer guide
-- Code examples
-- Technical specifications
-- FAQ and troubleshooting
+No Fabric. No Forge. No Optifine conflicts. Just drop and play.
 
 ---
 
-## 🎮 Example: UNI Gate
+## Useful Commands
 
-The UNI Gate is the **centerpiece** of Redstone Additions - one block that can be any logic gate:
-
-1. **Place** a UNI Gate (crafted with 8 smooth stone slabs + 1 redstone)
-2. **Surround** with iron blocks in a 3×3×3 cube
-3. **Cycle modes** using Shift+Right-Click with the Wrench
-4. **Connect** redstone inputs from any of the 6 sides
-5. **Output** via iron → redstone block transformation
-
-**Modes:** AND → OR → NOT → XOR → NAND → NOR → XNOR → (repeat)
-
----
-
-## 🔬 Technical Highlights
-
-- **Modular Architecture** - Three namespaces (ra, ra_lib, ra_interactive)
-- **Bat-Based Placement** - Survival-compatible custom block placement
-- **Entity Markers** - Invisible armor stands track block state
-- **Library System** - Reusable orientation, placement, redstone, and inventory systems
-- **Performance Optimized** - Efficient selectors and tick management
+| Command | What it does |
+|---------|--------------|
+| `/function ra:give_all_items` | Every block and tool in your inventory |
+| `/function ra_gates:items/give_all` | All logic gate items |
+| `/function ra_interactive:items/give_all` | All interactive machines |
+| `/function ra_sensors:items/give_all` | All sensor items |
+| `/function ra_wireless:items/give_all` | All wireless items |
+| `/function ra:tools/wrench/give` | The Wrench |
+| `/function ra:tools/creative_data_handler/give` | The Creative Data Handler |
+| `/function ra:uninstall` | Clean uninstall — removes all markers |
 
 ---
 
-## 🛠️ For Developers
+## How It Works Under the Hood
 
-Redstone Additions is built with extensibility in mind. The `ra_lib` namespace provides:
+Custom blocks are placed as **Bat Spawn Eggs** with special NBT. On placement, the bat is instantly replaced with a real block (dispenser, dropper, etc.) and an invisible armor stand that tracks state, facing, and properties. Every tick, the system reads each marker and runs the matching block logic. This means full survival compatibility, recipe book integration, and zero mods.
 
-- **Orientation System** - Calculate facing from player rotation
-- **Placement System** - Place custom blocks with markers
-- **Redstone Detection** - Detect power from all 6 directions
-- **Inventory Management** - Programmatic container operations
+The codebase is split into modular namespaces (`ra`, `ra_lib`, `ra_gates`, `ra_interactive`, `ra_sensors`, `ra_wireless`) so each addon is self-contained. Want to add your own custom block? The `ra_lib` library gives you orientation detection, redstone sensing from all 6 faces, placement helpers, and inventory utilities out of the box.
 
-**See the [Developer Guide](WIKI.md#developer-guide) in the wiki for templates and examples.**
+**Read the full [Developer Guide](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Developer-Guide) to start building your own blocks.**
 
 ---
 
-## 🐛 Known Issues
+## Documentation
 
-- Custom blocks are entities, not true blocks (Minecraft limitation)
-- Creative mode breaking doesn't consume the item
-- Recommended max: ~1000 custom blocks per world
+The complete wiki covers every block, recipe, property, and technical detail:
 
----
-
-## 📋 Changelog
-
-### V3.0.1 (Current - January 2026)
-- ✅ Added Wireless Redstone system (Emitter, Receiver, Remote)
-- ✅ Remote now pulses receivers (4-tick duration)
-- ✅ Creative Data Handler can now edit all block properties
-- ✅ Added [Modify] buttons to CDH property display
-- ✅ Added [Edit All] button to CDH menu
-- ✅ CDH supports all block properties (channel, distance, extend, pulse, entity_type)
-- ✅ Fixed JSON text event syntax (hover_event/click_event)
-- ✅ Added missing advancements for all blocks
-- ✅ Added ra_wireless namespace with full advancement tree
-
-### V3.0.0 (January 2026)
-- ✅ Complete rewrite from V1
-- ✅ Added 20+ custom blocks
-- ✅ UNI Gate with mode cycling
-- ✅ Wrench tool system
-- ✅ Fixed all survival duplication bugs
-- ✅ Simplified break detection (removed ra_lib removal)
-- ✅ Comprehensive wiki documentation
-- ✅ Recipe book integration
+| Page | Content |
+|------|---------|
+| [Logic Gates](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Logic-Gates) | UNI Gate, Clock, Delayer, Extender, Shortener, Randomizer |
+| [Interactive Machines](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Interactive-Machines) | Block Breaker, Placer, Item Pipe, Spitter, Pusher, Breeder, Cauldrons, Message Block |
+| [Sensors](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Sensors) | Entity Detector, Tag Adder, Tag Remover |
+| [Wireless Redstone](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Wireless-Redstone) | Emitter, Receiver, Redstone Remote |
+| [Developer Guide](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Developer-Guide) | Custom block creation, library API, code templates |
+| [Changelog](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Changelog) | Full version history |
 
 ---
 
-## 🤝 Contributing
+## Changelog
 
-Contributions are welcome! Please:
+### v3.1.0 — February 2026
+- Wireless Redstone system (Emitter, Receiver, Remote)
+- Remote pulses receivers with 4-tick duration
+- Creative Data Handler live-editing for all block properties
+- Clickable [Modify] / [Edit All] buttons in CDH menu
+- Full advancement tree for every addon
+- `ra_wireless` namespace
 
-1. Fork the repository
-2. Create a feature branch
-3. Test thoroughly in both creative and survival
-4. Submit a pull request
-
----
-
-## 📄 License
-
-Free to use and modify for personal and server use. Please credit the original author.
-
----
-
-## 🙏 Acknowledgments
-
-- **Created by:** AnCarsenat
-- **Inspired by:** Redstone Additions V1
-- **Thanks to:** The Minecraft datapacking community
+### v3.0.0 — January 2026
+- Complete rewrite from Redstone Additions V1
+- 23 custom blocks, 3 tools
+- UNI Gate with 7 logic modes
+- Wrench tool system
+- Survival duplication bugs eliminated
+- Recipe book integration for all items
 
 ---
 
-## 📞 Support
+## Contributing
 
-- **Issues:** [GitHub Issues](https://github.com/AnCarsenat/Redstone-Additions-V3/issues)
-- **Wiki:** [WIKI.md](WIKI.md)
-- **Repository:** [Redstone-Additions-V3](https://github.com/AnCarsenat/Redstone-Additions-V3)
+Pull requests are welcome. Fork the repo, create a branch, test in both creative and survival, and submit. If you're building a new block, follow the patterns in the [Developer Guide](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Developer-Guide).
+
+For bug reports, open an [issue on GitHub](https://github.com/AnCarsenat/Redstone-Additions-V3/issues).
 
 ---
 
-**Happy Redstoning! 🔴⚡**
+## License
+
+**Copyright (c) 2026 AnCarsenat. All rights reserved.**
+
+You are free to **use** this datapack on any world or server and to **modify** it for private use. You may **not** redistribute, reupload, mirror, or repackage it — in whole or in part — on any platform without explicit written permission from the author. Linking to the official [Modrinth](https://modrinth.com/datapack/redstone-additions-v3) or [GitHub](https://github.com/AnCarsenat/Redstone-Additions-V3) pages is always permitted.
+
+If you feature this datapack in videos, streams, or articles, please credit **AnCarsenat** and link to the official repository.
+
+See the full [LICENSE](LICENSE) file for complete terms.
+
+---
+
+<p align="center">
+  <strong>Created by <a href="https://github.com/AnCarsenat">AnCarsenat</a></strong><br>
+  <a href="https://github.com/AnCarsenat/Redstone-Additions-V3/issues">Report a Bug</a> · <a href="https://github.com/AnCarsenat/Redstone-Additions-V3/wiki">Wiki</a> · <a href="https://modrinth.com/datapack/redstone-additions-v3">Download</a>
+</p>
