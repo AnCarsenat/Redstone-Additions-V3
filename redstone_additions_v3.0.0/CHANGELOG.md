@@ -1,5 +1,66 @@
 # Changelog
 
+## [3.3.0] - 2026-02-23
+
+### Changed
+
+#### Macro-Based Multiblock Architecture
+- **Eliminated 4× directional code duplication** using MC macro functions (`$` parameter substitution)
+- Direction offsets stored in `storage ra:multiblock bf_dir.{north|south|east|west}` — each direction contains ~29 keys (positions, IO metadata)
+- New macro functions: `validate_facing`, `check_facing`, `tick_facing`, `process_facing` — single implementation handles all 4 directions
+- Dispatch files use 4-line pattern to resolve facing → macro call
+- Deleted 9 obsolete per-direction files (validate/check_N/S/E/W, consume_and_output)
+
+#### Marker Entity Data Fix
+- Summon marker with `{data:{_init:1b}}` to prevent Minecraft from auto-removing empty `data:{}` compound
+- `setup_marker` now uses atomic `data merge` to initialize all fields at once, then `data modify` to override from storage
+- Fixes critical bug where multiblocks would assemble then immediately disassemble
+
+#### Blast Forge
+- Added **ancient debris** recipe: ancient_debris → 2× netherite scrap
+- Updated wrench error message to reflect current structure requirements
+
+### Fixed
+- Fixed multiblock marker losing its `data` compound due to Minecraft removing empty NBT compounds
+- Fixed non-atomic entity data initialization causing race conditions during assembly
+
+---
+
+## [3.2.0] - 2026-02-23
+
+### Changed
+
+#### Multiblock System Overhaul
+- **Standardized multiblock data structure** — All multiblocks now store:
+  - `inputs` — Container positions (relative to base) for material/fuel inputs
+  - `outputs` — Container positions for processed results
+  - `properties` — Configurable properties (enabled, speed, tier)
+  - `controls` — Redstone input/output positions for automation
+- `setup_marker.mcfunction` now initializes all standard IO and control data from assembly
+- Added `ra.mb_enabled` scoreboard for control state tracking
+
+#### Blast Forge Reworked
+- **Removed hopper** from structure — replaced with barrel-based IO
+- **2 Inputs + 1 Output** barrel system:
+  - Input 1 (material barrel): Raw ores, ore blocks, equipment to recycle
+  - Input 2 (fuel barrel): Coal, charcoal, or blaze powder
+  - Output barrel: Smelted/recycled results automatically inserted
+- Structure now uses **blast furnace** instead of regular furnace
+- Added **blaze powder** as valid fuel type
+- **Redstone control**: Place a redstone block behind the base to lock/disable the forge
+- **Block tag `#ra_multiblock:blast_forge_bricks`**: Accepts nether bricks, red nether bricks, cracked, and chiseled variants
+- Process function now uses `ra_lib:inventory/insert` for proper output stacking
+
+### Fixed
+
+#### Blast Forge
+- Fixed check_* functions checking from wrong position (hopper instead of base)
+- Fixed inconsistency between validate (furnace) and check (blast_furnace) block types  
+- Fixed missing `#ra_multiblock:blast_forge_bricks` block tag (was referenced but never created)
+- Fixed structure validation checking from marker position correctly in all 4 directions
+
+---
+
 ## [3.1.0] - 2026-02-23
 
 ### Added

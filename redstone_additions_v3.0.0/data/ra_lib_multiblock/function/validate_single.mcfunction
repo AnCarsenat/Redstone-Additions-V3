@@ -2,6 +2,9 @@
 # Validate a single multiblock structure
 # Context: as multiblock marker, at its position
 
+# Grace period — skip validation for newly created markers, remove tag for next time
+execute if entity @s[tag=ra.multiblock.grace] run return run tag @s remove ra.multiblock.grace
+
 # Reset validation flag
 scoreboard players set @s ra.multiblock 0
 
