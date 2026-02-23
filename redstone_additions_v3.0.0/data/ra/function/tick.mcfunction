@@ -26,4 +26,7 @@ function ra_gates:tick
 # Run wireless redstone tick
 function ra_wireless:tick
 
+# Run multiblock tick
+function ra_multiblock:tick
+
 schedule function ra:tick 1t

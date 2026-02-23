@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CRC",
+    "RGR",
+    "CRC"
+  ],
+  "key": {
+    "C": "minecraft:copper_ingot",
+    "R": "minecraft:redstone",
+    "G": "minecraft:glass"
+  },
+  "result": {
+    "id": "minecraft:bat_spawn_egg",
+    "components": {
+      "minecraft:item_model": "minecraft:copper_block",
+      "minecraft:item_name": "Copper Multiblock Base",
+      "minecraft:lore": [{"text":"Tier 1 Multiblock Core","color":"gray","italic":false}],
+      "minecraft:custom_data": { "ra": { "multiblock_base": "copper" } },
+      "minecraft:entity_data": {
+        "id": "minecraft:bat",
+        "Tags": ["ra.spawned", "ra.place.multiblock_base", "ra.place.multiblock_base.copper"],
+        "Silent": true,
+        "NoAI": true,
+        "Invulnerable": true
+      }
+    }
+  },
+  "show_notification": true
+}
