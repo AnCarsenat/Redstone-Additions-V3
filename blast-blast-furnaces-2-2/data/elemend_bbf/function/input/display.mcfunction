@@ -1,0 +1,3 @@
+execute unless entity @n[type=item_display,distance=..0.5,tag=elemend_bbf_display] run summon item_display ~ ~0.1 ~ {Tags:["elemend_bbf_display"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0.65f,-0.6f,-0.8f,1f],translation:[0f,0f,0f],scale:[0.6f,0.6f,0.6f]},item:{id:"minecraft:fire_charge",count:1}}
+data modify entity @n[type=minecraft:item_display,distance=..0.5,tag=elemend_bbf_display] item.id set from entity @s data.Items[{Slot:0b}].id
+execute as @n[type=minecraft:item_display,tag=elemend_bbf_display] at @s if predicate elemend_bbf:64 run rotate @s ~20 ~

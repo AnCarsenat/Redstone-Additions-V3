@@ -1,10 +1,9 @@
 # /ra_wireless:blocks/emitter/process
 # Process Emitter logic. As armor stand, at position.
-# Transmits redstone signal to all receivers on the same channel
+# Transmits redstone signal to all receivers on the same channel (string identifier)
 
-# Get channel (default 1)
-execute unless data entity @s data.properties.channel run data modify entity @s data.properties.channel set value 1
-execute store result score @s ra.channel run data get entity @s data.properties.channel
+# Get channel (default "default")
+execute unless data entity @s data.properties.channel run data modify entity @s data.properties.channel set value "default"
 
 # Store enabled state (can toggle with wrench)
 execute unless data entity @s data.properties.enabled run data modify entity @s data.properties.enabled set value 1b

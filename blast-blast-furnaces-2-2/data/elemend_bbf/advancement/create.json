@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "rewards": {
+    "function": "elemend_bbf:create/recipe"
+  }
+}

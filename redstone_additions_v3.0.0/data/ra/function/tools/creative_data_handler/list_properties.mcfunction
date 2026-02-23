@@ -53,9 +53,8 @@ execute if data storage ra:cdh properties.extend run function ra:tools/creative_
 # Check for 'pulse' property (int) - for shortener
 execute if data storage ra:cdh properties.pulse run function ra:tools/creative_data_handler/props/show_pulse
 
-# Check for 'entity_type' property (str) - for tag_adder/tag_remover
-execute if data storage ra:cdh properties.entity_type run function ra:tools/creative_data_handler/props/show_entity_type
-
+# Check for 'chance' property (int) - for randomizer (percentage 0-100)
+execute if data storage ra:cdh properties.chance run function ra:tools/creative_data_handler/props/show_chance
 
 # If no properties, show message
 execute unless data storage ra:cdh properties run tellraw @s [{"text":"  (no properties)","color":"dark_gray","italic":true}]

@@ -7,8 +7,8 @@ execute unless entity @s[tag=ra.place.tag_remover] run return 0
 # Place red glazed terracotta with armor stand marker (dir_type:0 = non-directional)
 function ra_lib:placement/place {block_id:"minecraft:red_glazed_terracotta",block_tag:"tag_remover",dir_type:0}
 
-# Initialize default properties first
-data modify entity @e[tag=ra.custom_block.tag_remover,tag=ra.new,limit=1] data.properties set value {range:3,tag:"custom_tag",entity_type:""}
+# Initialize default properties
+data modify entity @e[tag=ra.custom_block.tag_remover,tag=ra.new,limit=1] data.properties set value {entity_selector:"@e[distance=..3]",tag:"custom_tag"}
 
 # Remove ra.new tag now that setup is complete
 tag @e[tag=ra.custom_block.tag_remover,tag=ra.new] remove ra.new

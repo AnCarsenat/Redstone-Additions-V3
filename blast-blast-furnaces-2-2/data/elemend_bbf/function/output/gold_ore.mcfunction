@@ -1,0 +1,2 @@
+execute if score #elemend_bbf_double elemend_bbf_calc matches 1 run summon minecraft:item ~ ~0.7 ~ {Item:{id:"minecraft:gold_ingot",count:1}}
+execute if score #elemend_bbf_double elemend_bbf_calc matches 0 run function elemend_bbf:output/gold_n

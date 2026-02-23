@@ -6,8 +6,7 @@ playsound minecraft:entity.experience_orb.pickup block @a[distance=..8] ^ ^ ^1 0
 particle minecraft:heart ^ ^ ^1 0.5 0.5 0.5 0.02 5
 
 # Replace tropical fish bucket with water bucket
-execute store result score #slot ra.temp run data get block ~ ~ ~ Items[{id:"minecraft:tropical_fish_bucket"}].Slot
 data modify block ~ ~ ~ Items[{id:"minecraft:tropical_fish_bucket"}].id set value "minecraft:water_bucket"
 
 # Mark success
-scoreboard players set #breed_success ra.temp 1
+scoreboard players set @s ra.temp 1

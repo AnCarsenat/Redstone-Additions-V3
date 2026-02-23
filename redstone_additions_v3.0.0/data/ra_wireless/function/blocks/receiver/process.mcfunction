@@ -1,10 +1,9 @@
 # /ra_wireless:blocks/receiver/process
 # Process Receiver logic. As armor stand, at position.
-# Receives signal from emitters on the same channel or pulses from remote
+# Receives signal from emitters on the same channel (string identifier) or pulses from remote
 
-# Get channel (default 1)
-execute unless data entity @s data.properties.channel run data modify entity @s data.properties.channel set value 1
-execute store result score @s ra.channel run data get entity @s data.properties.channel
+# Get channel (default "default")
+execute unless data entity @s data.properties.channel run data modify entity @s data.properties.channel set value "default"
 
 # Store enabled state (can toggle with wrench)
 execute unless data entity @s data.properties.enabled run data modify entity @s data.properties.enabled set value 1b
@@ -22,11 +21,12 @@ execute if entity @s[tag=ra.pulsing] if score @s ra.pulse_timer matches ..0 run 
 execute if entity @s[tag=ra.pulsing] run return 1
 
 # Check if any emitter on same channel is transmitting
+# Store our channel in storage for comparison
+data modify storage ra:temp receiver_channel set from entity @s data.properties.channel
 tag @s add ra.checking
-scoreboard players operation #check_channel ra.temp = @s ra.channel
 
-# Look for any emitter that is transmitting on our channel
-execute as @e[tag=ra.custom_block.emitter,tag=ra.transmitting] if score @s ra.channel = #check_channel ra.temp run tag @e[tag=ra.checking] add ra.receiving
+# Look for any transmitting emitter with matching channel
+execute as @e[tag=ra.custom_block.emitter,tag=ra.transmitting] run function ra_wireless:blocks/receiver/check_emitter_channel
 
 # Output based on receiving state
 execute if entity @s[tag=ra.receiving] at @s run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 redstone_block replace iron_block

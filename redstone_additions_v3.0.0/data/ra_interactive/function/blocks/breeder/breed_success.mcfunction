@@ -10,4 +10,4 @@ particle minecraft:heart ^ ^ ^1 0.5 0.5 0.5 0.02 5
 function ra_interactive:blocks/breeder/consume_item with storage ra:temp
 
 # Mark success
-scoreboard players set #breed_success ra.temp 1
+scoreboard players set @s ra.temp 1

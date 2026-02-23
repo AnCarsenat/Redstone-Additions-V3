@@ -1,6 +1,6 @@
 # /ra_gates:blocks/rand/process
 # Process Randomizer logic. As armor stand, at position.
-# Outputs random signal (50% chance) on rising edge
+# Outputs random signal (based on chance property, default 50%) on rising edge
 
 # Detect rising edge
 execute unless entity @s[tag=ra.was_powered] if score @s ra.act_red matches 1.. run function ra_gates:blocks/rand/trigger
