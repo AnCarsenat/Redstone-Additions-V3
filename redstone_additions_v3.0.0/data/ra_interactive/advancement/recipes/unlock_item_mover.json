@@ -1,0 +1,21 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ra_interactive:item_mover"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_observer": {
+      "conditions": {
+        "items": [{ "items": "minecraft:observer" }]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [["has_the_recipe", "has_observer"]],
+  "rewards": {
+    "recipes": ["ra_interactive:item_mover"]
+  }
+}

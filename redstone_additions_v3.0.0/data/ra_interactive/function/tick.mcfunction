@@ -11,3 +11,4 @@ function ra_interactive:blocks/infinite_water_cauldron/tick
 function ra_interactive:blocks/infinite_lava_cauldron/tick
 function ra_interactive:blocks/infinite_snow_cauldron/tick
 function ra_interactive:blocks/message/tick
+function ra_interactive:blocks/item_mover/tick

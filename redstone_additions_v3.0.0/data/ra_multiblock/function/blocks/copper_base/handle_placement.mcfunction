@@ -4,7 +4,7 @@
 execute unless entity @s[tag=ra.place.multiblock_base.copper] run return 0
 
 # Place the block using library (dir_type:0 = no facing)
-function ra_lib:placement/place {block_id:"minecraft:copper_block",block_tag:"multiblock_base.copper",dir_type:0}
+function ra_lib:placement/place {block_id:"minecraft:waxed_copper_block",block_tag:"multiblock_base.copper",dir_type:0}
 
 # Initialize properties
 data modify entity @e[tag=ra.new,limit=1] data.properties.tier set value "copper"
