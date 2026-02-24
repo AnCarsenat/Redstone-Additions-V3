@@ -1,7 +1,0 @@
-scoreboard objectives remove elemend_bbf_create
-scoreboard objectives remove elemend_bbf_calc
-scoreboard objectives remove elemend_bbf_item
-scoreboard objectives remove elemend_bbf_ctime
-scoreboard objectives remove elemend_bbf_timing
-
-schedule clear function elemend_bbf:clock_2_sec

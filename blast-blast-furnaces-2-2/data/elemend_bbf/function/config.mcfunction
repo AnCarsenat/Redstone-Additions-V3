@@ -1,6 +1,0 @@
-tellraw @s ["",{"text":" \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020","color":"dark_blue","strikethrough":true}]
-tellraw @s ["",{"text":"Blast Blast Furnaces - Customization","color":"green"}]
-tellraw @s ["",{"text":""}]
-tellraw @s ["",{"text":"double ore smelting","hover_event":{action:"show_text",value:[{text:"when enabled, smelting ores yields an extra ingot"}]}}]
-tellraw @s ["",{text:"[disable]   ",color:"gold",click_event:{action:"run_command",command:"/scoreboard players set #elemend_bbf_double elemend_bbf_calc 0"}},{text:"[enable]",color:"gold",click_event:{action:"run_command",command:"/scoreboard players set #elemend_bbf_double elemend_bbf_calc 1"}}]
-tellraw @s ["",{"text":" \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020","color":"dark_blue","strikethrough":true}]
