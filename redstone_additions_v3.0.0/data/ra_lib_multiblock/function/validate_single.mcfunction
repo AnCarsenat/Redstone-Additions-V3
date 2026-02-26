@@ -8,8 +8,12 @@ execute if entity @s[tag=ra.multiblock.grace] run return run tag @s remove ra.mu
 # Reset validation flag
 scoreboard players set @s ra.multiblock 0
 
-# Type-specific structure check (sets score to 1 if valid)
-execute if entity @s[tag=ra.multiblock.blast_forge] run function ra_multiblock:blast_forge/check_structure
+# Type-specific structure check via registered hooks (sets score to 1 if valid)
+function #ra_lib_multiblock:check_structure
+
+# Debug: show validation result
+execute if entity @a[tag=ra.debug,limit=1] if score @s ra.multiblock matches 0 at @s run tellraw @a[tag=ra.debug] [{text:"[MB Debug] ",color:"gold"},{text:"FAIL ",color:"red"},{text:"type="},{nbt:"data.type",entity:"@s",color:"aqua"},{text:" facing="},{nbt:"data.facing",entity:"@s",color:"aqua"},{text:" pos="},{nbt:"Pos",entity:"@s",color:"yellow"}]
+execute if entity @a[tag=ra.debug,limit=1] if score @s ra.multiblock matches 1 at @s run tellraw @a[tag=ra.debug] [{text:"[MB Debug] ",color:"gold"},{text:"OK ",color:"green"},{text:"type="},{nbt:"data.type",entity:"@s",color:"aqua"},{text:" facing="},{nbt:"data.facing",entity:"@s",color:"aqua"}]
 
 # If structure is broken, disassemble
 execute if score @s ra.multiblock matches 0 run function ra_lib_multiblock:disassemble

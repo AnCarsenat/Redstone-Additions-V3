@@ -5,7 +5,7 @@
 data modify storage ra:temp current_gate set from entity @s data.properties.gate_type
 
 # Notify player
-tellraw @a[distance=..10] [{"text":"[Wrench] ","color":"gold"},{"text":"UNI Gate mode: ","color":"gray"},{"nbt":"current_gate","storage":"ra:temp","color":"light_purple","bold":true}]
+tellraw @a[distance=..10] [{text:"[Wrench] ",color:"gold"},{text:"UNI Gate mode: ",color:"gray"},{nbt:"current_gate",storage:"ra:temp",color:"light_purple",bold:true}]
 
 # Play sound
 playsound minecraft:block.note_block.hat block @a[distance=..16] ~ ~ ~ 0.5 2

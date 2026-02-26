@@ -9,5 +9,5 @@ execute unless data entity @s SelectedItem.components."minecraft:custom_data".ra
 $function ra_wireless:tools/remote/update_item {channel:$(channel)}
 
 # Feedback
-$tellraw @s [{"text":"[Remote] ","color":"red"},{"text":"Channel set to ","color":"gray"},{"text":"$(channel)","color":"yellow"}]
+$tellraw @s [{text:"[Remote] ",color:"red"},{text:"Channel set to ",color:"gray"},{text:"$(channel)",color:"yellow"}]
 playsound minecraft:block.note_block.pling block @s ~ ~ ~ 0.5 1.5

@@ -1,5 +1,88 @@
 # Changelog
 
+## [4.0.0] - 2026-02-24
+
+### Added
+
+#### Goggles (New Tool)
+- **New tool: Goggles** — wearable/holdable tool that reveals custom block info
+  - Wear as helmet or hold in hand to scan nearby blocks (16 block range)
+  - Shows block name billboards above each custom block
+  - Shows block-specific status: gate mode, wireless channel, sensor target, clock period, delay
+  - Shows multiblock I/O indicators with labeled inputs/outputs/controls
+  - Shows blast forge heat status and enabled state
+  - Crafting recipe: Copper Ingot + 2× Glass Pane + Gold Ingot
+  - New files: `ra:tools/goggles/` (give, tick, scan_blocks, scan_multiblocks, billboard/, status/)
+
+#### Blast Forge Heat System
+- **Heat counter system** replacing flat 5-second timer
+  - Heat stored per-forge in marker entity `data.status.heat`
+  - Heat increases when fuel is consumed, decreases by 1 every 2 ticks passively
+  - Processing only occurs when heat ≥ 100
+  - Heat capped at 1000
+- **Fuel tiers:**
+  - Coal: +50 heat
+  - Charcoal: +40 heat
+  - Blaze Powder: +500 heat
+  - Blaze Rod: +1500 heat (new fuel type)
+  - Lava Bucket: +5000 heat (returns empty bucket)
+- **Heat-based processing speed:**
+  - Heat 100-299: process every 5 seconds
+  - Heat 300-599: process every 3 seconds
+  - Heat 600-899: process every 2 seconds
+  - Heat 900+: process every 1 second
+- **Visual feedback:** particle intensity scales with heat level (smoke → flames → lava drips)
+- New file: `ra_multiblock:blast_forge/consume_fuel`
+
+#### Clock Recipe
+- Added crafting recipe for Clock block: Stone + Redstone + Clock item
+
+#### Uninstall Confirmation
+- `/function ra:uninstall` now shows clickable [CONFIRM] / [CANCEL] prompt
+- `ra:uninstall/confirm` performs full cleanup:
+  - Kills all custom blocks, multiblock markers, billboards, display entities
+  - Removes all 26 scoreboards
+  - Clears all data storage namespaces
+  - Cancels scheduled ticks
+  - Removes all player tags
+- `ra:uninstall/cancel` sends cancellation message
+
+#### Guidelines Document
+- Added `GUIDELINES.md` with naming conventions, new block checklist, multiblock checklist, release checklist, and file templates
+
+### Changed
+
+#### Naming Convention Overhaul
+- `ra_gates:load` now calls `register_block` for each gate block (matching `ra_interactive` and `ra_sensors` pattern)
+- Created `register_block.mcfunction` for: UNI Gate, Clock, Delayer, Extender, Randomizer, Shortener
+- Standardized header comments across all load/tick files with consistent format
+- Organized `give_all_items.mcfunction` by category (Tools → Interactive → Gates → Sensors → Wireless → Multiblocks)
+- Removed debug/test items (Output 1/2/3) from `give_all_items`
+
+#### Version Updates
+- Updated pack.mcmeta version to v4.0.0
+- Updated load message to v4.0.0
+- Updated README badge to v4.0.0
+- Updated WIKI Home.md version to 4.0.0
+
+### Fixed
+
+#### Critical Fixes
+- **Beamer ghost block:** Removed all beamer references (tick call, give_all call, advancement, CDH mapping, scoreboard). Beamer was never implemented — only had an advancement JSON
+- **Conveyor recipe without implementation:** Disabled `conveyor.json` recipe (renamed to `.disabled`). The recipe produced Item Pipe items but no conveyor block exists
+- **Stray pack.mcmeta:** Deleted `data/ra_wireless/pack.mcmeta` which should not exist inside a namespace folder
+- **Duplicate ra.cooldown:** Removed duplicate `scoreboard objectives add ra.cooldown` from `ra:load` (kept in `ra_lib:placement/init` where it's used)
+- **Version mismatches:** All version references now consistently say 4.0.0
+
+### Removed
+- `data/ra_advancements/advancement/ra_gates/get_beamer.json` — ghost advancement for unimplemented block
+- `data/ra_wireless/pack.mcmeta` — stray file in namespace folder
+- `data/ra_interactive/recipe/conveyor.json` → renamed to `.disabled`
+- Debug items (Output 1/2/3) from `give_all_items.mcfunction`
+- Beamer scoreboard (`ra.dir`) from `ra_gates:load`
+
+---
+
 ## [3.3.0] - 2026-02-23
 
 ### Changed

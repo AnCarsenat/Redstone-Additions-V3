@@ -16,5 +16,5 @@ execute unless data storage ra:temp wrench_found at @s anchored eyes positioned 
 execute unless data storage ra:temp wrench_found at @s anchored eyes positioned ^ ^ ^4 align xyz positioned ~0.5 ~ ~0.5 run function ra:tools/wrench/try_multiblock
 
 # If still nothing found
-execute unless data storage ra:temp wrench_found run tellraw @s [{"text":"[Wrench] ","color":"gold"},{"text":"No custom block or multiblock found nearby.","color":"gray"}]
+execute unless data storage ra:temp wrench_found run tellraw @s [{text:"[Wrench] ",color:"gold"},{text:"No custom block or multiblock found nearby.",color:"gray"}]
 data remove storage ra:temp wrench_found

@@ -8,5 +8,5 @@ data modify storage ra:temp remote_channel set from entity @s SelectedItem.compo
 execute as @e[tag=ra.custom_block.receiver] run function ra_wireless:tools/remote/check_receiver_channel
 
 # Feedback
-tellraw @s [{"text":"[Remote] ","color":"red"},{"text":"Pulsed receivers on channel ","color":"gray"},{"nbt":"remote_channel","storage":"ra:temp","color":"yellow"}]
+tellraw @s [{text:"[Remote] ",color:"red"},{text:"Pulsed receivers on channel ",color:"gray"},{nbt:"remote_channel",storage:"ra:temp",color:"yellow"}]
 playsound minecraft:block.lever.click block @s ~ ~ ~ 1 1

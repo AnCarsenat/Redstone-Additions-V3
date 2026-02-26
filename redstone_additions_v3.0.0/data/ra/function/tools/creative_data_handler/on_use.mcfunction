@@ -28,5 +28,5 @@ execute at @s anchored eyes positioned ^ ^ ^3 unless data storage ra:temp cdh_fo
 execute at @s anchored eyes positioned ^ ^ ^4 unless data storage ra:temp cdh_found as @e[tag=ra.custom_block,distance=..1.5,limit=1,sort=nearest] run function ra:tools/creative_data_handler/found_block
 
 # If no block found
-execute unless data storage ra:temp cdh_found run tellraw @s [{"text":"[Creative Data Handler] ","color":"gold"},{"text":"No custom block found nearby.","color":"gray"}]
+execute unless data storage ra:temp cdh_found run tellraw @s [{text:"[Creative Data Handler] ",color:"gold"},{text:"No custom block found nearby.",color:"gray"}]
 data remove storage ra:temp cdh_found

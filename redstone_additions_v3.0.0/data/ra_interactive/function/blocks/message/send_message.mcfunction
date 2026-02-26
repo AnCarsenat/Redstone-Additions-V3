@@ -10,10 +10,10 @@ execute if score @s ra.temp matches ..0 run scoreboard players set @s ra.temp 16
 
 # Send tellraw to players within range (use execute if to check range brackets)
 # Use interpret:true to parse JSON text components in the message
-execute if score @s ra.temp matches ..8 run tellraw @a[distance=..8] [{"text":"[Message] ","color":"yellow"},{"nbt":"message","storage":"ra:temp","interpret":true}]
-execute if score @s ra.temp matches 9..16 run tellraw @a[distance=..16] [{"text":"[Message] ","color":"yellow"},{"nbt":"message","storage":"ra:temp","interpret":true}]
-execute if score @s ra.temp matches 17..32 run tellraw @a[distance=..32] [{"text":"[Message] ","color":"yellow"},{"nbt":"message","storage":"ra:temp","interpret":true}]
-execute if score @s ra.temp matches 33.. run tellraw @a[distance=..64] [{"text":"[Message] ","color":"yellow"},{"nbt":"message","storage":"ra:temp","interpret":true}]
+execute if score @s ra.temp matches ..8 run tellraw @a[distance=..8] [{text:"[Message] ",color:"yellow"},{nbt:"message",storage:"ra:temp",interpret:true}]
+execute if score @s ra.temp matches 9..16 run tellraw @a[distance=..16] [{text:"[Message] ",color:"yellow"},{nbt:"message",storage:"ra:temp",interpret:true}]
+execute if score @s ra.temp matches 17..32 run tellraw @a[distance=..32] [{text:"[Message] ",color:"yellow"},{nbt:"message",storage:"ra:temp",interpret:true}]
+execute if score @s ra.temp matches 33.. run tellraw @a[distance=..64] [{text:"[Message] ",color:"yellow"},{nbt:"message",storage:"ra:temp",interpret:true}]
 
 execute if score @s ra.temp matches ..16 run playsound minecraft:block.note_block.chime block @a[distance=..16] ~ ~ ~ 0.5 1.2
 execute if score @s ra.temp matches 17..32 run playsound minecraft:block.note_block.chime block @a[distance=..32] ~ ~ ~ 0.5 1.2

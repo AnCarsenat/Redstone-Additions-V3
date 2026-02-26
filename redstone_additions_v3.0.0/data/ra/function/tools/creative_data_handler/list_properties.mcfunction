@@ -57,4 +57,4 @@ execute if data storage ra:cdh properties.pulse run function ra:tools/creative_d
 execute if data storage ra:cdh properties.chance run function ra:tools/creative_data_handler/props/show_chance
 
 # If no properties, show message
-execute unless data storage ra:cdh properties run tellraw @s [{"text":"  (no properties)","color":"dark_gray","italic":true}]
+execute unless data storage ra:cdh properties run tellraw @s [{text:"  (no properties)",color:"dark_gray",italic:true}]

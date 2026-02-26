@@ -7,4 +7,4 @@ function ra_multiblock:blocks/gold_base/give
 function ra_multiblock:blocks/diamond_base/give
 function ra_multiblock:blocks/netherite_base/give
 
-tellraw @s [{"text":"[","color":"dark_gray"},{"text":"RA","color":"gold","bold":true},{"text":"] ","color":"dark_gray"},{"text":"Given all multiblock bases!","color":"green"}]
+tellraw @s [{text:"[",color:"dark_gray"},{text:"RA",color:"gold",bold:true},{text:"] ",color:"dark_gray"},{text:"Given all multiblock bases!",color:"green"}]

@@ -10,4 +10,4 @@ execute if entity @s[tag=ra.custom_block.uni_gate] run return run function ra:to
 # Other blocks could be added here
 
 # If block doesn't support cycling
-tellraw @a[distance=..10] [{"text":"[Wrench] ","color":"gold"},{"text":"This block doesn't support cycling.","color":"gray"}]
+tellraw @a[distance=..10] [{text:"[Wrench] ",color:"gold"},{text:"This block doesn't support cycling.",color:"gray"}]

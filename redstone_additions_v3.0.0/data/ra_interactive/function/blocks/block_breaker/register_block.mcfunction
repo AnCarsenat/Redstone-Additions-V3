@@ -3,4 +3,4 @@
 
 # Note: Uses shared ra.cooldown scoreboard from ra_lib
 
-tellraw @a [{"text":"[RA] ","color":"gold"},{"text":"Block Breaker registered","color":"gray"}]
+tellraw @a [{text:"[RA] ",color:"gold"},{text:"Block Breaker registered",color:"gray"}]

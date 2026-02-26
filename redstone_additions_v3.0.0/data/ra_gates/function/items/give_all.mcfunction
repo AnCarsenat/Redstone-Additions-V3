@@ -8,6 +8,5 @@ function ra_gates:blocks/uni_gate/give
 function ra_gates:blocks/clock/give
 function ra_gates:blocks/delayer/give
 function ra_gates:blocks/extender/give
-function ra_gates:blocks/beamer/give
 function ra_gates:blocks/rand/give
 function ra_gates:blocks/shortener/give

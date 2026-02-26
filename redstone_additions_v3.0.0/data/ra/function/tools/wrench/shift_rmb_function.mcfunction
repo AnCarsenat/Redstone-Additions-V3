@@ -10,5 +10,5 @@ execute at @s anchored eyes positioned ^ ^ ^3.5 unless data storage ra:temp wren
 execute at @s anchored eyes positioned ^ ^ ^4.5 unless data storage ra:temp wrench_found as @e[tag=ra.custom_block,distance=..1.5,limit=1,sort=nearest] run function ra:tools/wrench/cycle_block
 
 # If no block found
-execute unless data storage ra:temp wrench_found run tellraw @s [{"text":"[Wrench] ","color":"gold"},{"text":"No cyclable block found nearby.","color":"gray"}]
+execute unless data storage ra:temp wrench_found run tellraw @s [{text:"[Wrench] ",color:"gold"},{text:"No cyclable block found nearby.",color:"gray"}]
 data remove storage ra:temp wrench_found

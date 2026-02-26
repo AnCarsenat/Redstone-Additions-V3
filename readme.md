@@ -15,7 +15,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Minecraft-1.21+-2EA44F?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHJlY3QgZmlsbD0iIzVBOTEzMiIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ii8+PC9zdmc+" alt="Minecraft 1.21+">
-  <img src="https://img.shields.io/badge/Version-3.1.0-blue" alt="Version 3.1.0">
+  <img src="https://img.shields.io/badge/Version-4.0.0-blue" alt="Version 4.0.0">
   <img src="https://img.shields.io/badge/Blocks-23+-red" alt="23+ blocks">
   <img src="https://img.shields.io/badge/License-Custom-orange" alt="Custom License">
 </p>

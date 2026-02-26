@@ -9,7 +9,7 @@
 # Copy value from storage to entity property
 $data modify entity @e[tag=ra.cdh_target,limit=1] data.properties.$(name) set from storage ra:cdh set_value
 
-$tellraw @s [{"text":"[Creative Data Handler] ","color":"gold"},{"text":"Set ","color":"gray"},{"text":"$(name)","color":"yellow"},{"text":" = ","color":"gray"},{"nbt":"set_value","storage":"ra:cdh","color":"green"}]
+$tellraw @s [{text:"[Creative Data Handler] ",color:"gold"},{text:"Set ",color:"gray"},{text:"$(name)",color:"yellow"},{text:" = ",color:"gray"},{nbt:"set_value",storage:"ra:cdh",color:"green"}]
 
 # Refresh display
 function ra:tools/creative_data_handler/refresh

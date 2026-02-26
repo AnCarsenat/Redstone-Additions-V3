@@ -1,5 +1,6 @@
 # /data/ra/function/tick.mcfunction
-# Main tick loop
+# Main tick loop — runs every game tick
+# Handles tool cleanup, placement detection, and dispatches all module ticks
 
 # Remove active tool tags for players who stopped clicking
 # Tags get re-added each tick while clicking via advancement
@@ -28,5 +29,8 @@ function ra_wireless:tick
 
 # Run multiblock tick
 function ra_multiblock:tick
+
+# Run goggles scan
+function ra:tools/goggles/tick
 
 schedule function ra:tick 1t

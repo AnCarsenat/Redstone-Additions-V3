@@ -21,8 +21,8 @@ execute if data storage ra:multiblock inputs run data modify entity @s data.inpu
 execute if data storage ra:multiblock outputs run data modify entity @s data.outputs set from storage ra:multiblock outputs
 execute if data storage ra:multiblock controls run data modify entity @s data.controls set from storage ra:multiblock controls
 
-# Add type-specific tag for efficient selector filtering
-execute if data entity @s data{type:"blast_forge"} run tag @s add ra.multiblock.blast_forge
+# Add type-specific tags via registered hooks
+function #ra_lib_multiblock:setup_type
 
 # Grace period — skip first validation cycle to avoid race conditions
 tag @s add ra.multiblock.grace

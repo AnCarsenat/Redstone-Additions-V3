@@ -11,7 +11,7 @@
 # 3. Register recipes with #ra_lib:crafting/dispenser/recipes tag
 
 # Place crafter block when armor stand with tag is placed
-execute at @e[tag=ra.create_crafter] run setblock ~ ~ ~ dispenser[facing=down]{CustomName:'{"text":"RA Crafter","color":"gold","bold":true}'}
+execute at @e[tag=ra.create_crafter] run setblock ~ ~ ~ dispenser[facing=down]{CustomName:{text:"RA Crafter",color:"gold",bold:true}}
 tag @e[tag=ra.create_crafter] remove ra.create_crafter
 
 # Check if crafter still exists

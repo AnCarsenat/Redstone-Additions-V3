@@ -5,4 +5,4 @@
 # Scoreboards for crafting
 scoreboard objectives add ra.craft_id dummy
 
-tellraw @a [{"text":"[RA] ","color":"gold"},{"text":"Crafting system initialized","color":"gray"}]
+tellraw @a [{text:"[RA] ",color:"gold"},{text:"Crafting system initialized",color:"gray"}]
