@@ -61,4 +61,4 @@ tag @a remove ra.debug
 
 # === Final message ===
 tellraw @a [{text:"\n"},{text:"[",color:"dark_gray"},{text:"RA",color:"gold",bold:true},{text:"] ",color:"dark_gray"},{text:"Redstone Additions has been uninstalled.",color:"red"}]
-tellraw @a [{text:"  "},{text:"You may now disable the datapack with: ",color:"gray"},{text:"/datapack disable \"file/redstone_additions_v3.0.0\"",color:"yellow",clickEvent:{action:"suggest_command",value:"/datapack disable \"file/redstone_additions_v3.0.0\""},hoverEvent:{action:"show_text",contents:{text:"Click to run",color:"gray"}}}]
+tellraw @a [{text:"  "},{text:"You may now disable the datapack with: ",color:"gray"},{text:"/datapack disable \"file/redstone_additions_v3.0.0\"",color:"yellow",click_event:{action:"suggest_command",command:"/datapack disable \"file/redstone_additions_v3.0.0\""},hover_event:{action:"show_text",value:"Click to run"}}]

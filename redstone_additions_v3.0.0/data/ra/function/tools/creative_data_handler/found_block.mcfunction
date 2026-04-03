@@ -38,6 +38,10 @@ execute if entity @s[tag=ra.custom_block.extender] run data modify storage ra:cd
 execute if entity @s[tag=ra.custom_block.rand] run data modify storage ra:cdh block_type set value "Randomizer"
 execute if entity @s[tag=ra.custom_block.shortener] run data modify storage ra:cdh block_type set value "Shortener"
 
+# Clock compatibility: older markers may still use delay instead of cooldown
+execute if entity @s[tag=ra.custom_block.clock] if data entity @s data.properties.delay unless data entity @s data.properties.cooldown run data modify entity @s data.properties.cooldown set from entity @s data.properties.delay
+execute if entity @s[tag=ra.custom_block.clock] if data entity @s data.properties.delay unless data entity @s data.properties.cooldown run data remove entity @s data.properties.delay
+
 # Wireless blocks
 execute if entity @s[tag=ra.custom_block.emitter] run data modify storage ra:cdh block_type set value "Wireless Emitter"
 execute if entity @s[tag=ra.custom_block.receiver] run data modify storage ra:cdh block_type set value "Wireless Receiver"
