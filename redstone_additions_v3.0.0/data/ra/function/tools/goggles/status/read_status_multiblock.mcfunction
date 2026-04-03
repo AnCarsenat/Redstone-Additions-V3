@@ -2,9 +2,10 @@
 # Display multiblock-specific status info (heat, enabled, etc.)
 # Context: as multiblock marker entity, at base position
 
-# Show heat status for blast forge
-execute store result score #bf_heat ra.temp run data get entity @s data.status.heat
-execute store result score #bf_enabled ra.temp run data get entity @s data.properties.enabled
+# Heat is scoreboard-backed for blast forge and updates live
+data modify storage ra:temp status_score_line set value {y:1.7,label:"Heat: ",objective:"ra.heat",suffix:"/1000",value_color:"gold",fallback:"N/A"}
+function ra:tools/goggles/billboard/show_score_line with storage ra:temp status_score_line
 
-# Summon status billboard below the name
-summon text_display ~ ~1.7 ~ {Tags:["ra.billboard","ra.display"],billboard:"center",text:[{text:"Heat: ",color:"gray"},{nbt:"data.status.heat",entity:"@s",color:"gold"},{text:"/1000",color:"dark_gray"},{text:" | ",color:"dark_gray"},{text:"Enabled: ",color:"gray"},{nbt:"data.properties.enabled",entity:"@s",interpret:false,color:"aqua"}],background:1073741824,shadow:true,see_through:false,line_width:300,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[0.35f,0.35f,0.35f]}}
+# Enabled remains NBT-backed from multiblock properties
+data modify storage ra:temp status_line set value {y:1.45,label:"Enabled: ",path:"data.properties.enabled",suffix:"",value_color:"aqua",fallback:"N/A"}
+function ra:tools/goggles/billboard/show_nbt_line with storage ra:temp status_line

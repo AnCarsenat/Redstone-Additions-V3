@@ -6,9 +6,8 @@
 # === Name billboard (above the ceiling, y+2.5) ===
 summon text_display ~ ~2.5 ~ {Tags:["ra.billboard","ra.display"],billboard:"center",text:{text:"Blast Forge",color:"green",bold:true},background:1073741824,shadow:true,see_through:false,line_width:200,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[0.6f,0.6f,0.6f]}}
 
-# === Status billboard (heat + enabled, y+2.0) ===
-# Uses score selector for live heat value (not stale NBT)
-summon text_display ~ ~2.0 ~ {Tags:["ra.billboard","ra.display"],billboard:"center",text:[{text:"Heat: ",color:"gray"},{score:{name:"@s",objective:"ra.heat"},color:"gold"},{text:"/1000",color:"dark_gray"},{text:" | ",color:"dark_gray"},{text:"Enabled: ",color:"gray"},{nbt:"data.properties.enabled",entity:"@s",interpret:false,color:"aqua"}],background:1073741824,shadow:true,see_through:false,line_width:300,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[0.35f,0.35f,0.35f]}}
+# === Status billboards ===
+function ra:tools/goggles/status/read_status_multiblock
 
 # === I/O indicators — positioned ABOVE the structure (y+2.3 instead of y+1.3) ===
 # Copy IO block offset to temp storage, add label + color, call generic show_io_label macro

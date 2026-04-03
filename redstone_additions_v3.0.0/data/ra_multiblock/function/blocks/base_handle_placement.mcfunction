@@ -9,14 +9,14 @@ $execute unless entity @s[tag=ra.place.multiblock_base.$(tier)] run return 0
 $function ra_lib:placement/place {block_id:"$(block_id)",block_tag:"$(block_tag)",dir_type:0}
 
 # Initialize properties
-$data modify entity @e[tag=ra.new,limit=1] data.properties.tier set value "$(tier)"
-$data modify entity @e[tag=ra.new,limit=1] data.properties.tier_level set value $(tier_level)
+$data modify entity @e[type=marker,tag=ra.new,distance=..0.5,sort=nearest,limit=1] data.properties.tier set value "$(tier)"
+$data modify entity @e[type=marker,tag=ra.new,distance=..0.5,sort=nearest,limit=1] data.properties.tier_level set value $(tier_level)
 
 # Add multiblock base tag for detection
-tag @e[tag=ra.new,limit=1] add ra.multiblock_base
+tag @e[type=marker,tag=ra.new,distance=..0.5,sort=nearest,limit=1] add ra.multiblock_base
 
 # Remove ra.new tag
-$tag @e[tag=ra.custom_block.$(block_tag),tag=ra.new] remove ra.new
+$tag @e[type=marker,tag=ra.custom_block.$(block_tag),tag=ra.new,distance=..0.5] remove ra.new
 
 # Placement effects
 $playsound $(place_sound) block @a[distance=..16] ~ ~ ~ $(place_volume) $(place_pitch)

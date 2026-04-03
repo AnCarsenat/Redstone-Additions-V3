@@ -25,7 +25,7 @@ function ra_lib:placement/set_block
 
 # Summon marker with initialized data structure
 $summon marker ~ ~ ~ {Tags:["ra.custom_block","ra.custom_block.$(block_tag)","ra.new"],data:{properties:{},data:{}}}
-data modify entity @e[tag=ra.new,limit=1] Rotation set from storage ra:temp Rotation
-execute as @p[tag=ra.placer] run scoreboard players operation @e[tag=ra.new,limit=1] ra.facing = @s ra.facing
+data modify entity @e[type=marker,tag=ra.new,distance=..0.1,sort=nearest,limit=1] Rotation set from storage ra:temp Rotation
+execute as @p[tag=ra.placer,sort=nearest,limit=1] run scoreboard players operation @e[type=marker,tag=ra.new,distance=..0.1,sort=nearest,limit=1] ra.facing = @s ra.facing
 
 playsound minecraft:block.stone.place block @a[distance=..16] ~ ~ ~ 1 1

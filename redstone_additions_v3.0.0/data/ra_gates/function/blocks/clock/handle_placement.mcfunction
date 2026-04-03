@@ -14,11 +14,11 @@ kill @e[type=item_display,tag=ra.custom_block.display_item.clock,distance=..0.6]
 summon item_display ~ ~0.39 ~ {item:{id:"minecraft:clock",count:1},item_display:"fixed",transformation:{left_rotation:[0.7071f,0f,0f,0.7071f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[0.5f,0.5f,0.5f]},Tags:["ra.custom_block.display_item","ra.custom_block.display_item.clock"]}
 
 # Always set cooldown property to 20 after copying (overwrites any delay property)
-data modify entity @n[tag=ra.custom_block.clock,tag=ra.new] data.properties.cooldown set value 20
-scoreboard players set @n[tag=ra.custom_block.clock,tag=ra.new] ra.cooldown 0
+data modify entity @e[type=marker,tag=ra.custom_block.clock,tag=ra.new,distance=..0.5,sort=nearest,limit=1] data.properties.cooldown set value 20
+scoreboard players set @e[type=marker,tag=ra.custom_block.clock,tag=ra.new,distance=..0.5,sort=nearest,limit=1] ra.cooldown 0
 
 # Remove ra.new tag now that setup is complete
-tag @e[tag=ra.custom_block.clock,tag=ra.new] remove ra.new
+tag @e[type=marker,tag=ra.custom_block.clock,tag=ra.new,distance=..0.5] remove ra.new
 
 # Remove placement tag
 tag @s remove ra.place.clock
