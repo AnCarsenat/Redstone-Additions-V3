@@ -8,9 +8,9 @@ execute unless entity @s[tag=ra.place.entity_detector] run return 0
 function ra_lib:placement/place {block_id:"minecraft:waxed_chiseled_copper",block_tag:"entity_detector",dir_type:0}
 
 # Initialize default properties first
-data modify entity @e[tag=ra.custom_block.entity_detector,tag=ra.new,limit=1] data.properties set value {entity_selector:"@e[type=minecraft:pig,distance=..5]"}
+data modify entity @e[type=marker,tag=ra.custom_block.entity_detector,tag=ra.new,distance=..0.5,sort=nearest,limit=1] data.properties set value {entity_selector:"@e[type=minecraft:pig,distance=..5]"}
 
 # Remove ra.new tag now that setup is complete
-tag @e[tag=ra.custom_block.entity_detector,tag=ra.new] remove ra.new
+tag @e[type=marker,tag=ra.custom_block.entity_detector,tag=ra.new,distance=..0.5] remove ra.new
 
 return 1
