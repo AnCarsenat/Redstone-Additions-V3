@@ -17,6 +17,7 @@
 
 - Fixed remote advancement criteria mismatch (iron ingot requirement consistency).
 - Fixed Blast Forge text display clipping inside the forge.
+- Fixed Item pipes and item movers voiding items 😅
 
 ## [4.0.0] - 2026-02-24
 
