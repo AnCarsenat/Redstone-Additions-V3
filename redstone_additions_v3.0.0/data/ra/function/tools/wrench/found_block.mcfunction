@@ -12,6 +12,7 @@ execute if entity @s[tag=ra.custom_block.receiver] run function ra_wireless:bloc
 
 # Multiblock bases - try to assemble or toggle existing multiblock
 execute if entity @s[tag=ra.multiblock_base] at @s run function ra:tools/wrench/handle_multiblock_base
+execute if entity @s[tag=ra.custom_block.multiblock_base] at @s run function ra:tools/wrench/handle_multiblock_base
 
 # No action for other blocks (excluding multiblock bases)
-execute unless entity @s[tag=ra.custom_block.emitter] unless entity @s[tag=ra.custom_block.receiver] unless entity @s[tag=ra.multiblock_base] run tellraw @a[tag=ra.wrench_active,distance=..8] [{text:"[Wrench] ",color:"gold"},{text:"This block cannot be toggled.",color:"gray"}]
+execute unless entity @s[tag=ra.custom_block.emitter] unless entity @s[tag=ra.custom_block.receiver] unless entity @s[tag=ra.multiblock_base] unless entity @s[tag=ra.custom_block.multiblock_base] run tellraw @a[tag=ra.wrench_active,distance=..8] [{text:"[Wrench] ",color:"gold"},{text:"This block cannot be toggled.",color:"gray"}]
