@@ -18,9 +18,6 @@ function ra_sensors:items/give_all
 # === Wireless Blocks ===
 function ra_wireless:items/give_all
 
-# === Example Blocks ===
-function ra_example:items/give_all
-
 # === Chunk Loader Blocks ===
 function ra_chunk_loader:items/give_all
 

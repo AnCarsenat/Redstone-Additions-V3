@@ -30,8 +30,8 @@ function ra_wireless:tick
 # Run chunk loader tick
 function ra_chunk_loader:tick
 
-# Run example multiblocks tick
-function ra_example:tick
+# Run multiblock tick
+function ra_multiblock:tick
 
 # Run goggles scan
 function ra:tools/goggles/tick

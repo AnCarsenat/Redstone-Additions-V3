@@ -19,7 +19,7 @@ function ra_sensors:load
 function ra_gates:load
 function ra_wireless:load
 function ra_chunk_loader:load
-function ra_example:load
+function ra_multiblock:load
 
 # Initialize multiblock library
 function ra_lib_multiblock:init
