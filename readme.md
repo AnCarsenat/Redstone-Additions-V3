@@ -15,7 +15,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Minecraft-1.21+-2EA44F?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHJlY3QgZmlsbD0iIzVBOTEzMiIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ii8+PC9zdmc+" alt="Minecraft 1.21+">
-  <img src="https://img.shields.io/badge/Version-4.0.0-blue" alt="Version 4.0.0">
+  <img src="https://img.shields.io/badge/Version-4.0.1-blue" alt="Version 4.0.1">
   <img src="https://img.shields.io/badge/Blocks-28-red" alt="28 blocks">
   <img src="https://img.shields.io/badge/Tools-4-lightgrey" alt="4 tools">
   <img src="https://img.shields.io/badge/License-Custom-orange" alt="Custom License">
@@ -146,6 +146,7 @@ Wiki pages:
 | [Multiblocks](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Multiblocks) | Base tiers and assembled structures |
 | [Block Reference](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Block-Reference) | Full block matrix |
 | [Recipe Reference](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Recipe-Reference) | Recipe file mapping |
+| [How It Works](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/How-It-Works) | Full runtime architecture walkthrough |
 | [Developer Guide](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Developer-Guide) | Architecture and conventions |
 | [Extension Examples](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Extension-Examples) | Copy-paste custom block examples |
 | [Changelog](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Changelog) | Full version history |
@@ -154,12 +155,12 @@ Wiki pages:
 
 ## Latest Changelog
 
-### v4.0.0 — February 2026
-- Added Goggles tool
-- Added chunk loader documentation and module integration updates
-- Added Blast Forge heat system and balancing
-- Added uninstall confirmation flow
-- Refined naming consistency and cleanup for legacy/stale content
+### v4.0.1 — April 2026
+- Refined recipes and progression hooks for multiple modules (including remote advancement criteria)
+- Improved marker targeting and status rendering reliability for goggles and displays
+- Hardened load/upgrade selectors and normalized Creative Data Handler tellraw output
+- Fixed Blast Forge text clipping and aligned several display placement behaviors
+- Rewrote wiki documentation with a full architecture deep dive and expanded contributor guidance
 
 ---
 

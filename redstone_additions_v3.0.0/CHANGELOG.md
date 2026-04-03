@@ -1,5 +1,30 @@
 # Changelog
 
+## [4.0.1] - 2026-04-03
+
+### Added
+
+- New architecture documentation page in the wiki with full runtime flow details.
+
+### Changed
+
+- Reworked several crafting recipes and related advancements for cleaner progression and balance.
+- Replaced legacy gate recipe material usage for Delayer, Extender, and Shortener with a unified quartz block path.
+- Hardened selector usage around load/upgrade paths to reduce edge-case targeting errors.
+- Normalized Creative Data Handler tellraw payload format for consistent UI output.
+- Refined goggles and status display behavior for more stable marker targeting and rendering.
+- Expanded and reorganized wiki and developer documentation for contributors.
+
+### Fixed
+
+- Fixed remote advancement criteria mismatch (iron ingot requirement consistency).
+- Fixed Blast Forge text display clipping and related display alignment issues.
+- Fixed clock item display placement offset.
+
+### Internal
+
+- Continued maintainability refactors across recipe and function structure.
+
 ## [4.0.0] - 2026-02-24
 
 ### Added
