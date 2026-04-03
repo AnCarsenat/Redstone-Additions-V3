@@ -16,6 +16,9 @@ summon item_display ~ ~0.46 ~ {item:{id:"minecraft:clock",count:1},item_display:
 data modify entity @n[tag=ra.custom_block.clock,tag=ra.new] data.properties.cooldown set value 20
 scoreboard players set @n[tag=ra.custom_block.clock,tag=ra.new] ra.cooldown 0
 
+# Remove ra.new tag now that setup is complete
+tag @e[tag=ra.custom_block.clock,tag=ra.new] remove ra.new
+
 # Remove placement tag
 tag @s remove ra.place.clock
 
