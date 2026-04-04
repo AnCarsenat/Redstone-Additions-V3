@@ -1,5 +1,23 @@
 # Changelog
 
+## [5.0.0] - 2026-04-04 - The survival update
+
+### Added
+- Added library for aqcuiring text input from non op players using writable books
+- Added "suvrival" friendly data handler
+
+### Changed
+- Refactored writable-book input backend.
+- Updated load messaging and root README version references to 5.0.0.
+
+### Fixed
+- Fixed Data Handler text-edit flow causing the editor item to disappear.
+- Fixed temporary input books persisting as dropped entities after session transitions.
+- Fixed full-inventory behavior so input books are not given when no slot is available.
+
+### Removed
+- CDH recipe
+
 ## [4.0.1] - 2026-04-03
 
 ### Added
