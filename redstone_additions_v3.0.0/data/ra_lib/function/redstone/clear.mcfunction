@@ -16,3 +16,9 @@ tag @s remove ra.powered.east
 tag @s remove ra.powered.west
 tag @s remove ra.powered.up
 tag @s remove ra.powered.down
+tag @s remove ra.powered.front
+tag @s remove ra.powered.back
+tag @s remove ra.powered.left
+tag @s remove ra.powered.right
+tag @s remove ra.powered.local_up
+tag @s remove ra.powered.local_down

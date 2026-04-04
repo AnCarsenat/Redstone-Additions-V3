@@ -30,7 +30,6 @@
   - `ra.place.{block_name}` — Bat placement routing tag
   - `ra.broken` — Block marked for break cleanup
   - `ra.new` — Newly placed block (one-tick marker)
-  - `ra.checkRed` — Block participating in redstone signal check
 
 ### Player Tags
 - `ra.wrench_active` — Player is using wrench this tick
@@ -43,8 +42,12 @@
 - **Format:** `ra.{name}` (lowercase, dot-separated)
 - **Core:** `ra.temp`, `ra.cooldown`, `ra.craft_id`
 - **Orientation:** `ra.facing`, `ra.yaw`, `ra.pitch`
-- **Redstone:** `ra.power`, `ra.power.{direction}` (up/down/north/south/east/west)
-- **Gates:** `ra.act_red`, `ra.inac_red`
+- **Redstone:**
+  - aggregate: `ra.power` (0..16)
+  - world-space: `ra.power.up/down/north/south/east/west`
+  - look-space: `ra.power.front/back/left/right/local_up/local_down`
+  - convention: `0` no power, `1..15` normal power, `16` superpower (direct repeater/comparator output)
+- **Gates:** use `ra_lib:redstone/detect` outputs (`ra.power*`) directly; no dedicated gate redstone objectives
 - **Wireless:** `ra.channel`, `ra.pulse_timer`
 - **Multiblock:** `ra.multiblock`, `ra.mb_timer`, `ra.mb_enabled`, `ra.heat`
 - **Inventory:** `ra.inv.slot`, `ra.inv.count`
