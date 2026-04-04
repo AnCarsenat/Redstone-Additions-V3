@@ -8,7 +8,7 @@ execute unless entity @s[tag=ra.place.message_block] run return 0
 function ra_lib:placement/place {block_id:"minecraft:note_block",block_tag:"message_block",dir_type:0}
 
 # Initialize default properties first
-data modify entity @e[type=marker,tag=ra.custom_block.message_block,tag=ra.new,distance=..0.5,sort=nearest,limit=1] data.properties set value {message:"Hello World!",range:16}
+data modify entity @e[type=marker,tag=ra.custom_block.message_block,tag=ra.new,distance=..0.5,sort=nearest,limit=1] data.properties set value {message:"Hello World!",entity_selector:"@a[distance=..16]"}
 
 # Remove ra.new tag now that setup is complete
 tag @e[type=marker,tag=ra.custom_block.message_block,tag=ra.new,distance=..0.5] remove ra.new

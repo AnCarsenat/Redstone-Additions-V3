@@ -1,10 +1,15 @@
 # /ra_interactive:blocks/message/send_message
-# Send the message to nearby players. As armor stand, at position.
+# Send the message to selected players. As armor stand, at position.
 
 # Copy message to storage
 data modify storage ra:temp message set from entity @s data.properties.message
 
-# Get range value
+# Preferred targeting model: explicit entity selector string.
+execute if data entity @s data.properties.entity_selector run data modify storage ra:temp entity_selector set from entity @s data.properties.entity_selector
+execute if data entity @s data.properties.entity_selector run function ra_interactive:blocks/message/send_message_macro with storage ra:temp
+execute if data entity @s data.properties.entity_selector run return 1
+
+# Legacy fallback for old blocks that still use range.
 execute store result score @s ra.temp run data get entity @s data.properties.range
 execute if score @s ra.temp matches ..0 run scoreboard players set @s ra.temp 16
 
