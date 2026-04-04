@@ -10,8 +10,6 @@ function ra_lib:placement/place {block_id:"minecraft:quartz_block",block_tag:"sh
 # Set default pulse length property (2 ticks)
 data modify entity @e[type=marker,tag=ra.custom_block.shortener,tag=ra.new,distance=..0.5,sort=nearest,limit=1] data.properties.pulse set value 2
 
-# Add checkRed tag for signal detection
-tag @e[type=marker,tag=ra.custom_block.shortener,tag=ra.new,distance=..0.5] add ra.checkRed
 tag @e[type=marker,tag=ra.custom_block.shortener,tag=ra.new,distance=..0.5] remove ra.new
 
 # Remove placement tag

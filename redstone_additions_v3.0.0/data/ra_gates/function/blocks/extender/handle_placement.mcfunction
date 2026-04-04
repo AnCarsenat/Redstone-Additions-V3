@@ -10,8 +10,6 @@ function ra_lib:placement/place {block_id:"minecraft:quartz_block",block_tag:"ex
 # Set default extend property (20 ticks = 1 second)
 data modify entity @e[type=marker,tag=ra.custom_block.extender,tag=ra.new,distance=..0.5,sort=nearest,limit=1] data.properties.extend set value 20
 
-# Add checkRed tag for signal detection
-tag @e[type=marker,tag=ra.custom_block.extender,tag=ra.new,distance=..0.5] add ra.checkRed
 tag @e[type=marker,tag=ra.custom_block.extender,tag=ra.new,distance=..0.5] remove ra.new
 
 # Remove placement tag

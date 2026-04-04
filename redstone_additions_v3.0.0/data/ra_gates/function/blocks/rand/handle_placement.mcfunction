@@ -10,8 +10,6 @@ function ra_lib:placement/place {block_id:"minecraft:bookshelf",block_tag:"rand"
 # Initialize default properties (50% chance)
 data modify entity @e[type=marker,tag=ra.custom_block.rand,tag=ra.new,distance=..0.5,sort=nearest,limit=1] data.properties.chance set value 50
 
-# Add checkRed tag for signal detection
-tag @e[type=marker,tag=ra.custom_block.rand,tag=ra.new,distance=..0.5] add ra.checkRed
 tag @e[type=marker,tag=ra.custom_block.rand,tag=ra.new,distance=..0.5] remove ra.new
 
 # Remove placement tag

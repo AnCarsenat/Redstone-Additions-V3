@@ -5,8 +5,13 @@
 # Get delay amount from properties (default 20 ticks = 1 second)
 execute unless data entity @s data.properties.delay run data modify entity @s data.properties.delay set value 20
 
+# Detect redstone state for this marker.
+tag @s add ra.redstone.ignore_blocks
+function ra_lib:redstone/detect
+tag @s remove ra.redstone.ignore_blocks
+
 # If powered and not counting, start countdown
-execute if score @s ra.act_red matches 1.. unless entity @s[tag=ra.delaying] run tag @s add ra.delaying
+execute if score @s ra.power matches 1.. unless entity @s[tag=ra.delaying] run tag @s add ra.delaying
 execute if entity @s[tag=ra.delaying] unless data entity @s data.delay_current run data modify entity @s data.delay_current set from entity @s data.properties.delay
 
 # Count down while powered
@@ -20,6 +25,6 @@ execute if entity @s[tag=ra.delaying] if score @s ra.temp matches ..0 at @s run 
 execute if entity @s[tag=ra.delaying] if score @s ra.temp matches 1.. at @s run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 iron_block replace redstone_block
 
 # Reset when power removed
-execute if score @s ra.act_red matches 0 if entity @s[tag=ra.delaying] run tag @s remove ra.delaying
-execute if score @s ra.act_red matches 0 run data remove entity @s data.delay_current
-execute if score @s ra.act_red matches 0 at @s run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 iron_block replace redstone_block
+execute if score @s ra.power matches 0 if entity @s[tag=ra.delaying] run tag @s remove ra.delaying
+execute if score @s ra.power matches 0 run data remove entity @s data.delay_current
+execute if score @s ra.power matches 0 at @s run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 iron_block replace redstone_block

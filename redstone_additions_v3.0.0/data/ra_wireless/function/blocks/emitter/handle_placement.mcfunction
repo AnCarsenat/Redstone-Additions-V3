@@ -11,8 +11,6 @@ function ra_lib:placement/place {block_id:"minecraft:end_stone_bricks",block_tag
 data modify entity @e[type=marker,tag=ra.custom_block.emitter,tag=ra.new,distance=..0.5,sort=nearest,limit=1] data.properties.channel set value "default"
 data modify entity @e[type=marker,tag=ra.custom_block.emitter,tag=ra.new,distance=..0.5,sort=nearest,limit=1] data.properties.enabled set value 1b
 
-# Add checkRed tag for signal detection
-tag @e[type=marker,tag=ra.custom_block.emitter,tag=ra.new,distance=..0.5] add ra.checkRed
 tag @e[type=marker,tag=ra.custom_block.emitter,tag=ra.new,distance=..0.5] remove ra.new
 
 # Remove placement tag
