@@ -10,7 +10,8 @@ $execute unless data storage ra:input sessions.req_$(req).result.text run data m
 
 $data modify storage ra:input sessions.req_$(req).state set value "ready"
 
-function ra_lib:input/backend/writable_book/restore_current_hand
+$function ra_lib:input/backend/writable_book/kill_dropped_req {req:$(req)}
+$function ra_lib:input/backend/writable_book/clear_book_req {req:$(req)}
 
 scoreboard players set @s ra.input.result 1
 scoreboard players set @s ra.input.state 2
