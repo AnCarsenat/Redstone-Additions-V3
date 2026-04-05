@@ -5,7 +5,7 @@
 <h1 align="center">Redstone Additions V3</h1>
 
 <p align="center">
-  <strong>28 custom blocks. 4 tools. Vanilla datapack for Minecraft 1.21+.</strong>
+  <strong>44 custom blocks. 5 tools. Vanilla datapack for Minecraft 1.21+.</strong>
 </p>
 
 <p align="center">
@@ -15,15 +15,15 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Minecraft-1.21+-2EA44F?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHJlY3QgZmlsbD0iIzVBOTEzMiIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ii8+PC9zdmc+" alt="Minecraft 1.21+">
-  <img src="https://img.shields.io/badge/Version-v5.0.0-blue" alt="Version v5.0.0">
-  <img src="https://img.shields.io/badge/Blocks-28-red" alt="28 blocks">
-  <img src="https://img.shields.io/badge/Tools-4-lightgrey" alt="4 tools">
+  <img src="https://img.shields.io/badge/Version-v5.1.0-blue" alt="Version v5.1.0">
+  <img src="https://img.shields.io/badge/Blocks-44-red" alt="44 blocks">
+  <img src="https://img.shields.io/badge/Tools-5-lightgrey" alt="5 tools">
   <img src="https://img.shields.io/badge/License-Custom-orange" alt="Custom License">
 </p>
 
 ---
 
-Redstone Additions V3 is a modular datapack that expands vanilla redstone with custom logic blocks, automation machines, sensors, wireless signaling, chunk loading, and multiblock systems.
+Redstone Additions V3 is a modular datapack that expands vanilla redstone with custom logic blocks, automation machines, sensors, wireless signaling, chunk loading, multiblock systems, and transport networks.
 
 Everything runs in vanilla using datapack functions and custom block markers. No mods required.
 
@@ -62,6 +62,24 @@ Everything runs in vanilla using datapack functions and custom block markers. No
 - Wireless Receiver
 - Redstone Remote (tool)
 
+### Transport Networks (16)
+- Copper Liquid Pipe
+- Netherite Liquid Pipe
+- Liquid Tank
+- Liquid Pump
+- Liquid Valve
+- Liquid Drain
+- Copper Gas Pipe
+- Netherite Gas Pipe
+- Gas Tank
+- Gas Pump
+- Gas Valve
+- Copper Electric Wire
+- Netherite Electric Wire
+- EU Generator
+- EU Consumer
+- EU Switch
+
 ### Chunk Loader (1)
 - Chunk Loader
 
@@ -72,9 +90,10 @@ Everything runs in vanilla using datapack functions and custom block markers. No
 - Diamond Multiblock Base
 - Netherite Multiblock Base
 
-### Tools (4 total)
+### Tools (5 total)
 - Wrench
 - Creative Data Handler
+- Data Handler
 - Goggles
 - Redstone Remote
 
@@ -93,7 +112,7 @@ git clone https://github.com/AnCarsenat/Redstone-Additions-V3.git
 ```
 Copy `redstone_additions_v3.0.0` into your world `datapacks/` directory, then run `/reload`.
 
-Get all items:
+Get the full namespace bundle kit:
 ```
 /function ra:give_all_items
 ```
@@ -104,11 +123,12 @@ Get all items:
 
 | Command | What it does |
 |---------|--------------|
-| `/function ra:give_all_items` | Every block and tool in your inventory |
+| `/function ra:give_all_items` | One prefilled bundle per namespace |
 | `/function ra_gates:items/give_all` | All logic gate items |
 | `/function ra_interactive:items/give_all` | All interactive machines |
 | `/function ra_sensors:items/give_all` | All sensor items |
 | `/function ra_wireless:items/give_all` | All wireless items |
+| `/function ra_wires:items/give_all` | All transport and EU network items |
 | `/function ra_chunk_loader:items/give_all` | Chunk loader items |
 | `/function ra_multiblock:blocks/give_all` | Multiblock base items |
 | `/function ra:tools/wrench/give` | The Wrench |
@@ -126,7 +146,7 @@ Custom blocks are represented as bat spawn eggs with custom data. On placement, 
 
 Module tick functions process those markers each game tick.
 
-The codebase is split by namespaces (`ra`, `ra_lib`, `ra_lib_multiblock`, `ra_gates`, `ra_interactive`, `ra_sensors`, `ra_wireless`, `ra_chunk_loader`, `ra_multiblock`).
+The codebase is split by namespaces (`ra`, `ra_lib`, `ra_lib_multiblock`, `ra_gates`, `ra_interactive`, `ra_sensors`, `ra_wireless`, `ra_wires`, `ra_chunk_loader`, `ra_multiblock`).
 
 If you are extending the pack, start with the Developer Guide and Extension Examples pages.
 
@@ -142,6 +162,7 @@ Wiki pages:
 | [Interactive Machines](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Interactive-Machines) | Block Breaker, Block Placer, Item Pipe, Item Mover, Spitter, Pusher, Breeder, cauldrons, Message Block |
 | [Sensors](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Sensors) | Entity Detector, Tag Adder, Tag Remover |
 | [Wireless Redstone](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Wireless-Redstone) | Emitter, Receiver, Redstone Remote |
+| [Transport Networks](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Transport-Networks) | Liquid/gas/electric transport blocks and tinkering controls |
 | [Chunk Loader](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Chunk-Loader) | Chunk loading block behavior |
 | [Multiblocks](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Multiblocks) | Base tiers and assembled structures |
 | [Block Reference](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Block-Reference) | Full block matrix |
@@ -155,12 +176,11 @@ Wiki pages:
 
 ## Latest Changelog
 
-### v5.0.0 — April 4, 2026
-- Refactored several redstone component recipes and related advancement unlocks for cleaner progression.
-- Unified Delayer, Extender, and Shortener recipe progression around quartz block.
-- Fixed Redstone Remote recipe advancement criteria to require iron ingot consistently.
-- Fixed Blast Forge text display clipping inside the forge.
-- Updated README and changelog documentation for the v5.0.0 release.
+### v5.1.0 — April 5, 2026
+- Added `ra_wires` with liquid, gas, and electric transport blocks.
+- Added liquid drain fallback particles/status when no valid source can be drained.
+- Added goggles tinkering to toggle/cycle transport block properties in-world.
+- Added full recipes and advancement coverage for transport and EU blocks.
 
 ---
 

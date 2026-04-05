@@ -1,5 +1,35 @@
 # Changelog
 
+## [Unreleased] - 2026-04-05
+
+### Changed
+- `ra:give_all_items` now gives one prefilled bundle per namespace instead of loose item spam.
+- Added `ra:items/bundles/give_all` and namespace bundle helper functions under `ra:items/bundles/*`.
+
+### Docs
+- Updated wiki Home/Developer Guide command descriptions to reflect direct namespace bundles.
+
+## [v5.1.0] - 2026-04-05 - Transport Networks
+
+### Added
+- New `ra_wires` namespace for liquid pipes, gas pipes, and electric wire systems.
+- Liquid blocks: copper/netherite pipes, tank, pump, valve, and drain.
+- Gas blocks: copper/netherite pipes, tank, pump, and valve.
+- Electric blocks: copper/netherite wires, EU generator, EU consumer, and EU switch.
+- Shared helper `ra_lib:transport/update_connection_status` for local node connection state.
+- Goggles support for `ra_wires` status overlays and sneaking tinker interactions.
+- Full recipe and advancement coverage for all `ra_wires` items.
+
+### Changed
+- Core load/tick dispatch now includes `ra_wires:load` and `ra_wires:tick`.
+- Global give-all now includes `ra_wires:items/give_all`.
+- Placement handler registry now includes `ra_wires:blocks/handle_placement`.
+- Uninstall cleanup now removes `ra_wires` scoreboards, tags, and storage state.
+
+### Fixed
+- Fixed non-zero score checks in transport logic to valid score-match syntax.
+- Added explicit fallback particles/status for liquid drain failure cases.
+
 ## [v5.0.0] - 2026-04-04 - The survival update
 
 ### Added
