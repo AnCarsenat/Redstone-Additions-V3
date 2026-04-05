@@ -15,7 +15,7 @@
                    "id":  "minecraft:bat_spawn_egg",
                    "count":  1,
                    "components":  {
-                                      "minecraft:item_model":  "minecraft:cut_copper",
+                                      "minecraft:item_model":  "minecraft:waxed_cut_copper",
                                       "minecraft:item_name":  "Liquid Valve",
                                       "minecraft:custom_data":  {
                                                                     "ra":  {

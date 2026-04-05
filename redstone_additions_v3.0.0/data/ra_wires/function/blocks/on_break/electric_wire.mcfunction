@@ -3,8 +3,10 @@
 
 tag @s remove ra.wires.node
 tag @s remove ra.wires.electric_node
+kill @e[type=block_display,tag=ra.wires.wire_display,distance=..1.5]
 function ra_wires:common/update_model_local_and_neighbors
 
+kill @e[type=item,nbt={Item:{id:"minecraft:conduit"}},distance=..2,limit=2]
 kill @e[type=item,nbt={Item:{id:"minecraft:mud_brick_wall"}},distance=..2,limit=2]
 kill @e[type=item,nbt={Item:{id:"minecraft:polished_blackstone_wall"}},distance=..2,limit=2]
 

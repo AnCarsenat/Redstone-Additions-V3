@@ -13,6 +13,9 @@ tag @e[type=marker,tag=ra.custom_block.gas_tank] add ra.wires.fluid_node
 tag @e[type=marker,tag=ra.custom_block.gas_pump] add ra.wires.fluid_node
 tag @e[type=marker,tag=ra.custom_block.gas_valve] add ra.wires.fluid_node
 
+# Normalize pipe IO endpoint capabilities and tags.
+function ra_wires:liquid/bootstrap_pipe_io_caps
+
 # Ensure every node has complete runtime data before any processing.
 execute as @e[type=marker,tag=ra.wires.fluid_node] at @s run function ra_wires:liquid/init_node
 
@@ -52,16 +55,16 @@ execute as @e[type=marker,tag=ra.custom_block.liquid_pipe] at @s if block ~ ~ ~ 
 execute as @e[type=marker,tag=ra.custom_block.gas_pipe] at @s if block ~ ~ ~ conduit unless entity @e[type=block_display,tag=ra.wires.pipe_display.center,distance=..0.6,limit=1] run function ra_wires:common/update_model_local_and_neighbors
 
 # One-time refresh when display geometry changes; avoids perpetual flicker.
-execute as @e[type=marker,tag=ra.custom_block.liquid_pipe,tag=!ra.wires.pipe_display_v5] at @s if block ~ ~ ~ conduit run function ra_wires:common/update_model_local_and_neighbors
-execute as @e[type=marker,tag=ra.custom_block.liquid_pipe,tag=!ra.wires.pipe_display_v5] at @s if block ~ ~ ~ conduit run tag @s add ra.wires.pipe_display_v5
-execute as @e[type=marker,tag=ra.custom_block.gas_pipe,tag=!ra.wires.pipe_display_v5] at @s if block ~ ~ ~ conduit run function ra_wires:common/update_model_local_and_neighbors
-execute as @e[type=marker,tag=ra.custom_block.gas_pipe,tag=!ra.wires.pipe_display_v5] at @s if block ~ ~ ~ conduit run tag @s add ra.wires.pipe_display_v5
+execute as @e[type=marker,tag=ra.custom_block.liquid_pipe,tag=!ra.wires.pipe_display_v6] at @s if block ~ ~ ~ conduit run function ra_wires:common/update_model_local_and_neighbors
+execute as @e[type=marker,tag=ra.custom_block.liquid_pipe,tag=!ra.wires.pipe_display_v6] at @s if block ~ ~ ~ conduit run tag @s add ra.wires.pipe_display_v6
+execute as @e[type=marker,tag=ra.custom_block.gas_pipe,tag=!ra.wires.pipe_display_v6] at @s if block ~ ~ ~ conduit run function ra_wires:common/update_model_local_and_neighbors
+execute as @e[type=marker,tag=ra.custom_block.gas_pipe,tag=!ra.wires.pipe_display_v6] at @s if block ~ ~ ~ conduit run tag @s add ra.wires.pipe_display_v6
 
 # Break detection
 execute as @e[type=marker,tag=ra.custom_block.liquid_pipe] at @s unless block ~ ~ ~ conduit run tag @s add ra.broken
-execute as @e[type=marker,tag=ra.custom_block.liquid_tank] at @s unless block ~ ~ ~ copper_block run tag @s add ra.broken
+execute as @e[type=marker,tag=ra.custom_block.liquid_tank] at @s unless block ~ ~ ~ waxed_copper_block run tag @s add ra.broken
 execute as @e[type=marker,tag=ra.custom_block.liquid_pump] at @s unless block ~ ~ ~ dispenser run tag @s add ra.broken
-execute as @e[type=marker,tag=ra.custom_block.liquid_valve] at @s unless block ~ ~ ~ cut_copper run tag @s add ra.broken
+execute as @e[type=marker,tag=ra.custom_block.liquid_valve] at @s unless block ~ ~ ~ waxed_cut_copper run tag @s add ra.broken
 execute as @e[type=marker,tag=ra.custom_block.liquid_drain] at @s unless block ~ ~ ~ dropper run tag @s add ra.broken
 execute as @e[type=marker,tag=ra.custom_block.gas_pipe] at @s unless block ~ ~ ~ conduit run tag @s add ra.broken
 execute as @e[type=marker,tag=ra.custom_block.gas_tank] at @s unless block ~ ~ ~ iron_block run tag @s add ra.broken
@@ -93,8 +96,11 @@ execute as @e[type=marker,tag=ra.custom_block.liquid_pump] at @s run function ra
 execute as @e[type=marker,tag=ra.custom_block.liquid_drain] at @s run function ra_wires:liquid/drain_tick
 execute as @e[type=marker,tag=ra.custom_block.gas_pump] at @s run function ra_wires:gas/pump_tick
 
+# Tanks pull first so adjacent filled pipes are consumed reliably.
+execute as @e[type=marker,tag=ra.custom_block.liquid_tank] at @s run function ra_wires:liquid/tank_receive_prepass
+
 # Transfer through network
-execute as @e[type=marker,tag=ra.wires.fluid_node] at @s run function ra_wires:liquid/process_source
+execute as @e[type=marker,tag=ra.wires.pipe_io_endpoint] at @s run function ra_wires:liquid/process_source
 
 # Status refresh
 execute as @e[type=marker,tag=ra.wires.fluid_node] at @s run function ra_wires:liquid/update_status

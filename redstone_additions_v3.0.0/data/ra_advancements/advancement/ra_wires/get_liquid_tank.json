@@ -2,7 +2,7 @@
     "parent":  "ra_advancements:ra_wires",
     "display":  {
                     "icon":  {
-                                 "id":  "minecraft:copper_block"
+                                 "id":  "minecraft:waxed_copper_block"
                              },
                     "title":  "Liquid Tank",
                     "description":  "Obtain the Liquid Tank.",

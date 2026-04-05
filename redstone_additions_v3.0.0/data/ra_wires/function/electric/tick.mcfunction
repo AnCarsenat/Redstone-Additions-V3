@@ -1,8 +1,22 @@
 # /ra_wires:electric/tick
 # Tick electric wires, generator, consumer, and switch
 
+# Migrate legacy wall-based electric wires to conduit visuals.
+execute as @e[type=marker,tag=ra.custom_block.electric_wire] at @s if block ~ ~ ~ mud_brick_wall run setblock ~ ~ ~ conduit[waterlogged=false]
+execute as @e[type=marker,tag=ra.custom_block.electric_wire] at @s if block ~ ~ ~ polished_blackstone_wall run setblock ~ ~ ~ conduit[waterlogged=false]
+
+# Keep electric wire conduits non-waterlogged.
+execute as @e[type=marker,tag=ra.custom_block.electric_wire] at @s if block ~ ~ ~ conduit[waterlogged=true] run setblock ~ ~ ~ conduit[waterlogged=false]
+
+# Self-heal missing wire displays without forcing per-tick full rebuilds.
+execute as @e[type=marker,tag=ra.custom_block.electric_wire] at @s if block ~ ~ ~ conduit unless entity @e[type=block_display,tag=ra.wires.wire_display.center,distance=..0.6,limit=1] run function ra_wires:common/update_model_local_and_neighbors
+
+# One-time refresh for display geometry updates.
+execute as @e[type=marker,tag=ra.custom_block.electric_wire,tag=!ra.wires.wire_display_v1] at @s if block ~ ~ ~ conduit run function ra_wires:common/update_model_local_and_neighbors
+execute as @e[type=marker,tag=ra.custom_block.electric_wire,tag=!ra.wires.wire_display_v1] at @s if block ~ ~ ~ conduit run tag @s add ra.wires.wire_display_v1
+
 # Break detection
-execute as @e[type=marker,tag=ra.custom_block.electric_wire] at @s unless block ~ ~ ~ mud_brick_wall unless block ~ ~ ~ polished_blackstone_wall run tag @s add ra.broken
+execute as @e[type=marker,tag=ra.custom_block.electric_wire] at @s unless block ~ ~ ~ conduit run tag @s add ra.broken
 execute as @e[type=marker,tag=ra.custom_block.electric_generator] at @s unless block ~ ~ ~ blast_furnace run tag @s add ra.broken
 execute as @e[type=marker,tag=ra.custom_block.electric_consumer] at @s unless block ~ ~ ~ observer run tag @s add ra.broken
 execute as @e[type=marker,tag=ra.custom_block.electric_switch] at @s unless block ~ ~ ~ redstone_lamp run tag @s add ra.broken

@@ -2,7 +2,7 @@
     "parent":  "ra_advancements:ra_wires",
     "display":  {
                     "icon":  {
-                                 "id":  "minecraft:cut_copper"
+                                 "id":  "minecraft:waxed_cut_copper"
                              },
                     "title":  "Liquid Valve",
                     "description":  "Obtain the Liquid Valve.",

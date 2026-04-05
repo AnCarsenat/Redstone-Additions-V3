@@ -7,6 +7,8 @@ execute unless data entity @e[type=marker,tag=ra.wires.liq_src,distance=..1.1,so
 execute unless data entity @e[type=marker,tag=ra.wires.liq_src,distance=..1.1,sort=nearest,limit=1] data.properties.transfer_rate run data modify entity @e[type=marker,tag=ra.wires.liq_src,distance=..1.1,sort=nearest,limit=1] data.properties.transfer_rate set value 50
 execute unless data entity @s data.properties{enabled:1b} run return 0
 execute unless data entity @e[type=marker,tag=ra.wires.liq_src,distance=..1.1,sort=nearest,limit=1] data.properties{enabled:1b} run return 0
+execute if data entity @s data.properties.pipe_io unless data entity @s data.properties.pipe_io{input:1b} run return 0
+execute if data entity @e[type=marker,tag=ra.wires.liq_src,distance=..1.1,sort=nearest,limit=1] data.properties.pipe_io unless data entity @e[type=marker,tag=ra.wires.liq_src,distance=..1.1,sort=nearest,limit=1] data.properties.pipe_io{output:1b} run return 0
 execute if entity @s[tag=ra.custom_block.liquid_pump] run return 0
 execute if entity @s[tag=ra.custom_block.gas_pump] run return 0
 

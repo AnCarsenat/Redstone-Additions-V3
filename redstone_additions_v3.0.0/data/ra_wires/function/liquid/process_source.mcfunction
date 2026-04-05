@@ -7,6 +7,7 @@ execute unless data entity @s data.data.amount run data modify entity @s data.da
 execute unless data entity @s data.data.medium_id run data modify entity @s data.data.medium_id set value 0
 
 execute unless data entity @s data.properties{enabled:1b} run return 0
+execute if data entity @s data.properties.pipe_io unless data entity @s data.properties.pipe_io{output:1b} run return 0
 execute store result score #src_amt ra.wires.tmp run data get entity @s data.data.amount 1
 execute if score #src_amt ra.wires.tmp matches ..0 run return 0
 
