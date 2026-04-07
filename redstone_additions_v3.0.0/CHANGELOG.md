@@ -1,18 +1,6 @@
 # Changelog
 
-## [Unreleased] - 2026-04-05
-
-### Changed
-- `ra:give_all_items` now gives one prefilled bundle per namespace instead of loose item spam.
-- Added `ra:items/bundles/give_all` and namespace bundle helper functions under `ra:items/bundles/*`.
-- Goggles overlays are now block-defined: billboards only render for blocks that opt in with `show_name` / `show_status`.
-
-### Docs
-- Updated wiki Home/Developer Guide command descriptions to reflect direct namespace bundles.
-- Updated wiki architecture docs to document block-defined goggles rendering profiles.
-
-## [v5.1.0] - 2026-04-05 - Transport Networks
-
+## [v5.1.0] - 2026-04-05 - Transport Networks - Creative QOL
 ### Added
 - New `ra_wires` namespace for liquid pipes, gas pipes, and electric wire systems.
 - Liquid blocks: copper/netherite pipes, tank, pump, valve, and drain.
@@ -27,12 +15,19 @@
 - Global give-all now includes `ra_wires:items/give_all`.
 - Placement handler registry now includes `ra_wires:blocks/handle_placement`.
 - Uninstall cleanup now removes `ra_wires` scoreboards, tags, and storage state.
+- `ra:give_all_items` now gives one prefilled bundle per namespace instead of loose item spam.
+- Added `ra:items/bundles/give_all` and namespace bundle helper functions under `ra:items/bundles/*`.
+- Goggles overlays are now block-defined: billboards only render for blocks that opt in with `show_name` / `show_status`.
 
 ### Fixed
 - Fixed non-zero score checks in transport logic to valid score-match syntax.
 - Added explicit fallback particles/status for liquid drain failure cases.
 
-## [v5.1.0] - 2026-04-04 - The survival update
+### Docs
+- Updated wiki Home/Developer Guide command descriptions to reflect direct namespace bundles.
+- Updated wiki architecture docs to document block-defined goggles rendering profiles.
+
+## [v5.0.0] - 2026-04-04 - The survival update
 
 ### Added
 - Added library for aqcuiring text input from non op players using writable books
