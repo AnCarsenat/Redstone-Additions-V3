@@ -1,4 +1,4 @@
-# /ra_wires:liquid/tick
+﻿# /ra_wires:liquid/tick
 # Tick merged fluid pipes, tanks, pumps, valves, and drains
 
 # Keep legacy tags participating in the merged fluid network.
@@ -71,15 +71,84 @@ execute as @e[type=marker,tag=ra.custom_block.gas_tank] at @s unless block ~ ~ ~
 execute as @e[type=marker,tag=ra.custom_block.gas_pump] at @s unless block ~ ~ ~ smoker run tag @s add ra.broken
 execute as @e[type=marker,tag=ra.custom_block.gas_valve] at @s unless block ~ ~ ~ smooth_basalt run tag @s add ra.broken
 
-execute as @e[type=marker,tag=ra.custom_block.liquid_pipe,tag=ra.broken] at @s run function ra_wires:blocks/on_break/liquid_pipe
-execute as @e[type=marker,tag=ra.custom_block.liquid_tank,tag=ra.broken] at @s run function ra_wires:blocks/on_break/liquid_tank
-execute as @e[type=marker,tag=ra.custom_block.liquid_pump,tag=ra.broken] at @s run function ra_wires:blocks/on_break/liquid_pump
-execute as @e[type=marker,tag=ra.custom_block.liquid_valve,tag=ra.broken] at @s run function ra_wires:blocks/on_break/liquid_valve
-execute as @e[type=marker,tag=ra.custom_block.liquid_drain,tag=ra.broken] at @s run function ra_wires:blocks/on_break/liquid_drain
-execute as @e[type=marker,tag=ra.custom_block.gas_pipe,tag=ra.broken] at @s run function ra_wires:blocks/on_break/gas_pipe
-execute as @e[type=marker,tag=ra.custom_block.gas_tank,tag=ra.broken] at @s run function ra_wires:blocks/on_break/gas_tank
-execute as @e[type=marker,tag=ra.custom_block.gas_pump,tag=ra.broken] at @s run function ra_wires:blocks/on_break/gas_pump
-execute as @e[type=marker,tag=ra.custom_block.gas_valve,tag=ra.broken] at @s run function ra_wires:blocks/on_break/gas_valve
+execute as @e[type=marker,tag=ra.custom_block.liquid_pipe,tag=ra.broken] at @s run tag @s remove ra.wires.node
+execute as @e[type=marker,tag=ra.custom_block.liquid_pipe,tag=ra.broken] at @s run tag @s remove ra.wires.fluid_node
+execute as @e[type=marker,tag=ra.custom_block.liquid_pipe,tag=ra.broken] at @s run tag @s remove ra.wires.liquid_node
+execute as @e[type=marker,tag=ra.custom_block.liquid_pipe,tag=ra.broken] at @s run tag @s remove ra.wires.gas_node
+execute as @e[type=marker,tag=ra.custom_block.liquid_pipe,tag=ra.broken] at @s run kill @e[type=block_display,tag=ra.wires.pipe_display,distance=..1.5]
+execute as @e[type=marker,tag=ra.custom_block.liquid_pipe,tag=ra.broken] at @s run function ra_wires:common/update_model_local_and_neighbors
+execute as @e[type=marker,tag=ra.custom_block.liquid_pipe,tag=ra.broken] at @s run kill @e[type=item,nbt={Item:{id:"minecraft:conduit"}},distance=..2,limit=2]
+execute as @e[type=marker,tag=ra.custom_block.liquid_pipe,tag=ra.broken] at @s run execute if data entity @s data.properties{tier:"netherite"} run summon item ~ ~ ~ {Item:{id:"minecraft:bat_spawn_egg",count:1,components:{"minecraft:item_model":"minecraft:blue_candle","minecraft:item_name":'L2 Plastic Pipe',"minecraft:custom_data":{ra:{liquid_pipe_netherite:1b}},"minecraft:entity_data":{id:"minecraft:bat",Tags:["ra.spawned","ra.place.liquid_pipe_netherite"],Silent:1b,NoAI:1b,Invulnerable:1b}}}}
+execute as @e[type=marker,tag=ra.custom_block.liquid_pipe,tag=ra.broken] at @s run execute unless data entity @s data.properties{tier:"netherite"} run summon item ~ ~ ~ {Item:{id:"minecraft:bat_spawn_egg",count:1,components:{"minecraft:item_model":"minecraft:light_blue_candle","minecraft:item_name":'L1 Plastic Pipe',"minecraft:custom_data":{ra:{liquid_pipe_copper:1b}},"minecraft:entity_data":{id:"minecraft:bat",Tags:["ra.spawned","ra.place.liquid_pipe_copper"],Silent:1b,NoAI:1b,Invulnerable:1b}}}}
+execute as @e[type=marker,tag=ra.custom_block.liquid_pipe,tag=ra.broken] at @s run kill @s
+execute as @e[type=marker,tag=ra.custom_block.liquid_tank,tag=ra.broken] at @s run tag @s remove ra.wires.node
+execute as @e[type=marker,tag=ra.custom_block.liquid_tank,tag=ra.broken] at @s run tag @s remove ra.wires.fluid_node
+execute as @e[type=marker,tag=ra.custom_block.liquid_tank,tag=ra.broken] at @s run tag @s remove ra.wires.liquid_node
+execute as @e[type=marker,tag=ra.custom_block.liquid_tank,tag=ra.broken] at @s run tag @s remove ra.wires.gas_node
+execute as @e[type=marker,tag=ra.custom_block.liquid_tank,tag=ra.broken] at @s run function ra_wires:common/update_model_local_and_neighbors
+execute as @e[type=marker,tag=ra.custom_block.liquid_tank,tag=ra.broken] at @s run kill @e[type=item,nbt={Item:{id:"minecraft:waxed_copper_block"}},distance=..2,limit=1]
+execute as @e[type=marker,tag=ra.custom_block.liquid_tank,tag=ra.broken] at @s run summon item ~ ~ ~ {Item:{id:"minecraft:bat_spawn_egg",count:1,components:{"minecraft:item_model":"minecraft:waxed_copper_block","minecraft:item_name":'Liquid Tank',"minecraft:custom_data":{ra:{liquid_tank:1b}},"minecraft:entity_data":{id:"minecraft:bat",Tags:["ra.spawned","ra.place.liquid_tank"],Silent:1b,NoAI:1b,Invulnerable:1b}}}}
+execute as @e[type=marker,tag=ra.custom_block.liquid_tank,tag=ra.broken] at @s run kill @s
+execute as @e[type=marker,tag=ra.custom_block.liquid_pump,tag=ra.broken] at @s run tag @s remove ra.wires.node
+execute as @e[type=marker,tag=ra.custom_block.liquid_pump,tag=ra.broken] at @s run tag @s remove ra.wires.fluid_node
+execute as @e[type=marker,tag=ra.custom_block.liquid_pump,tag=ra.broken] at @s run tag @s remove ra.wires.liquid_node
+execute as @e[type=marker,tag=ra.custom_block.liquid_pump,tag=ra.broken] at @s run tag @s remove ra.wires.gas_node
+execute as @e[type=marker,tag=ra.custom_block.liquid_pump,tag=ra.broken] at @s run function ra_wires:common/update_model_local_and_neighbors
+execute as @e[type=marker,tag=ra.custom_block.liquid_pump,tag=ra.broken] at @s run kill @e[type=item,nbt={Item:{id:"minecraft:dispenser"}},distance=..2,limit=1]
+execute as @e[type=marker,tag=ra.custom_block.liquid_pump,tag=ra.broken] at @s run summon item ~ ~ ~ {Item:{id:"minecraft:bat_spawn_egg",count:1,components:{"minecraft:item_model":"minecraft:dispenser","minecraft:item_name":'Liquid Pump',"minecraft:custom_data":{ra:{liquid_pump:1b}},"minecraft:entity_data":{id:"minecraft:bat",Tags:["ra.spawned","ra.place.liquid_pump"],Silent:1b,NoAI:1b,Invulnerable:1b}}}}
+execute as @e[type=marker,tag=ra.custom_block.liquid_pump,tag=ra.broken] at @s run kill @s
+execute as @e[type=marker,tag=ra.custom_block.liquid_valve,tag=ra.broken] at @s run tag @s remove ra.wires.node
+execute as @e[type=marker,tag=ra.custom_block.liquid_valve,tag=ra.broken] at @s run tag @s remove ra.wires.fluid_node
+execute as @e[type=marker,tag=ra.custom_block.liquid_valve,tag=ra.broken] at @s run tag @s remove ra.wires.liquid_node
+execute as @e[type=marker,tag=ra.custom_block.liquid_valve,tag=ra.broken] at @s run tag @s remove ra.wires.gas_node
+execute as @e[type=marker,tag=ra.custom_block.liquid_valve,tag=ra.broken] at @s run function ra_wires:common/update_model_local_and_neighbors
+execute as @e[type=marker,tag=ra.custom_block.liquid_valve,tag=ra.broken] at @s run kill @e[type=item,nbt={Item:{id:"minecraft:waxed_cut_copper"}},distance=..2,limit=1]
+execute as @e[type=marker,tag=ra.custom_block.liquid_valve,tag=ra.broken] at @s run summon item ~ ~ ~ {Item:{id:"minecraft:bat_spawn_egg",count:1,components:{"minecraft:item_model":"minecraft:waxed_cut_copper","minecraft:item_name":'Liquid Valve',"minecraft:custom_data":{ra:{liquid_valve:1b}},"minecraft:entity_data":{id:"minecraft:bat",Tags:["ra.spawned","ra.place.liquid_valve"],Silent:1b,NoAI:1b,Invulnerable:1b}}}}
+execute as @e[type=marker,tag=ra.custom_block.liquid_valve,tag=ra.broken] at @s run kill @s
+execute as @e[type=marker,tag=ra.custom_block.liquid_drain,tag=ra.broken] at @s run tag @s remove ra.wires.node
+execute as @e[type=marker,tag=ra.custom_block.liquid_drain,tag=ra.broken] at @s run tag @s remove ra.wires.fluid_node
+execute as @e[type=marker,tag=ra.custom_block.liquid_drain,tag=ra.broken] at @s run tag @s remove ra.wires.liquid_node
+execute as @e[type=marker,tag=ra.custom_block.liquid_drain,tag=ra.broken] at @s run tag @s remove ra.wires.gas_node
+execute as @e[type=marker,tag=ra.custom_block.liquid_drain,tag=ra.broken] at @s run function ra_wires:common/update_model_local_and_neighbors
+execute as @e[type=marker,tag=ra.custom_block.liquid_drain,tag=ra.broken] at @s run kill @e[type=item,nbt={Item:{id:"minecraft:dropper"}},distance=..2,limit=1]
+execute as @e[type=marker,tag=ra.custom_block.liquid_drain,tag=ra.broken] at @s run summon item ~ ~ ~ {Item:{id:"minecraft:bat_spawn_egg",count:1,components:{"minecraft:item_model":"minecraft:dropper","minecraft:item_name":'Liquid Drain',"minecraft:custom_data":{ra:{liquid_drain:1b}},"minecraft:entity_data":{id:"minecraft:bat",Tags:["ra.spawned","ra.place.liquid_drain"],Silent:1b,NoAI:1b,Invulnerable:1b}}}}
+execute as @e[type=marker,tag=ra.custom_block.liquid_drain,tag=ra.broken] at @s run kill @s
+execute as @e[type=marker,tag=ra.custom_block.gas_pipe,tag=ra.broken] at @s run tag @s remove ra.wires.node
+execute as @e[type=marker,tag=ra.custom_block.gas_pipe,tag=ra.broken] at @s run tag @s remove ra.wires.fluid_node
+execute as @e[type=marker,tag=ra.custom_block.gas_pipe,tag=ra.broken] at @s run tag @s remove ra.wires.liquid_node
+execute as @e[type=marker,tag=ra.custom_block.gas_pipe,tag=ra.broken] at @s run tag @s remove ra.wires.gas_node
+execute as @e[type=marker,tag=ra.custom_block.gas_pipe,tag=ra.broken] at @s run kill @e[type=block_display,tag=ra.wires.pipe_display,distance=..1.5]
+execute as @e[type=marker,tag=ra.custom_block.gas_pipe,tag=ra.broken] at @s run function ra_wires:common/update_model_local_and_neighbors
+execute as @e[type=marker,tag=ra.custom_block.gas_pipe,tag=ra.broken] at @s run kill @e[type=item,nbt={Item:{id:"minecraft:conduit"}},distance=..2,limit=2]
+execute as @e[type=marker,tag=ra.custom_block.gas_pipe,tag=ra.broken] at @s run kill @e[type=item,nbt={Item:{id:"minecraft:light_gray_stained_glass_pane"}},distance=..2,limit=2]
+execute as @e[type=marker,tag=ra.custom_block.gas_pipe,tag=ra.broken] at @s run kill @e[type=item,nbt={Item:{id:"minecraft:gray_stained_glass_pane"}},distance=..2,limit=2]
+execute as @e[type=marker,tag=ra.custom_block.gas_pipe,tag=ra.broken] at @s run execute if data entity @s data.properties{tier:"netherite"} run summon item ~ ~ ~ {Item:{id:"minecraft:bat_spawn_egg",count:1,components:{"minecraft:item_model":"minecraft:blue_candle","minecraft:item_name":'L2 Plastic Pipe',"minecraft:custom_data":{ra:{liquid_pipe_netherite:1b}},"minecraft:entity_data":{id:"minecraft:bat",Tags:["ra.spawned","ra.place.liquid_pipe_netherite"],Silent:1b,NoAI:1b,Invulnerable:1b}}}}
+execute as @e[type=marker,tag=ra.custom_block.gas_pipe,tag=ra.broken] at @s run execute unless data entity @s data.properties{tier:"netherite"} run summon item ~ ~ ~ {Item:{id:"minecraft:bat_spawn_egg",count:1,components:{"minecraft:item_model":"minecraft:light_blue_candle","minecraft:item_name":'L1 Plastic Pipe',"minecraft:custom_data":{ra:{liquid_pipe_copper:1b}},"minecraft:entity_data":{id:"minecraft:bat",Tags:["ra.spawned","ra.place.liquid_pipe_copper"],Silent:1b,NoAI:1b,Invulnerable:1b}}}}
+execute as @e[type=marker,tag=ra.custom_block.gas_pipe,tag=ra.broken] at @s run kill @s
+execute as @e[type=marker,tag=ra.custom_block.gas_tank,tag=ra.broken] at @s run tag @s remove ra.wires.node
+execute as @e[type=marker,tag=ra.custom_block.gas_tank,tag=ra.broken] at @s run tag @s remove ra.wires.fluid_node
+execute as @e[type=marker,tag=ra.custom_block.gas_tank,tag=ra.broken] at @s run tag @s remove ra.wires.liquid_node
+execute as @e[type=marker,tag=ra.custom_block.gas_tank,tag=ra.broken] at @s run tag @s remove ra.wires.gas_node
+execute as @e[type=marker,tag=ra.custom_block.gas_tank,tag=ra.broken] at @s run function ra_wires:common/update_model_local_and_neighbors
+execute as @e[type=marker,tag=ra.custom_block.gas_tank,tag=ra.broken] at @s run kill @e[type=item,nbt={Item:{id:"minecraft:iron_block"}},distance=..2,limit=1]
+execute as @e[type=marker,tag=ra.custom_block.gas_tank,tag=ra.broken] at @s run summon item ~ ~ ~ {Item:{id:"minecraft:bat_spawn_egg",count:1,components:{"minecraft:item_model":"minecraft:iron_block","minecraft:item_name":'Gas Tank',"minecraft:custom_data":{ra:{gas_tank:1b}},"minecraft:entity_data":{id:"minecraft:bat",Tags:["ra.spawned","ra.place.gas_tank"],Silent:1b,NoAI:1b,Invulnerable:1b}}}}
+execute as @e[type=marker,tag=ra.custom_block.gas_tank,tag=ra.broken] at @s run kill @s
+execute as @e[type=marker,tag=ra.custom_block.gas_pump,tag=ra.broken] at @s run tag @s remove ra.wires.node
+execute as @e[type=marker,tag=ra.custom_block.gas_pump,tag=ra.broken] at @s run tag @s remove ra.wires.fluid_node
+execute as @e[type=marker,tag=ra.custom_block.gas_pump,tag=ra.broken] at @s run tag @s remove ra.wires.liquid_node
+execute as @e[type=marker,tag=ra.custom_block.gas_pump,tag=ra.broken] at @s run tag @s remove ra.wires.gas_node
+execute as @e[type=marker,tag=ra.custom_block.gas_pump,tag=ra.broken] at @s run function ra_wires:common/update_model_local_and_neighbors
+execute as @e[type=marker,tag=ra.custom_block.gas_pump,tag=ra.broken] at @s run kill @e[type=item,nbt={Item:{id:"minecraft:smoker"}},distance=..2,limit=1]
+execute as @e[type=marker,tag=ra.custom_block.gas_pump,tag=ra.broken] at @s run summon item ~ ~ ~ {Item:{id:"minecraft:bat_spawn_egg",count:1,components:{"minecraft:item_model":"minecraft:smoker","minecraft:item_name":'Gas Pump',"minecraft:custom_data":{ra:{gas_pump:1b}},"minecraft:entity_data":{id:"minecraft:bat",Tags:["ra.spawned","ra.place.gas_pump"],Silent:1b,NoAI:1b,Invulnerable:1b}}}}
+execute as @e[type=marker,tag=ra.custom_block.gas_pump,tag=ra.broken] at @s run kill @s
+execute as @e[type=marker,tag=ra.custom_block.gas_valve,tag=ra.broken] at @s run tag @s remove ra.wires.node
+execute as @e[type=marker,tag=ra.custom_block.gas_valve,tag=ra.broken] at @s run tag @s remove ra.wires.fluid_node
+execute as @e[type=marker,tag=ra.custom_block.gas_valve,tag=ra.broken] at @s run tag @s remove ra.wires.liquid_node
+execute as @e[type=marker,tag=ra.custom_block.gas_valve,tag=ra.broken] at @s run tag @s remove ra.wires.gas_node
+execute as @e[type=marker,tag=ra.custom_block.gas_valve,tag=ra.broken] at @s run function ra_wires:common/update_model_local_and_neighbors
+execute as @e[type=marker,tag=ra.custom_block.gas_valve,tag=ra.broken] at @s run kill @e[type=item,nbt={Item:{id:"minecraft:smooth_basalt"}},distance=..2,limit=1]
+execute as @e[type=marker,tag=ra.custom_block.gas_valve,tag=ra.broken] at @s run summon item ~ ~ ~ {Item:{id:"minecraft:bat_spawn_egg",count:1,components:{"minecraft:item_model":"minecraft:smooth_basalt","minecraft:item_name":'Gas Valve',"minecraft:custom_data":{ra:{gas_valve:1b}},"minecraft:entity_data":{id:"minecraft:bat",Tags:["ra.spawned","ra.place.gas_valve"],Silent:1b,NoAI:1b,Invulnerable:1b}}}}
+execute as @e[type=marker,tag=ra.custom_block.gas_valve,tag=ra.broken] at @s run kill @s
 
 tag @e[type=marker,tag=ra.broken,tag=ra.custom_block.liquid_pipe] remove ra.broken
 tag @e[type=marker,tag=ra.broken,tag=ra.custom_block.liquid_tank] remove ra.broken
