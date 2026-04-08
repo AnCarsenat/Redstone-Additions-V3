@@ -1,5 +1,24 @@
 # Changelog
 
+## [v5.1.2] - 2026-04-08 - Docs Refresh - Transport Cleanup
+
+### Changed
+- Refactored datapack function layout for readability and maintainability across modules.
+- Normalized liquid/gas transport tiers back to copper and iron naming.
+- Updated transport and multiblock recipe files to align with the renamed tiers.
+
+### Fixed
+- Fixed multiblock base recipe inconsistencies introduced during transport tier migration.
+- Updated docs deployment workflow dependencies for stable GitHub Pages builds.
+
+### Docs
+- Reworked project documentation structure for GitHub Pages publishing.
+- Refreshed block reference and recipe images to match current recipes.
+- Renamed project references and expanded storage/interactive documentation coverage.
+
+### Removed
+- Removed experimental Pusher block content from the current interactive release set.
+
 ## [v5.1.1] - 2026-04-05 - Transport Networks - Creative QOL
 ### Added
 - New `ra_wires` namespace for liquid pipes, gas pipes, and electric wire systems.

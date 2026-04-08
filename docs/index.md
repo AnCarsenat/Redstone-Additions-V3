@@ -2,7 +2,7 @@
 
 <img src="images/icon.png" alt="Redstone Additions" width="128">
 
-**Version:** v5.1.1  
+**Version:** v5.1.2  
 **Minecraft:** 1.21+  
 **Author:** [AnCarsenat](https://github.com/AnCarsenat)
 
@@ -67,12 +67,13 @@ Current pack totals:
 | Data Handler | `/function ra:tools/data_handler/give` | ![Data Handler recipe](images/recipes/ra/data_handler.png){ width="200" } | Edit nearby block `data.properties` |
 | Goggles | `/function ra:tools/goggles/give` | ![Goggles recipe](images/recipes/ra/goggles.png){ width="200" } | In-world status overlays |
 
-## What Is New In v5.1.1
+## What Is New In v5.1.2
 
-- Added `ra_wires` namespace with liquid, gas, and electric transport blocks.
-- Added liquid drain fallback behavior when no source can be drained.
-- Added goggles tinkering for transport blocks (toggle/cycle runtime properties).
-- Added full recipe and advancement coverage for transport and EU blocks.
+- Reworked docs for GitHub Pages publishing and refreshed key module pages.
+- Updated recipe and block-reference imagery across core modules.
+- Normalized liquid and gas transport tiers back to copper/iron naming.
+- Fixed multiblock base recipes after transport tier updates.
+- Removed the experimental Pusher block from the active release set.
 
 ## Need More Detail
 

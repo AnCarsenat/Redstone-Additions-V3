@@ -2,6 +2,29 @@
 
 This page mirrors key datapack milestones from the main project changelog.
 
+## v5.1.2 (2026-04-08)
+
+### Changed
+
+- Refactored internal datapack structure for maintainability across modules.
+- Normalized liquid and gas transport tiers back to copper/iron naming.
+- Updated transport and multiblock recipe definitions to match tier renames.
+
+### Fixed
+
+- Corrected multiblock base recipe regressions introduced during transport refactors.
+- Updated docs deployment workflow actions to current GitHub Actions releases.
+
+### Removed
+
+- Removed the experimental Pusher block from the active interactive release set.
+
+### Docs
+
+- Reworked and reorganized docs for GitHub Pages/MkDocs publishing.
+- Refreshed block reference and recipe imagery across core module pages.
+- Added storage page coverage and improved interactive/storage documentation clarity.
+
 ## v5.1.1 (2026-04-07)
 
 ### Added
