@@ -158,23 +158,30 @@ If you are extending the pack, start with the Developer Guide and Extension Exam
 
 ## Documentation
 
-Wiki pages:
+Documentation site:
+
+- Live site: [https://ancarsenat.github.io/Redstone-Additions-V3/](https://ancarsenat.github.io/Redstone-Additions-V3/)
+- Source pages: `docs/`
+- Build config: `mkdocs.yml`
+
+Local docs workflow:
+
+```bash
+pip install -r requirements-docs.txt
+mkdocs serve
+```
+
+Key pages:
 
 | Page | Content |
 |------|---------|
-| [Logic Gates](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Logic-Gates) | UNI Gate, Clock, Delayer, Extender, Shortener, Randomizer |
-| [Interactive Machines](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Interactive-Machines) | Block Breaker, Block Placer, Item Pipe, Item Mover, Spitter, Pusher, Breeder, cauldrons, Message Block |
-| [Sensors](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Sensors) | Entity Detector, Tag Adder, Tag Remover |
-| [Wireless Redstone](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Wireless-Redstone) | Emitter, Receiver, Redstone Remote |
-| [Transport Networks](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Transport-Networks) | Liquid/gas/electric transport blocks and tinkering controls |
-| [Chunk Loader](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Chunk-Loader) | Chunk loading block behavior |
-| [Multiblocks](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Multiblocks) | Base tiers and assembled structures |
-| [Block Reference](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Block-Reference) | Full block matrix |
-| [Recipe Reference](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Recipe-Reference) | Recipe file mapping |
-| [How It Works](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/How-It-Works) | Full runtime architecture walkthrough |
-| [Developer Guide](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Developer-Guide) | Architecture and conventions |
-| [Extension Examples](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Extension-Examples) | Copy-paste custom block examples |
-| [Changelog](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Changelog) | Full version history |
+| [Home](https://ancarsenat.github.io/Redstone-Additions-V3/) | Overview, feature map, install and command quickstart |
+| [How It Works](https://ancarsenat.github.io/Redstone-Additions-V3/how-it-works/) | Runtime architecture walkthrough |
+| [Block Reference](https://ancarsenat.github.io/Redstone-Additions-V3/block-reference/) | Full block matrix |
+| [Recipe Reference](https://ancarsenat.github.io/Redstone-Additions-V3/recipe-reference/) | Recipe file mapping |
+| [Developer Guide](https://ancarsenat.github.io/Redstone-Additions-V3/developer-guide/) | Architecture and conventions |
+| [Extension Examples](https://ancarsenat.github.io/Redstone-Additions-V3/extension-examples/) | Copy-paste custom block examples |
+| [Changelog](https://ancarsenat.github.io/Redstone-Additions-V3/changelog/) | Version history |
 
 ---
 
@@ -191,8 +198,8 @@ Wiki pages:
 ## Contributing
 
 Pull requests are welcome. If you add a new block, follow the conventions in:
-- [Developer Guide](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Developer-Guide)
-- [Extension Examples](https://github.com/AnCarsenat/Redstone-Additions-V3/wiki/Extension-Examples)
+- [Developer Guide](https://ancarsenat.github.io/Redstone-Additions-V3/developer-guide/)
+- [Extension Examples](https://ancarsenat.github.io/Redstone-Additions-V3/extension-examples/)
 
 For bug reports, open an [issue on GitHub](https://github.com/AnCarsenat/Redstone-Additions-V3/issues).
 
@@ -212,5 +219,5 @@ See the full [LICENSE](LICENSE) file for complete terms.
 
 <p align="center">
   <strong>Created by <a href="https://github.com/AnCarsenat">AnCarsenat</a></strong><br>
-  <a href="https://github.com/AnCarsenat/Redstone-Additions-V3/issues">Report a Bug</a> · <a href="https://github.com/AnCarsenat/Redstone-Additions-V3/wiki">Wiki</a> · <a href="https://modrinth.com/datapack/redstone-additions-v3">Download</a>
+  <a href="https://github.com/AnCarsenat/Redstone-Additions-V3/issues">Report a Bug</a> · <a href="https://ancarsenat.github.io/Redstone-Additions-V3/">Documentation</a> · <a href="https://modrinth.com/datapack/redstone-additions-v3">Download</a>
 </p>
