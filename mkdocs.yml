@@ -1,8 +1,8 @@
-site_name: Redstone Additions V3
-site_description: Redstone Additions V3 documentation for players and contributors
-site_url: https://ancarsenat.github.io/Redstone-Additions-V3/
-repo_url: https://github.com/AnCarsenat/Redstone-Additions-V3
-repo_name: AnCarsenat/Redstone-Additions-V3
+site_name: Redstone Additions
+site_description: Redstone Additions documentation for players and contributors
+site_url: https://ancarsenat.github.io/Redstone-Additions/
+repo_url: https://github.com/AnCarsenat/Redstone-Additions
+repo_name: AnCarsenat/Redstone-Additions
 docs_dir: docs
 theme:
   name: material

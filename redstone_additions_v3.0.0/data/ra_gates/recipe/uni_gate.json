@@ -2,14 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "redstone",
   "pattern": [
-    " S",
+    " S ",
     "TRT",
     " S "
   ],
   "key": {
     "S": "minecraft:smooth_stone_slab",
     "R": "minecraft:repeater",
-    "T": "redstone_torch"
+    "T": "minecraft:redstone_torch"
   },
   "result": {
     "id": "minecraft:bat_spawn_egg",
