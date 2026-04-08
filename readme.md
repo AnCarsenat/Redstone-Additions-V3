@@ -5,7 +5,7 @@
 <h1 align="center">Redstone Additions</h1>
 
 <p align="center">
-  <strong>46 custom blocks. 5 tools. Vanilla datapack for Minecraft 1.21+.</strong>
+  <strong>46 custom blocks. 5 tools. 48 recipes. Vanilla datapack for Minecraft 1.21+.</strong>
 </p>
 
 <p align="center">
@@ -14,22 +14,43 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Minecraft-1.21+-2EA44F?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+PHJlY3QgZmlsbD0iIzVBOTEzMiIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ii8+PC9zdmc+" alt="Minecraft 1.21+">
+  <img src="https://img.shields.io/badge/Minecraft-1.21+-2EA44F" alt="Minecraft 1.21+">
   <img src="https://img.shields.io/badge/Version-v5.1.1-blue" alt="Version v5.1.1">
   <img src="https://img.shields.io/badge/Blocks-46-red" alt="46 blocks">
   <img src="https://img.shields.io/badge/Tools-5-lightgrey" alt="5 tools">
-  <img src="https://img.shields.io/badge/License-Custom-orange" alt="Custom License">
+  <img src="https://img.shields.io/badge/Recipes-48-8A2BE2" alt="48 recipes">
 </p>
 
 ---
 
-Redstone Additions is a modular datapack that expands vanilla redstone with custom logic blocks, automation machines, sensors, wireless signaling, chunk loading, multiblock systems, and transport networks.
+Redstone Additions expands vanilla redstone with logic gates, automation machines, storage, sensors, wireless signaling, chunk loading, multiblocks, and liquid/gas/electric transport networks.
 
-Everything runs in vanilla using datapack functions and custom block markers. No mods required.
+All systems run as a pure datapack using marker entities and function-driven runtime logic. No mods required.
+
+I recommend using [Bundles Beyond](https://modrinth.com/mod/bundles-beyond) for better bundle previews.
 
 ---
 
-## Block and Tool Inventory
+## Quick Links
+
+| Link | URL |
+|---|---|
+| Docs Home | https://ancarsenat.github.io/Redstone-Additions/ |
+| Logic Gates | https://ancarsenat.github.io/Redstone-Additions/logic-gates/ |
+| Interactive Machines | https://ancarsenat.github.io/Redstone-Additions/interactive-machines/ |
+| Storage | https://ancarsenat.github.io/Redstone-Additions/storage/ |
+| Sensors | https://ancarsenat.github.io/Redstone-Additions/sensors/ |
+| Wireless Redstone | https://ancarsenat.github.io/Redstone-Additions/wireless-redstone/ |
+| Transport Networks | https://ancarsenat.github.io/Redstone-Additions/transport-networks/ |
+| Chunk Loader | https://ancarsenat.github.io/Redstone-Additions/chunk-loader/ |
+| Multiblocks | https://ancarsenat.github.io/Redstone-Additions/multiblocks/ |
+| Block Reference | https://ancarsenat.github.io/Redstone-Additions/block-reference/ |
+| Recipe Reference | https://ancarsenat.github.io/Redstone-Additions/recipe-reference/ |
+| Changelog | https://ancarsenat.github.io/Redstone-Additions/changelog/ |
+
+---
+
+## Block Inventory
 
 ### Logic Gates (6)
 - UNI Gate
@@ -61,10 +82,9 @@ Everything runs in vanilla using datapack functions and custom block markers. No
 - Tag Adder
 - Tag Remover
 
-### Wireless (2 blocks + 1 tool)
+### Wireless (2)
 - Wireless Emitter
 - Wireless Receiver
-- Redstone Remote (tool)
 
 ### Transport Networks (16)
 - Copper Liquid Pipe
@@ -94,12 +114,56 @@ Everything runs in vanilla using datapack functions and custom block markers. No
 - Diamond Multiblock Base
 - Netherite Multiblock Base
 
-### Tools (5 total)
+### Tools (5)
 - Wrench
 - Creative Data Handler
 - Data Handler
 - Goggles
 - Redstone Remote
+
+---
+
+## New Block Recipes And Images
+
+### Storage (`ra_storage`)
+
+| Block | Recipe JSON | Recipe image |
+|---|---|---|
+| Boxer | [redstone_additions/data/ra_storage/recipe/boxer.json](redstone_additions/data/ra_storage/recipe/boxer.json) | <img src="docs/images/recipes/ra_storage/boxer.png" alt="Boxer recipe" width="210"> |
+| Unboxer | [redstone_additions/data/ra_storage/recipe/unboxer.json](redstone_additions/data/ra_storage/recipe/unboxer.json) | <img src="docs/images/recipes/ra_storage/unboxer.png" alt="Unboxer recipe" width="210"> |
+| Item Crate | [redstone_additions/data/ra_storage/recipe/storage_box.json](redstone_additions/data/ra_storage/recipe/storage_box.json) | Image pending |
+
+### Transport Networks (`ra_wires`)
+
+| Block | Recipe JSON | Recipe image |
+|---|---|---|
+| Copper Liquid Pipe | [redstone_additions/data/ra_wires/recipe/liquid_pipe_copper.json](redstone_additions/data/ra_wires/recipe/liquid_pipe_copper.json) | <img src="docs/images/recipes/ra_wires/copper_pipe.png" alt="Copper liquid pipe recipe" width="210"> |
+| Netherite Liquid Pipe | [redstone_additions/data/ra_wires/recipe/liquid_pipe_netherite.json](redstone_additions/data/ra_wires/recipe/liquid_pipe_netherite.json) | <img src="docs/images/recipes/ra_wires/iron_pipe.png" alt="Netherite liquid pipe recipe" width="210"> |
+| Liquid Tank | [redstone_additions/data/ra_wires/recipe/liquid_tank.json](redstone_additions/data/ra_wires/recipe/liquid_tank.json) | <img src="docs/images/recipes/ra_wires/liquid_tank.png" alt="Liquid tank recipe" width="210"> |
+| Liquid Pump | [redstone_additions/data/ra_wires/recipe/liquid_pump.json](redstone_additions/data/ra_wires/recipe/liquid_pump.json) | <img src="docs/images/recipes/ra_wires/liquid_pump.png" alt="Liquid pump recipe" width="210"> |
+| Liquid Valve | [redstone_additions/data/ra_wires/recipe/liquid_valve.json](redstone_additions/data/ra_wires/recipe/liquid_valve.json) | <img src="docs/images/recipes/ra_wires/liquid_valve.png" alt="Liquid valve recipe" width="210"> |
+| Liquid Drain | [redstone_additions/data/ra_wires/recipe/liquid_drain.json](redstone_additions/data/ra_wires/recipe/liquid_drain.json) | <img src="docs/images/recipes/ra_wires/liquid_drain.png" alt="Liquid drain recipe" width="210"> |
+| Copper Gas Pipe | No recipe file yet | <img src="docs/images/recipes/ra_wires/copper_pipe.png" alt="Copper gas pipe recipe" width="210"> |
+| Netherite Gas Pipe | No recipe file yet | <img src="docs/images/recipes/ra_wires/iron_pipe.png" alt="Netherite gas pipe recipe" width="210"> |
+| Gas Tank | [redstone_additions/data/ra_wires/recipe/gas_tank.json](redstone_additions/data/ra_wires/recipe/gas_tank.json) | <img src="docs/images/recipes/ra_wires/gas_tank.png" alt="Gas tank recipe" width="210"> |
+| Gas Pump | [redstone_additions/data/ra_wires/recipe/gas_pump.json](redstone_additions/data/ra_wires/recipe/gas_pump.json) | <img src="docs/images/recipes/ra_wires/gas_pump.png" alt="Gas pump recipe" width="210"> |
+| Gas Valve | [redstone_additions/data/ra_wires/recipe/gas_valve.json](redstone_additions/data/ra_wires/recipe/gas_valve.json) | <img src="docs/images/recipes/ra_wires/gas_valve.png" alt="Gas valve recipe" width="210"> |
+| Copper Electric Wire | [redstone_additions/data/ra_wires/recipe/electric_wire_copper.json](redstone_additions/data/ra_wires/recipe/electric_wire_copper.json) | <img src="docs/images/recipes/ra_wires/copper_wire.png" alt="Copper electric wire recipe" width="210"> |
+| Netherite Electric Wire | [redstone_additions/data/ra_wires/recipe/electric_wire_netherite.json](redstone_additions/data/ra_wires/recipe/electric_wire_netherite.json) | <img src="docs/images/recipes/ra_wires/insulated_wire.png" alt="Netherite electric wire recipe" width="210"> |
+| EU Generator | [redstone_additions/data/ra_wires/recipe/electric_generator.json](redstone_additions/data/ra_wires/recipe/electric_generator.json) | <img src="docs/images/recipes/ra_wires/eu_generator.png" alt="EU generator recipe" width="210"> |
+| EU Consumer | [redstone_additions/data/ra_wires/recipe/electric_consumer.json](redstone_additions/data/ra_wires/recipe/electric_consumer.json) | <img src="docs/images/recipes/ra_wires/eu_consumer.png" alt="EU consumer recipe" width="210"> |
+| EU Switch | [redstone_additions/data/ra_wires/recipe/electric_switch.json](redstone_additions/data/ra_wires/recipe/electric_switch.json) | <img src="docs/images/recipes/ra_wires/eu_switch.png" alt="EU switch recipe" width="210"> |
+
+### Other Module Previews
+
+| Module | Preview |
+|---|---|
+| Logic Gates | <img src="docs/images/recipes/ra_gates/clock.png" alt="Clock recipe" width="220"> |
+| Interactive Machines | <img src="docs/images/recipes/ra_interactive/block_placer.png" alt="Block placer recipe" width="220"> |
+| Sensors | <img src="docs/images/recipes/ra_sensors/entity_detector.png" alt="Entity detector recipe" width="220"> |
+| Wireless Redstone | <img src="docs/images/recipes/ra_wireless/emitter.png" alt="Emitter recipe" width="220"> |
+| Chunk Loader | <img src="docs/images/recipes/ra_chunk_loader/chunk_loader.png" alt="Chunk loader recipe" width="220"> |
+| Multiblocks | <img src="docs/images/recipes/ra_multiblock/copper_base.png" alt="Copper multiblock base recipe" width="220"> |
 
 ---
 
@@ -114,10 +178,12 @@ Everything runs in vanilla using datapack functions and custom block markers. No
 ```bash
 git clone https://github.com/AnCarsenat/Redstone-Additions.git
 ```
+
 Copy `redstone_additions` into your world `datapacks/` directory, then run `/reload`.
 
-Get the full namespace bundle kit:
-```
+Starter command:
+
+```mcfunction
 /function ra:give_all_items
 ```
 
@@ -125,95 +191,48 @@ Get the full namespace bundle kit:
 
 ## Useful Commands
 
-| Command | What it does |
-|---------|--------------|
+| Command | Purpose |
+|---|---|
 | `/function ra:give_all_items` | One prefilled bundle per namespace |
-| `/function ra_gates:items/give_all` | All logic gate items |
-| `/function ra_interactive:items/give_all` | All interactive machines |
-| `/function ra_sensors:items/give_all` | All sensor items |
-| `/function ra_wireless:items/give_all` | All wireless items |
-| `/function ra_wires:items/give_all` | All transport and EU network items |
+| `/function ra_gates:items/give_all` | Logic gate items |
+| `/function ra_interactive:items/give_all` | Interactive machine items |
+| `/function ra_storage:items/give_all` | Storage items |
+| `/function ra_sensors:items/give_all` | Sensor items |
+| `/function ra_wireless:items/give_all` | Wireless items |
+| `/function ra_wires:items/give_all` | Transport and EU items |
 | `/function ra_chunk_loader:items/give_all` | Chunk loader items |
 | `/function ra_multiblock:blocks/give_all` | Multiblock base items |
-| `/function ra:tools/wrench/give` | The Wrench |
-| `/function ra:tools/creative_data_handler/give` | The Creative Data Handler |
+| `/function ra:tools/wrench/give` | Wrench |
+| `/function ra:tools/data_handler/give` | Data Handler |
+| `/function ra:tools/creative_data_handler/give` | Creative Data Handler |
 | `/function ra:tools/goggles/give` | Goggles |
-| `/function ra:uninstall` | Clean uninstall — removes all markers |
+| `/function ra_wireless:tools/remote/give` | Redstone Remote |
+| `/function ra:uninstall` | Clean uninstall |
 
 ---
 
-## How It Works
+## Documentation Source
 
-Custom blocks are represented as bat spawn eggs with custom data. On placement, the spawned bat is immediately converted into:
-- a real vanilla block (for example dispenser, dropper, lodestone), and
-- a hidden marker entity that stores runtime properties and state.
+- Site: [https://ancarsenat.github.io/Redstone-Additions/](https://ancarsenat.github.io/Redstone-Additions/)
+- Docs pages: [docs/](docs/)
+- Build config: [mkdocs.yml](mkdocs.yml)
 
-Module tick functions process those markers each game tick.
-
-The codebase is split by namespaces (`ra`, `ra_lib`, `ra_lib_multiblock`, `ra_gates`, `ra_interactive`, `ra_sensors`, `ra_wireless`, `ra_wires`, `ra_chunk_loader`, `ra_multiblock`).
-
-If you are extending the pack, start with the Developer Guide and Extension Examples pages.
-
----
-
-## Documentation
-
-Documentation site:
-
-- Live site: [https://ancarsenat.github.io/Redstone-Additions/](https://ancarsenat.github.io/Redstone-Additions/)
-- Source pages: `docs/`
-- Build config: `mkdocs.yml`
-
-Local docs workflow:
+Local docs:
 
 ```bash
 pip install -r requirements-docs.txt
 mkdocs serve
 ```
 
-Key pages:
-
-| Page | Content |
-|------|---------|
-| [Home](https://ancarsenat.github.io/Redstone-Additions/) | Overview, feature map, install and command quickstart |
-| [How It Works](https://ancarsenat.github.io/Redstone-Additions/how-it-works/) | Runtime architecture walkthrough |
-| [Block Reference](https://ancarsenat.github.io/Redstone-Additions/block-reference/) | Full block matrix |
-| [Recipe Reference](https://ancarsenat.github.io/Redstone-Additions/recipe-reference/) | Recipe file mapping |
-| [Developer Guide](https://ancarsenat.github.io/Redstone-Additions/developer-guide/) | Architecture and conventions |
-| [Extension Examples](https://ancarsenat.github.io/Redstone-Additions/extension-examples/) | Copy-paste custom block examples |
-| [Changelog](https://ancarsenat.github.io/Redstone-Additions/changelog/) | Version history |
-
----
-
-## Latest Changelog
-
-### v5.1.1 — April 5, 2026
-- Added `ra_wires` with liquid, gas, and electric transport blocks.
-- Added liquid drain fallback particles/status when no valid source can be drained.
-- Added goggles tinkering to toggle/cycle transport block properties in-world.
-- Added full recipes and advancement coverage for transport and EU blocks.
-
----
-
-## Contributing
-
-Pull requests are welcome. If you add a new block, follow the conventions in:
-- [Developer Guide](https://ancarsenat.github.io/Redstone-Additions/developer-guide/)
-- [Extension Examples](https://ancarsenat.github.io/Redstone-Additions/extension-examples/)
-
-For bug reports, open an [issue on GitHub](https://github.com/AnCarsenat/Redstone-Additions/issues).
-
 ---
 
 ## License
 
-**Copyright (c) 2026 AnCarsenat. All rights reserved.**
+Copyright (c) 2026 AnCarsenat. All rights reserved.
 
-You are free to **use** this datapack on any world or server and to **modify** it for private use. You may **not** redistribute, reupload, mirror, or repackage it — in whole or in part — on any platform without explicit written permission from the author. Linking to the official [Modrinth](https://modrinth.com/datapack/redstone-additions) or [GitHub](https://github.com/AnCarsenat/Redstone-Additions) pages is always permitted.
+You may use this datapack on any world or server and modify it for private use. You may not redistribute, mirror, reupload, or repackage it in whole or in part without explicit written permission.
 
-If you feature this datapack in videos, streams, or articles, please credit **AnCarsenat** and link to the official repository.
-
-See the full [LICENSE](LICENSE) file for complete terms.
+See [LICENSE](LICENSE) for full terms.
 
 ---
 

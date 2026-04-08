@@ -12,7 +12,7 @@ The `ra_interactive` module provides 11 utility machines for automation and map 
 |---|---|---|---|---|
 | Block Breaker | `minecraft:dispenser` | Yes | While powered | 40 tick action cooldown |
 | Block Placer | `minecraft:dispenser` | Yes | While powered | Places from inventory into air in front |
-| Item Pipe | `minecraft:dispenser` | No | Continuous | 4 tick transfer cycle |
+| Item Pipe | `minecraft:dispenser` | Yes | Continuous | 4 tick transfer cycle |
 | Item Mover | `minecraft:observer` | Yes | Continuous | Rear container to front container |
 | Spitter | `minecraft:dropper` | Yes | Continuous | Throws item entities forward |
 | Pusher | `minecraft:magenta_glazed_terracotta` | Yes | While powered | Pushes entities forward, 20 tick cooldown |

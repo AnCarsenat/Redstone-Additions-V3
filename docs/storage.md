@@ -17,6 +17,7 @@ The `ra_storage` module adds Boxer, Unboxer, and Item Crate workflows for compac
 ## Item Crate Model
 
 Item Crates are craftable storage items (`storage_box.json`) and can also be given directly.
+Crafting them is useless. They are made when you power a boxer block. And are emptied when you power an unboxer
 
 - Base item: `minecraft:player_head` with profile `BoxMan01234`
 - Stack size: `64`
