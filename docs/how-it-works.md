@@ -1,6 +1,6 @@
 # How It Works
 
-This page explains the runtime architecture of Redstone Additions V3 in detail.
+This page explains the runtime architecture of Redstone Additions in detail.
 
 Use this as the canonical technical reference for the pack flow. Module pages focus on behavior and block details, while this page explains system internals.
 
@@ -261,3 +261,4 @@ Keep placement tags, block IDs, recipes, and advancements consistent. Most runti
 ---
 
 Next: [Developer Guide](developer-guide.md) for implementation workflow and extension checklists.
+

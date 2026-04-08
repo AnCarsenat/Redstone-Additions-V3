@@ -42,6 +42,7 @@ nav:
   - Gameplay Modules:
       - Logic Gates: logic-gates.md
       - Interactive Machines: interactive-machines.md
+      - Storage: storage.md
       - Sensors: sensors.md
       - Wireless Redstone: wireless-redstone.md
       - Transport Networks: transport-networks.md

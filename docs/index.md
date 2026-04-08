@@ -1,6 +1,6 @@
-# Redstone Additions V3
+# Redstone Additions
 
-<img src="images/icon.png" alt="Redstone Additions V3" width="128">
+<img src="images/icon.png" alt="Redstone Additions" width="128">
 
 **Version:** v5.1.1  
 **Minecraft:** 1.21+  
@@ -8,22 +8,22 @@
 
 ---
 
-Redstone Additions V3 is a vanilla datapack with automation, storage, wireless signaling, sensors, chunk loading, multiblocks, and transport networks.
+Redstone Additions is a vanilla datapack with automation, storage, wireless signaling, sensors, chunk loading, multiblocks, and transport networks.
 
 !!! tip "Player-first wiki"
     This home page is intentionally dense so most players can stay on one page and only open extra docs when they need deep technical details.
 
 ## Quick Start
 
-1. Download from [Modrinth](https://modrinth.com/datapack/redstone-additions-v3) or clone from GitHub.
-2. Place `redstone_additions_v3.0.0` in your world datapacks folder.
+1. Download from [Modrinth](https://modrinth.com/datapack/redstone-additions) or clone from GitHub.
+2. Place `redstone_additions` in your world datapacks folder.
 3. Run `/reload`.
 4. Run `/function ra:give_all_items` to get one prefilled bundle per namespace.
 
 Path example:
 
 ```text
-.minecraft/saves/<world>/datapacks/redstone_additions_v3.0.0/
+.minecraft/saves/<world>/datapacks/redstone_additions/
 ```
 
 ## Visual Module Atlas
@@ -32,7 +32,7 @@ Path example:
 |---|---|---|
 | [Logic Gates](logic-gates.md) | 6 timing/logic blocks | ![Clock recipe](images/recipes/ra_gates/clock.png){ width="220" } |
 | [Interactive Machines](interactive-machines.md) | 11 automation/utility blocks | ![Block Placer recipe](images/recipes/ra_interactive/block_placer.png){ width="220" } |
-| [Storage](block-reference.md) | Boxer + Unboxer workflow | ![Boxer recipe](images/recipes/ra_storage/boxer.png){ width="220" } |
+| [Storage](storage.md) | Boxer + Unboxer workflow | ![Boxer recipe](images/recipes/ra_storage/boxer.png){ width="220" } |
 | [Sensors](sensors.md) | Entity detector + tag operators | ![Entity Detector recipe](images/recipes/ra_sensors/entity_detector.png){ width="220" } |
 | [Wireless Redstone](wireless-redstone.md) | Emitter, Receiver, and Remote | ![Wireless Emitter recipe](images/recipes/ra_wireless/emitter.png){ width="220" } |
 | [Transport Networks](transport-networks.md) | Liquid, gas, and EU transport | ![Liquid Pump recipe](images/recipes/ra_wires/liquid_pump.png){ width="220" } |
@@ -80,6 +80,7 @@ For most players, this home page plus [Block Reference](block-reference.md) is e
 
 Open these pages only when needed:
 
+- [Storage](storage.md)
 - [Wireless Redstone](wireless-redstone.md)
 - [How It Works](how-it-works.md)
 - [Recipe Reference](recipe-reference.md)
@@ -89,6 +90,7 @@ Open these pages only when needed:
 
 ## Support
 
-- [GitHub Repository](https://github.com/AnCarsenat/Redstone-Additions-V3)
-- [Issues](https://github.com/AnCarsenat/Redstone-Additions-V3/issues)
-- [Modrinth](https://modrinth.com/datapack/redstone-additions-v3)
+- [GitHub Repository](https://github.com/AnCarsenat/Redstone-Additions)
+- [Issues](https://github.com/AnCarsenat/Redstone-Additions/issues)
+- [Modrinth](https://modrinth.com/datapack/redstone-additions)
+

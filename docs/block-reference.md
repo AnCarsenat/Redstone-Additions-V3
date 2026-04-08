@@ -1,6 +1,6 @@
 # Block Reference
 
-This matrix is generated from block folders, placement handler registrations, and recipe files in `redstone_additions_v3.0.0/data`.
+This matrix is generated from block folders, placement handler registrations, and recipe files in `redstone_additions/data`.
 
 For lifecycle internals and marker architecture, see [How It Works](how-it-works.md).
 

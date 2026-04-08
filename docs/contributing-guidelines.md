@@ -1,4 +1,4 @@
-# Redstone Additions V3 — Contributing Guidelines
+# Redstone Additions — Contributing Guidelines
 
 **Version:** v5.1.1  
 **Minecraft:** 1.21+
@@ -268,3 +268,4 @@ Each addon is independent and hooks into the core via:
 - **Direct calls** to `ra_lib:` for shared utilities
 - **Tick dispatch** from `ra:tick` → `{module}:tick`
 - **Load dispatch** from `ra:load` → `{module}:load`
+

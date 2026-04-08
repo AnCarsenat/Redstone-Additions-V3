@@ -1,16 +1,16 @@
 <p align="center">
-  <img src="icon.png" alt="Redstone Additions V3" width="128">
+  <img src="icon.png" alt="Redstone Additions" width="128">
 </p>
 
-<h1 align="center">Redstone Additions V3</h1>
+<h1 align="center">Redstone Additions</h1>
 
 <p align="center">
   <strong>46 custom blocks. 5 tools. Vanilla datapack for Minecraft 1.21+.</strong>
 </p>
 
 <p align="center">
-  <a href="https://modrinth.com/datapack/redstone-additions-v3"><img src="https://img.shields.io/badge/Download-Modrinth-00AF5C?style=for-the-badge&logo=modrinth&logoColor=white" alt="Modrinth"></a>
-  <a href="https://github.com/AnCarsenat/Redstone-Additions-V3"><img src="https://img.shields.io/badge/Source-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
+  <a href="https://modrinth.com/datapack/redstone-additions"><img src="https://img.shields.io/badge/Download-Modrinth-00AF5C?style=for-the-badge&logo=modrinth&logoColor=white" alt="Modrinth"></a>
+  <a href="https://github.com/AnCarsenat/Redstone-Additions"><img src="https://img.shields.io/badge/Source-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
 </p>
 
 <p align="center">
@@ -23,7 +23,7 @@
 
 ---
 
-Redstone Additions V3 is a modular datapack that expands vanilla redstone with custom logic blocks, automation machines, sensors, wireless signaling, chunk loading, multiblock systems, and transport networks.
+Redstone Additions is a modular datapack that expands vanilla redstone with custom logic blocks, automation machines, sensors, wireless signaling, chunk loading, multiblock systems, and transport networks.
 
 Everything runs in vanilla using datapack functions and custom block markers. No mods required.
 
@@ -106,15 +106,15 @@ Everything runs in vanilla using datapack functions and custom block markers. No
 ## Installation
 
 ### Option A (Modrinth)
-1. Download the latest `.zip` from [Modrinth](https://modrinth.com/datapack/redstone-additions-v3).
+1. Download the latest `.zip` from [Modrinth](https://modrinth.com/datapack/redstone-additions).
 2. Place it in `.minecraft/saves/<your_world>/datapacks/`.
 3. Run `/reload`.
 
 ### Option B (GitHub)
 ```bash
-git clone https://github.com/AnCarsenat/Redstone-Additions-V3.git
+git clone https://github.com/AnCarsenat/Redstone-Additions.git
 ```
-Copy `redstone_additions_v3.0.0` into your world `datapacks/` directory, then run `/reload`.
+Copy `redstone_additions` into your world `datapacks/` directory, then run `/reload`.
 
 Get the full namespace bundle kit:
 ```
@@ -160,7 +160,7 @@ If you are extending the pack, start with the Developer Guide and Extension Exam
 
 Documentation site:
 
-- Live site: [https://ancarsenat.github.io/Redstone-Additions-V3/](https://ancarsenat.github.io/Redstone-Additions-V3/)
+- Live site: [https://ancarsenat.github.io/Redstone-Additions/](https://ancarsenat.github.io/Redstone-Additions/)
 - Source pages: `docs/`
 - Build config: `mkdocs.yml`
 
@@ -175,13 +175,13 @@ Key pages:
 
 | Page | Content |
 |------|---------|
-| [Home](https://ancarsenat.github.io/Redstone-Additions-V3/) | Overview, feature map, install and command quickstart |
-| [How It Works](https://ancarsenat.github.io/Redstone-Additions-V3/how-it-works/) | Runtime architecture walkthrough |
-| [Block Reference](https://ancarsenat.github.io/Redstone-Additions-V3/block-reference/) | Full block matrix |
-| [Recipe Reference](https://ancarsenat.github.io/Redstone-Additions-V3/recipe-reference/) | Recipe file mapping |
-| [Developer Guide](https://ancarsenat.github.io/Redstone-Additions-V3/developer-guide/) | Architecture and conventions |
-| [Extension Examples](https://ancarsenat.github.io/Redstone-Additions-V3/extension-examples/) | Copy-paste custom block examples |
-| [Changelog](https://ancarsenat.github.io/Redstone-Additions-V3/changelog/) | Version history |
+| [Home](https://ancarsenat.github.io/Redstone-Additions/) | Overview, feature map, install and command quickstart |
+| [How It Works](https://ancarsenat.github.io/Redstone-Additions/how-it-works/) | Runtime architecture walkthrough |
+| [Block Reference](https://ancarsenat.github.io/Redstone-Additions/block-reference/) | Full block matrix |
+| [Recipe Reference](https://ancarsenat.github.io/Redstone-Additions/recipe-reference/) | Recipe file mapping |
+| [Developer Guide](https://ancarsenat.github.io/Redstone-Additions/developer-guide/) | Architecture and conventions |
+| [Extension Examples](https://ancarsenat.github.io/Redstone-Additions/extension-examples/) | Copy-paste custom block examples |
+| [Changelog](https://ancarsenat.github.io/Redstone-Additions/changelog/) | Version history |
 
 ---
 
@@ -198,10 +198,10 @@ Key pages:
 ## Contributing
 
 Pull requests are welcome. If you add a new block, follow the conventions in:
-- [Developer Guide](https://ancarsenat.github.io/Redstone-Additions-V3/developer-guide/)
-- [Extension Examples](https://ancarsenat.github.io/Redstone-Additions-V3/extension-examples/)
+- [Developer Guide](https://ancarsenat.github.io/Redstone-Additions/developer-guide/)
+- [Extension Examples](https://ancarsenat.github.io/Redstone-Additions/extension-examples/)
 
-For bug reports, open an [issue on GitHub](https://github.com/AnCarsenat/Redstone-Additions-V3/issues).
+For bug reports, open an [issue on GitHub](https://github.com/AnCarsenat/Redstone-Additions/issues).
 
 ---
 
@@ -209,7 +209,7 @@ For bug reports, open an [issue on GitHub](https://github.com/AnCarsenat/Redston
 
 **Copyright (c) 2026 AnCarsenat. All rights reserved.**
 
-You are free to **use** this datapack on any world or server and to **modify** it for private use. You may **not** redistribute, reupload, mirror, or repackage it — in whole or in part — on any platform without explicit written permission from the author. Linking to the official [Modrinth](https://modrinth.com/datapack/redstone-additions-v3) or [GitHub](https://github.com/AnCarsenat/Redstone-Additions-V3) pages is always permitted.
+You are free to **use** this datapack on any world or server and to **modify** it for private use. You may **not** redistribute, reupload, mirror, or repackage it — in whole or in part — on any platform without explicit written permission from the author. Linking to the official [Modrinth](https://modrinth.com/datapack/redstone-additions) or [GitHub](https://github.com/AnCarsenat/Redstone-Additions) pages is always permitted.
 
 If you feature this datapack in videos, streams, or articles, please credit **AnCarsenat** and link to the official repository.
 
@@ -219,5 +219,6 @@ See the full [LICENSE](LICENSE) file for complete terms.
 
 <p align="center">
   <strong>Created by <a href="https://github.com/AnCarsenat">AnCarsenat</a></strong><br>
-  <a href="https://github.com/AnCarsenat/Redstone-Additions-V3/issues">Report a Bug</a> · <a href="https://ancarsenat.github.io/Redstone-Additions-V3/">Documentation</a> · <a href="https://modrinth.com/datapack/redstone-additions-v3">Download</a>
+  <a href="https://github.com/AnCarsenat/Redstone-Additions/issues">Report a Bug</a> · <a href="https://ancarsenat.github.io/Redstone-Additions/">Documentation</a> · <a href="https://modrinth.com/datapack/redstone-additions">Download</a>
 </p>
+
