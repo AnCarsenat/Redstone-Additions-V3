@@ -1,43 +1,58 @@
-Redstone Additions — Custom License
+Redstone Additions - Custom License
 Copyright (c) 2026 AnCarsenat. All rights reserved.
 
 By downloading, installing, or using Redstone Additions (the "Datapack"),
 you agree to the following terms:
 
+NOMENCLATURE
+   In this license:
+   "RA" means Redstone Additions.
+   "Addon" means a datapack for RA that depends on RA to function.
+   Addons do not include RA's default namespaces (for example: ra_lib, ra,
+   ra_interactive, etc.).
+
 1. PERMITTED USE
    You may use the Datapack on any Minecraft world, server, or realm for
    personal, community, or commercial server use at no cost.
-
 2. MODIFICATION
    You may modify the Datapack for your own private use. Modified versions may
    NOT be publicly distributed, uploaded, or shared without prior written
    permission from the original author (AnCarsenat).
 
+   You may create an addon for this Datapack that links to the original
+   Datapack. Addons are datapacks for RA and cannot function without RA.
 3. REDISTRIBUTION
+   Datapack:
    You may NOT redistribute, reupload, mirror, repackage, or bundle the
-   Datapack — in whole or in part, modified or unmodified — on any platform
-   (including but not limited to CurseForge, Planet Minecraft, MCPEDL, or any
-   other website, file-sharing service, or modpack) without explicit written
-   permission from the original author.
+   Datapack - in whole or in part, modified or unmodified - on any platform
+   (including, but not limited to, CurseForge, Modrinth, Planet Minecraft,
+   MCPEDL, or any other website, file-sharing service, or modpack) without
+   explicit written permission from the original author.
+
+   Addons:
+   You may redistribute, reupload, mirror, repackage, or bundle the Datapack
+   in part and modified on any platform (including, but not limited to,
+   CurseForge, Modrinth, Planet Minecraft, MCPEDL, or any other website,
+   file-sharing service, or modpack) as long as the default RA namespaces are
+   not included.
 
    Linking directly to the official download pages (GitHub, Modrinth) IS
-   permitted and encouraged.
-
+   permitted and encouraged (it will also make it easier for users to
+   navigate).
 4. CREDIT
    If you showcase, review, or feature the Datapack in videos, streams, blogs,
    or other media, you must visibly credit "AnCarsenat" as the creator and
    link to the official repository:
    https://github.com/AnCarsenat/Redstone-Additions
-
 5. NO CLAIM OF OWNERSHIP
    You may not claim the Datapack, or any substantial portion of it, as your
    own work. This includes renaming the Datapack and presenting it as an
    original creation.
 
+   You may claim an addon as your own work.
 6. NO WARRANTY
    The Datapack is provided "as is" without warranty of any kind. The author
    is not liable for any damage, data loss, or issues arising from its use.
-
 7. ENFORCEMENT
    Violation of these terms may result in a DMCA takedown request or other
    appropriate action. The author reserves the right to revoke permission
