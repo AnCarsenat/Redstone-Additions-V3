@@ -9,15 +9,15 @@ The `ra_storage` module adds Boxer, Unboxer, and Item Crate workflows for compac
 
 ## Block Summary
 
-| Block | Item model | Recipe | Default I/O |
-|---|---|---|---|
-| Boxer | `minecraft:dropper` | ![Boxer recipe](images/recipes/ra_storage/boxer.png){ width="220" } | `input1="^ ^ ^-1"`, `output1="^ ^ ^1"` |
-| Unboxer | `minecraft:dispenser` | ![Unboxer recipe](images/recipes/ra_storage/unboxer.png){ width="220" } | `input1="~ ~ ~"`, `output1="^ ^ ^1"` |
+| Block   | Item model            | Recipe                                                                  | Default I/O                            |
+| ------- | --------------------- | ----------------------------------------------------------------------- | -------------------------------------- |
+| Boxer   | `minecraft:dropper`   | ![Boxer recipe](images/recipes/ra_storage/boxer.png){ width="220" }     | `input1="^ ^ ^-1"`, `output1="^ ^ ^1"` |
+| Unboxer | `minecraft:dispenser` | ![Unboxer recipe](images/recipes/ra_storage/unboxer.png){ width="220" } | `input1="~ ~ ~"`, `output1="^ ^ ^1"`   |
 
-## Item Crate Model
+## Item Crates
 
-Item Crates are craftable storage items (`storage_box.json`) and can also be given directly.
-Crafting them is useless. They are made when you power a boxer block. And are emptied when you power an unboxer
+Item Crates are storage items (`storage_box.json`) and can also be given directly.
+They are made when you power a boxer block. And are emptied when you power an unboxer
 
 - Base item: `minecraft:player_head` with profile `BoxMan01234`
 - Stack size: `64`

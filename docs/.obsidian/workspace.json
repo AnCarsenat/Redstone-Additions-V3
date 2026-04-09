@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "multiblocks.md",
+                "file": "item-reference.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "multiblocks"
+              "title": "item-reference"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "multiblocks.md",
+                "file": "item-reference.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for multiblocks"
+              "title": "Backlinks for item-reference"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "multiblocks.md",
+                "file": "item-reference.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from multiblocks"
+              "title": "Outgoing links from item-reference"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "multiblocks.md",
+                "file": "item-reference.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of multiblocks"
+              "title": "Outline of item-reference"
             }
           }
         ],
@@ -185,9 +185,14 @@
   },
   "active": "665b12ae00c0621d",
   "lastOpenFiles": [
+    "block-reference.md",
+    "multiblocks.md",
+    "recipe-reference.md",
+    "storage.md",
+    "transport-networks.md",
+    "sensors.md",
     "images/ra_multiblock/blast_forge_schematic.png",
     "images/ra_multiblock/2026-04-08_14.09.14.png",
-    "block-reference.md",
     "images/ra_multiblock/blast_forge.png",
     "images/ra_multiblock/2026-04-08_14.10.15.png",
     "logic-gates.md",
