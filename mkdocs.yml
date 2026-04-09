@@ -50,8 +50,7 @@ nav:
       - Multiblocks: multiblocks.md
   - Technical Foundation:
       - How It Works: how-it-works.md
-      - Block Reference: block-reference.md
-      - Recipe Reference: recipe-reference.md
+      - Item Reference: item-reference.md
   - For Developers:
       - Developer Guide: developer-guide.md
       - Extension Examples: extension-examples.md
