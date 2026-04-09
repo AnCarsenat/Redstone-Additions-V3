@@ -84,7 +84,7 @@ Open these pages only when needed:
 - [Storage](storage.md)
 - [Wireless Redstone](wireless-redstone.md)
 - [How It Works](how-it-works.md)
-- [Recipe Reference](recipe-reference.md)
+- [Item Reference](item-reference.md)
 - [Developer Guide](developer-guide.md)
 - [Extension Examples](extension-examples.md)
 - [Changelog](changelog.md)

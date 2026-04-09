@@ -474,6 +474,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Storage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../sensors/" class="md-nav__link">
         
   
@@ -650,28 +678,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#operational-caution" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Operational Caution
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#contributor-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Contributor Notes
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -803,42 +809,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../block-reference/" class="md-nav__link">
+      <a href="../item-reference/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Block Reference
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../recipe-reference/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Recipe Reference
+    Item Reference
   
 
     
@@ -1148,28 +1126,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#operational-caution" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Operational Caution
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#contributor-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Contributor Notes
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1203,7 +1159,6 @@
 <tr>
 <th>Block</th>
 <th>Item model</th>
-<th>Physical block</th>
 <th>Recipe</th>
 </tr>
 </thead>
@@ -1211,8 +1166,7 @@
 <tr>
 <td>Chunk Loader</td>
 <td><code>minecraft:lodestone</code></td>
-<td><code>minecraft:lodestone</code></td>
-<td>Yes</td>
+<td><img alt="Chunk Loader recipe" src="../images/recipes/ra_chunk_loader/chunk_loader.png" width="220" /></td>
 </tr>
 </tbody>
 </table>
@@ -1231,25 +1185,11 @@
 </ul>
 <h2 id="usage-notes">Usage Notes<a class="headerlink" href="#usage-notes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Place one per chunk you want controlled.</li>
+<li>Place one per chunk you want controlled. (use F3+G)</li>
 <li>Power on to lock the chunk loaded.</li>
 <li>Power off to release it.</li>
-<li>Recommended for machine hubs and long-distance automation relays.</li>
+<li>Recommended for farms.</li>
 </ul>
-<h2 id="operational-caution">Operational Caution<a class="headerlink" href="#operational-caution" title="Permanent link">&para;</a></h2>
-<p>Because this block writes to forceload state, treat it as infrastructure:</p>
-<ul>
-<li>Document where loaders are placed.</li>
-<li>Clean up abandoned loaders in old farms.</li>
-<li>Use <code>/forceload query</code> during diagnostics.</li>
-</ul>
-<h2 id="contributor-notes">Contributor Notes<a class="headerlink" href="#contributor-notes" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Keep edge-detection logic strict to avoid repeated <code>forceload</code> churn.</li>
-<li>Preserve on-break and unpowered cleanup paths to prevent stuck forced chunks.</li>
-<li>Test loader behavior across reloads and power flicker conditions.</li>
-</ol>
-<hr />
 
 
 

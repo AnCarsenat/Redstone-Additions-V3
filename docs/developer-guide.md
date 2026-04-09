@@ -308,5 +308,5 @@ Related pages:
 
 - [How It Works](how-it-works.md)
 - [Block Reference](item-reference.md)
-- [Recipe Reference](recipe-reference.md)
+- [Item Reference](item-reference.md)
 - [Extension Examples](extension-examples.md)
