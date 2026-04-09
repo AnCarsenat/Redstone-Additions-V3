@@ -10,7 +10,7 @@ function ra_interactive:blocks/item_pipe/register_block
 function ra_interactive:blocks/infinite_water_cauldron/register_block
 function ra_interactive:blocks/infinite_lava_cauldron/register_block
 function ra_interactive:blocks/infinite_snow_cauldron/register_block
-function ra_interactive:blocks/message/register_block
+function ra_interactive:blocks/message_block/register_block
 function ra_interactive:blocks/item_mover/register_block
 
 # Tellraw to all players to indicate that interactive blocks have been loaded

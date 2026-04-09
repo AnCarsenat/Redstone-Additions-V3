@@ -10,5 +10,5 @@ function ra_gates:blocks/uni_gate/tick
 function ra_gates:blocks/clock/tick
 function ra_gates:blocks/delayer/tick
 function ra_gates:blocks/extender/tick
-function ra_gates:blocks/rand/tick
+function ra_gates:blocks/randomizer/tick
 function ra_gates:blocks/shortener/tick

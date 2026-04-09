@@ -77,7 +77,7 @@ Current pack totals:
 
 ## Need More Detail
 
-For most players, this home page plus [Block Reference](block-reference.md) is enough.
+For most players, this home page plus [Block Reference](item-reference.md) is enough.
 
 Open these pages only when needed:
 

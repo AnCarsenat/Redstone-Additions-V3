@@ -2,6 +2,10 @@
 
 This page mirrors key datapack milestones from the main project changelog.
 
+## v5.1.2 (2026-04-09)
+### Changed
+- Renamed all "message" blocks to "message_block"
+- Renamed all "rand" blocks to "randomizer"
 ## v5.1.2 (2026-04-08)
 
 ### Changed

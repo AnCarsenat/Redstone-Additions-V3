@@ -7,8 +7,8 @@
 # Check for 'range' property (typically int)
 execute if data storage ra:dh properties.range run function ra:tools/data_handler/props/show_range
 
-# Check for 'message' property (typically str)
-execute if data storage ra:dh properties.message run function ra:tools/data_handler/props/show_message
+# Check for 'message_block' property (typically str)
+execute if data storage ra:dh properties.message_block run function ra:tools/data_handler/props/show_message_block
 
 # Check for 'tag' property (typically str)
 execute if data storage ra:dh properties.tag run function ra:tools/data_handler/props/show_tag
@@ -59,5 +59,5 @@ execute if data storage ra:dh properties.pulse run function ra:tools/data_handle
 # Check for 'chance' property (int) - for randomizer (percentage 0-100)
 execute if data storage ra:dh properties.chance run function ra:tools/data_handler/props/show_chance
 
-# If no properties, show message
+# If no properties, show message_block
 execute unless data storage ra:dh properties run tellraw @s [{text:"  (no properties)",color:"dark_gray",italic:true}]

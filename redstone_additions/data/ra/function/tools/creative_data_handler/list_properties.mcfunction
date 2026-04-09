@@ -7,8 +7,8 @@
 # Check for 'range' property (typically int)
 execute if data storage ra:cdh properties.range run function ra:tools/creative_data_handler/props/show_range
 
-# Check for 'message' property (typically str)
-execute if data storage ra:cdh properties.message run function ra:tools/creative_data_handler/props/show_message
+# Check for 'message_block' property (typically str)
+execute if data storage ra:cdh properties.message_block run function ra:tools/creative_data_handler/props/show_message_block
 
 # Check for 'tag' property (typically str)
 execute if data storage ra:cdh properties.tag run function ra:tools/creative_data_handler/props/show_tag
@@ -56,5 +56,5 @@ execute if data storage ra:cdh properties.pulse run function ra:tools/creative_d
 # Check for 'chance' property (int) - for randomizer (percentage 0-100)
 execute if data storage ra:cdh properties.chance run function ra:tools/creative_data_handler/props/show_chance
 
-# If no properties, show message
+# If no properties, show message_block
 execute unless data storage ra:cdh properties run tellraw @s [{text:"  (no properties)",color:"dark_gray",italic:true}]

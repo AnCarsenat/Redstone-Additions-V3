@@ -18,14 +18,14 @@
       "minecraft:item_name": "Randomizer",
       "minecraft:custom_data": {
         "ra": {
-          "rand": true
+          "randomizer": true
         }
       },
       "minecraft:entity_data": {
         "id": "minecraft:bat",
         "Tags": [
           "ra.spawned",
-          "ra.place.rand"
+          "ra.place.randomizer"
         ],
         "Silent": true,
         "NoAI": true,

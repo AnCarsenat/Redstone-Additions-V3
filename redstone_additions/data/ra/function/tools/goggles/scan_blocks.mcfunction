@@ -15,7 +15,7 @@ execute as @e[tag=ra.custom_block.item_mover,distance=..16] at @s run function r
 execute as @e[tag=ra.custom_block.infinite_water_cauldron,distance=..16] at @s run function ra_interactive:goggles/draw_display_inf_water
 execute as @e[tag=ra.custom_block.infinite_lava_cauldron,distance=..16] at @s run function ra_interactive:goggles/draw_display_inf_lava
 execute as @e[tag=ra.custom_block.infinite_snow_cauldron,distance=..16] at @s run function ra_interactive:goggles/draw_display_inf_snow
-execute as @e[tag=ra.custom_block.message_block,distance=..16] at @s run function ra_interactive:goggles/draw_display_message
+execute as @e[tag=ra.custom_block.message_block,distance=..16] at @s run function ra_interactive:goggles/draw_display_message_block
 
 # Storage blocks
 execute as @e[tag=ra.custom_block.boxer,distance=..16] at @s run function ra_storage:goggles/draw_display_boxer
@@ -26,7 +26,7 @@ execute as @e[tag=ra.custom_block.uni_gate,distance=..16] at @s run function ra_
 execute as @e[tag=ra.custom_block.clock,distance=..16] at @s run function ra_gates:goggles/draw_display_clock
 execute as @e[tag=ra.custom_block.delayer,distance=..16] at @s run function ra_gates:goggles/draw_display_delayer
 execute as @e[tag=ra.custom_block.extender,distance=..16] at @s run function ra_gates:goggles/draw_display_extender
-execute as @e[tag=ra.custom_block.rand,distance=..16] at @s run function ra_gates:goggles/draw_display_rand
+execute as @e[tag=ra.custom_block.randomizer,distance=..16] at @s run function ra_gates:goggles/draw_display_randomizer
 execute as @e[tag=ra.custom_block.shortener,distance=..16] at @s run function ra_gates:goggles/draw_display_shortener
 
 # Sensors

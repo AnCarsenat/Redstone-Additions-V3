@@ -21,7 +21,7 @@ execute if score @s ra.dh.pending matches 16 run data modify entity @e[tag=ra.dh
 execute if score @s ra.dh.pending matches 17 run data modify entity @e[tag=ra.dh_target,limit=1] data.properties.chance set from storage ra:input consume.number
 
 # Text properties
-execute if score @s ra.dh.pending matches 2 run data modify entity @e[tag=ra.dh_target,limit=1] data.properties.message set from storage ra:input consume.text
+execute if score @s ra.dh.pending matches 2 run data modify entity @e[tag=ra.dh_target,limit=1] data.properties.message_block set from storage ra:input consume.text
 execute if score @s ra.dh.pending matches 3 run data modify entity @e[tag=ra.dh_target,limit=1] data.properties.tag set from storage ra:input consume.text
 execute if score @s ra.dh.pending matches 4 run data modify entity @e[tag=ra.dh_target,limit=1] data.properties.entity_selector set from storage ra:input consume.text
 execute if score @s ra.dh.pending matches 9 run data modify entity @e[tag=ra.dh_target,limit=1] data.properties.mode set from storage ra:input consume.text

@@ -8,9 +8,9 @@ The `ra_chunk_loader` module contains one block that force-loads its chunk while
 
 ## Block Summary
 
-| Block | Item model | Physical block | Recipe |
-|---|---|---|---|
-| Chunk Loader | `minecraft:lodestone` | `minecraft:lodestone` | ![Chunk Loader recipe](images/recipes/ra_chunk_loader/chunk_loader.png){ width="220" } |
+| Block        | Item model            | Recipe                                                                                 |
+| ------------ | --------------------- | -------------------------------------------------------------------------------------- |
+| Chunk Loader | `minecraft:lodestone` | ![Chunk Loader recipe](images/recipes/ra_chunk_loader/chunk_loader.png){ width="220" } |
 
 ## Runtime Behavior
 
@@ -28,23 +28,7 @@ State tags used:
 
 ## Usage Notes
 
-- Place one per chunk you want controlled.
+- Place one per chunk you want controlled. (use F3+G)
 - Power on to lock the chunk loaded.
 - Power off to release it.
-- Recommended for machine hubs and long-distance automation relays.
-
-## Operational Caution
-
-Because this block writes to forceload state, treat it as infrastructure:
-
-- Document where loaders are placed.
-- Clean up abandoned loaders in old farms.
-- Use `/forceload query` during diagnostics.
-
-## Contributor Notes
-
-1. Keep edge-detection logic strict to avoid repeated `forceload` churn.
-2. Preserve on-break and unpowered cleanup paths to prevent stuck forced chunks.
-3. Test loader behavior across reloads and power flicker conditions.
-
----
+- Recommended for farms.

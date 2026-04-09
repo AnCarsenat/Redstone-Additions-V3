@@ -37,7 +37,7 @@ execute if entity @s[tag=ra.custom_block.clock] run data modify storage ra:cdh b
 execute if entity @s[tag=ra.custom_block.uni_gate] run data modify storage ra:cdh block_type set value "UNI Gate"
 execute if entity @s[tag=ra.custom_block.delayer] run data modify storage ra:cdh block_type set value "Delayer"
 execute if entity @s[tag=ra.custom_block.extender] run data modify storage ra:cdh block_type set value "Extender"
-execute if entity @s[tag=ra.custom_block.rand] run data modify storage ra:cdh block_type set value "Randomizer"
+execute if entity @s[tag=ra.custom_block.randomizer] run data modify storage ra:cdh block_type set value "Randomizer"
 execute if entity @s[tag=ra.custom_block.shortener] run data modify storage ra:cdh block_type set value "Shortener"
 
 # Clock compatibility: older markers may still use delay instead of cooldown

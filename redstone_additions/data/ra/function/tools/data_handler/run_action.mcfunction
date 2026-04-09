@@ -42,7 +42,7 @@ execute if score @s ra.dh.action matches 17 run function ra:tools/data_handler/r
 
 # Text properties
 execute if score @s ra.dh.action matches 2 run scoreboard players set @s ra.dh.pending 2
-execute if score @s ra.dh.action matches 2 run tellraw @s [{text:"[Data Handler] ",color:"gold"},{text:"Write new text for message in the input book.",color:"gray"}]
+execute if score @s ra.dh.action matches 2 run tellraw @s [{text:"[Data Handler] ",color:"gold"},{text:"Write new text for message_block in the input book.",color:"gray"}]
 execute if score @s ra.dh.action matches 2 run function ra:tools/data_handler/request_text
 
 execute if score @s ra.dh.action matches 3 run scoreboard players set @s ra.dh.pending 3

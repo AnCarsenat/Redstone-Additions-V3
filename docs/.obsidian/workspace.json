@@ -1,0 +1,199 @@
+{
+  "main": {
+    "id": "4712e799c69b31aa",
+    "type": "split",
+    "children": [
+      {
+        "id": "9c56ef1b8b234175",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "665b12ae00c0621d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "multiblocks.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "multiblocks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2b65df290d69da01",
+    "type": "split",
+    "children": [
+      {
+        "id": "7ec6acb347641d2e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cf209487ac58488a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "a4324b6389b5a7ee",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "15c0fd51b6cc9c57",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "546111d7385f8b0d",
+    "type": "split",
+    "children": [
+      {
+        "id": "40630034fcb54785",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e6513e51e15aa95d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "multiblocks.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for multiblocks"
+            }
+          },
+          {
+            "id": "a49e3d551f2d0487",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "multiblocks.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from multiblocks"
+            }
+          },
+          {
+            "id": "0b64fb8f1936fa80",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "2555896e3ac0d657",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "897711475f673ba0",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "multiblocks.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of multiblocks"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "665b12ae00c0621d",
+  "lastOpenFiles": [
+    "images/ra_multiblock/blast_forge_schematic.png",
+    "images/ra_multiblock/2026-04-08_14.09.14.png",
+    "block-reference.md",
+    "images/ra_multiblock/blast_forge.png",
+    "images/ra_multiblock/2026-04-08_14.10.15.png",
+    "logic-gates.md",
+    "item-reference.md",
+    "changelog.md",
+    "index.md",
+    "chunk-loader.md"
+  ]
+}

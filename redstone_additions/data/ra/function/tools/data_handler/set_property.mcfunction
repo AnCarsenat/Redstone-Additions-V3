@@ -2,7 +2,7 @@
 # Set a property value on the target block
 # Usage: First set the value, then call with property name
 #   /data modify storage ra:dh set_value set value "Hello friend !"
-#   /function ra:tools/data_handler/set_property {name:"message"}
+#   /function ra:tools/data_handler/set_property {name:"message_block"}
 # Macro: {name:"property_name"}
 # As player.
 

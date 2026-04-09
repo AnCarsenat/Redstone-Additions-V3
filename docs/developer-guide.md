@@ -306,6 +306,6 @@ Useful selectors:
 Related pages:
 
 - [How It Works](how-it-works.md)
-- [Block Reference](block-reference.md)
+- [Block Reference](item-reference.md)
 - [Recipe Reference](recipe-reference.md)
 - [Extension Examples](extension-examples.md)
