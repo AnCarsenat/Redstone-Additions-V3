@@ -18,7 +18,7 @@
 ## Naming Conventions
 
 ### Entity Tags
-- **Format:** `ra.{category}.{block_name}`
+- **Format:** `ra.{category}.{block_name}.{additional_fields1}.{additional_fields2}`
 - **Examples:**
   - `ra.custom_block` — All custom blocks
   - `ra.custom_block.block_breaker` — Specific block type

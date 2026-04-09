@@ -4,6 +4,7 @@ This guide documents implementation architecture and contributor workflow for `v
 
 If you want conceptual runtime flow first, start with [How It Works](how-it-works.md). This page is focused on engineering-level extension and maintenance work.
 
+If you want to contribute and write somewhat correct addons / fixes see [Contributing Guidelines](contributing-guidelines.md)
 ## 1) Core Entrypoints (`ra`)
 
 Primary core functions:
@@ -48,7 +49,7 @@ Calls module initializers:
 - `redstone/init`
 - `input/init`
 
-## placement
+### placement
 
 Key functions:
 
@@ -65,7 +66,7 @@ Contract of `place`:
 - Summons marker with `ra.custom_block`, typed tag, and `ra.new`.
 - Stores rotation/facing for downstream logic.
 
-## orientation
+### orientation
 
 Key functions:
 
@@ -78,7 +79,7 @@ Key functions:
 - `1`: horizontal facing only
 - `2`: full directional (including up/down)
 
-## redstone
+### redstone
 
 Key function:
 
@@ -105,7 +106,7 @@ Consumer model:
 
 Source-specific detectors are split under `ra_lib:redstone/detect/*`.
 
-## inventory
+### inventory
 
 Key functions:
 
@@ -116,7 +117,7 @@ Key functions:
 `insert` uses loot insertion semantics for stack-safe behavior.
 `remove` is slot-aware and returns success/failure for machine logic.
 
-## transport
+### transport
 
 Key function:
 
@@ -124,7 +125,7 @@ Key function:
 
 This helper computes immediate neighbor connectivity for transport nodes and writes compact status fields used by module visuals and goggles diagnostics.
 
-## input
+### input
 
 Key functions:
 
@@ -200,18 +201,18 @@ Keep IDs consistent across:
 
 ## 5) Tooling Integration
 
-## Wrench
+### Wrench
 
 - mode cycling for compatible blocks
 - assembly/toggle interactions for multiblock bases and markers
 
-## Creative Data Handler
+### Creative Data Handler
 
 - property discovery and editing
 - type-specific property menus
 - internal data/status inspection helpers
 
-## Data Handler
+### Data Handler
 
 - non-OP-friendly property editing menu
 - Shift+RMB target scan for nearby custom markers
@@ -220,7 +221,7 @@ Keep IDs consistent across:
 
 When adding new configurable properties, update CDH and Data Handler mappings/defaults.
 
-## Goggles
+### Goggles
 
 - scans nearby custom markers and multiblocks
 - renders billboards from block-defined info profiles
@@ -255,7 +256,7 @@ Use this sequence for safe feature delivery.
 7. Update docs and changelog.
 8. Run in-world validation pass.
 
-## New Block Checklist (Practical)
+### New Block Checklist (Practical)
 
 1. Item custom_data and `ra.place.*` tags are correct.
 2. Placement handler returns `1` only for matching bats.
@@ -264,7 +265,7 @@ Use this sequence for safe feature delivery.
 5. Block appears in module `give_all` and in the correct namespace bundle from `ra:give_all_items`.
 6. Recipe and advancement IDs align.
 
-## New Multiblock Checklist (Practical)
+### New Multiblock Checklist (Practical)
 
 1. Validation hook registered in `#ra_lib_multiblock:validate`.
 2. Setup hook registered in `#ra_lib_multiblock:setup_type`.
