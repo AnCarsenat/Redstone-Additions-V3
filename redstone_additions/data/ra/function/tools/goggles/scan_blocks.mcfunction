@@ -16,7 +16,7 @@ execute as @e[tag=ra.custom_block.infinite_water_cauldron,distance=..16] at @s r
 execute as @e[tag=ra.custom_block.infinite_lava_cauldron,distance=..16] at @s run function ra_interactive:goggles/draw_display_inf_lava
 execute as @e[tag=ra.custom_block.infinite_snow_cauldron,distance=..16] at @s run function ra_interactive:goggles/draw_display_inf_snow
 execute as @e[tag=ra.custom_block.message_block,distance=..16] at @s run function ra_interactive:goggles/draw_display_message_block
-
+execute as @e[tag=ra.custom_block.chunk_loader,distance=..16] at @s run function ra_chunk_loader:goggles/draw_display_chunk_loader
 # Storage blocks
 execute as @e[tag=ra.custom_block.boxer,distance=..16] at @s run function ra_storage:goggles/draw_display_boxer
 execute as @e[tag=ra.custom_block.unboxer,distance=..16] at @s run function ra_storage:goggles/draw_display_unboxer
