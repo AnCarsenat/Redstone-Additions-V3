@@ -40,8 +40,8 @@ function ra_multiblock:load
 function ra_lib_multiblock:init
 
 # ========================== TICKLOOP ==========================
-# Run tick
-function ra:tick
+# Schedule tick for the next game tick to avoid load-time command bursts
+schedule function ra:tick 1t
 
 # ========================== WELCOME MESSAGE ==========================
 # Load message_block
