@@ -8,8 +8,7 @@
   ],
   "key": {
     "G": "minecraft:gold_block",
-    "R": "minecraft:redstone",
-    "D": "minecraft:diamond"
+    "R": "minecraft:redstone"
   },
   "result": {
     "id": "minecraft:bat_spawn_egg",

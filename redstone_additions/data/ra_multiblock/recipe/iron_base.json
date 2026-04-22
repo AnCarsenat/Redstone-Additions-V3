@@ -8,8 +8,7 @@
   ],
   "key": {
     "I": "minecraft:iron_ingot",
-    "R": "minecraft:redstone",
-    "G": "minecraft:glass"
+    "R": "minecraft:redstone"
   },
   "result": {
     "id": "minecraft:bat_spawn_egg",
