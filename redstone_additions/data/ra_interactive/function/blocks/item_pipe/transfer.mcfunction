@@ -26,7 +26,5 @@ function ra_interactive:blocks/item_pipe/transfer_loop
 execute unless entity @s[tag=ra.pipe_moved_any] run return 0
 tag @s remove ra.pipe_moved_any
 
-# If destination is another item pipe, process it immediately for same-tick propagation.
-execute if block ~ ~ ~ minecraft:dispenser as @e[type=marker,tag=ra.custom_block.item_pipe,distance=..0.75,limit=1,sort=nearest] run tag @s remove ra.pipe_chain_visited
-execute if block ~ ~ ~ minecraft:dispenser as @e[type=marker,tag=ra.custom_block.item_pipe,distance=..0.75,limit=1,sort=nearest] at @s run function ra_interactive:blocks/item_pipe/process
+# If destination is another item pipe, let it process on its own tick.
 return 1
